@@ -1,3 +1,4 @@
 module.exports = {
-    mongoURI : 'mongodb://localhost/socialwebdatabase'
-}
+    mongoURI : 'mongodb://localhost/socialwebdatabase',
+    secretOrKey: 'secret'
+};
