@@ -113,7 +113,7 @@ class CreateProfile extends Component {
                         error={errors.instagram}
                         />
                 </div>
-            )
+            );
         }
 
         //Select option for status

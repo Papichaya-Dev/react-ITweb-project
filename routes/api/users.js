@@ -81,7 +81,7 @@ router.post('/login',(req,res) => {
         .then(user => {
             //Check for user
             if(!user) {
-                errors.email = 'User mot found'
+                errors.email = 'User not found'
                 return res.status(404).json(errors);
             }
 
