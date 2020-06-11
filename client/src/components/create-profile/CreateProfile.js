@@ -66,7 +66,7 @@ class CreateProfile extends Component {
     }
     render() {
         const { errors , displaySocialInputs } = this.state;
-
+        console.log(displaySocialInputs);
         let socialInputs;
 
         if(displaySocialInputs) {
@@ -201,9 +201,9 @@ class CreateProfile extends Component {
                                     info = "Tell us a little about yourself"
                                 />
                                 <div className="mb-3">
-                                    <button
-                                    type= "button"
-                                    onClick= {() => {
+                                    <button 
+                                    type="button"
+                                    onClick={() => {
                                         this.setState(prevState => ({
                                             displaySocialInputs: !prevState.displaySocialInputs
                                         }));
