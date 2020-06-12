@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import ProfileAction from './ProfileAction';
 import Experience from './Experience'
 import Education from './Education';
+import Navbar from '../Layout/Navbar';
 
 class Dashboard extends Component {
     componentDidMount(){
@@ -57,6 +58,7 @@ class Dashboard extends Component {
         }
         return (
             <div className="dashboard">
+
                 <div className= "container">
                     <div className="row">
                         <div className="col-md-12">
