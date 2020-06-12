@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import isEmpty from '../../validation/is-empty';
 import PropTypes from 'prop-types';
 import { MDBRow, MDBCol, MDBIcon } from "mdbreact";
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 class ProfileHeader extends Component {
 	render() {
@@ -28,9 +29,10 @@ class ProfileHeader extends Component {
 							</p>
 							{isEmpty(profile.location) ? null : <p>{profile.location}</p>}
 							<p>
+								
 								{isEmpty(profile.website) ? null : (
 									<a className="text-white p-2" href={profile.website} target="_blank">
-										<i className="fas fa-globe fa-2x" />
+										<FacebookIcon/>
 									</a>
 								)}
 
