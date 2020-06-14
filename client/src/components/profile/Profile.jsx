@@ -8,6 +8,9 @@ import ProfileCreds from './ProfileCreds';
 import ProfileGithub from './ProfileGithub';
 import Spinner from '../common/Spinner';
 import { getProfileByHandle } from '../../actions/profileActions';
+import styled from 'styled-components';
+
+const BackgroundHome = styled.div`background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%);`;
 
 class Profile extends Component {
 	componentDidMount() {
@@ -27,26 +30,28 @@ class Profile extends Component {
 				<div>
 					<div className="row">
 						<div className="col-md-6">
-							<Link to="/profiles" className="btn btn-light mb-3 float-left">
+							<Link to="/profiles" className="btn btn-black mb-3 float-left">
 								Back To Profiles
 							</Link>
 						</div>
 						<div className="col-md-6" />
 					</div>
 					<ProfileHeader profile={profile} />
-					<ProfileAbout profile={profile}/>
-					<ProfileCreds education={profile.education} experience={profile.experience}/>
+					<ProfileAbout profile={profile} />
+					<ProfileCreds education={profile.education} experience={profile.experience} />
 					<ProfileGithub />
 				</div>
 			);
 		}
 		return (
 			<div className="profile">
-				<div className="container">
-					<div className="row">
-						<div className="col-md-12">{profileContent}</div>
+				<BackgroundHome>
+					<div className="container">
+						<div className="row">
+							<div className="col-md-12">{profileContent}</div>
+						</div>
 					</div>
-				</div>
+				</BackgroundHome>
 			</div>
 		);
 	}

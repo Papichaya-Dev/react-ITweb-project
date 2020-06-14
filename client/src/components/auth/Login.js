@@ -3,6 +3,47 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loginUser } from '../../actions/authActions';
 import TextFieldGroup from '../common/TextFieldGroup';
+import styled from 'styled-components';
+import { Button } from 'react-bootstrap';
+
+const TitleSingIn = styled.div`
+	font-family: 'Kanit', sans-serif;
+	font-size: 50px;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 500;
+	margin-bottom: 10%;
+`;
+const Block = styled.form`
+	width: 500px;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(255, 255, 255, 0.1);
+
+	text-align: center;
+	border-radius: 5%;
+	font-family: 'Kanit', sans-serif;
+`;
+const ButtonSingIn = styled(Button)`
+margin-left:10px;
+color:black;
+background:rgba(255,255,255, 1);
+font-family: 'Source Sans Pro', sans-serif;
+`;
+const BackgroundSingIn = styled.div`
+	width: 100%;
+	height: 100vh;
+	background-color: black;
+	background-image: url("https://thumbs.gfycat.com/IndelibleAcademicHornshark-size_restricted.gif");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+`;
+
 class Login extends Component {
     constructor(){
         super();
@@ -48,12 +89,14 @@ class Login extends Component {
       const { errors } = this.state;
 
         return (
+          <span>
+            <BackgroundSingIn/>
+            <Block>
             <div className="login">
     <div className="container">
       <div className="row">
         <div className="col-md-8 m-auto">
-          <h1 className="display-4 text-center">Log In</h1>
-          <p className="lead text-center">Sign in to your DevConnector account</p>
+        <TitleSingIn className="gray-text text-darken-3">Sign In</TitleSingIn>
           <form onSubmit ={this.onSummit}>
            <TextFieldGroup 
               placeholder="Email Address"
@@ -70,14 +113,17 @@ class Login extends Component {
               type="password"
               value={this.state.password}
               onChange={this.onChange}
-              error={errors.email}
+              error={errors.password}
               />
-            <input type="submit" className="btn btn-info btn-block mt-4" />
-          </form>
+<ButtonSingIn variant="dark" type="submit ">
+						Enter
+					</ButtonSingIn>          </form>
         </div>
       </div>
     </div>
   </div>
+  </Block>
+  </span>
         );
     }
 }

@@ -1,6 +1,27 @@
 import React from 'react'
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const Slot = styled.input`
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #3498db;
+	padding: 14px 10px;
+	width: 300px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+    margin-left:-30px;
+	:focus {
+		width: 280px;
+		border-color: #a6009b;
+	}
+`;
 
 const TextFieldGroup = ({
     name,
@@ -14,10 +35,11 @@ const TextFieldGroup = ({
     disabled
 }) => {
     return (
+        <span>
         <div className="form-group">
-        <input 
+        <Slot 
         type={type}
-        className={classnames('form-control form-control-lg',{
+        className={classnames({
           'is-invalid': error
           
       })} 
@@ -30,6 +52,7 @@ const TextFieldGroup = ({
          {info && <small className="form-text text-muted">{info}</small>}
           {error && (<div className="invalid-feedback">{error}</div>)}
       </div>
+      </span>
     );
 };
 

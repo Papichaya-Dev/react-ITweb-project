@@ -4,6 +4,16 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 import { clearCurrentProfile } from '../../actions/profileActions';
+import { Nav, Form, FormControl, Button, Dropdown, DropdownButton } from 'react-bootstrap';
+import styled from 'styled-components';
+
+const NavbarBackground = styled.nav`
+background:black;
+width:100vw;
+height:15vh;
+background-image: url("https://i.imgur.com/sJS1H8y.gif?noredirect");
+`;
+
 
 class Navbar extends Component {
   onLogoutClick(e) {
@@ -52,7 +62,8 @@ class Navbar extends Component {
 
       );
         return (
-            <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
+          
+            <NavbarBackground className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
             <div className="container">
               <Link className="navbar-brand" to="/">DevConnector</Link>
               <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
@@ -61,6 +72,10 @@ class Navbar extends Component {
         
               <div className="collapse navbar-collapse" id="mobile-nav">
                 <ul className="navbar-nav mr-auto">
+                <li className="nav-item">
+                    <Link  className="nav-link" to="/home"> Home
+                    </Link>
+                  </li>
                   <li className="nav-item">
                     <Link  className="nav-link" to="/profiles"> Developers
                     </Link>
@@ -71,7 +86,7 @@ class Navbar extends Component {
             
               </div>
             </div>
-          </nav>
+          </NavbarBackground>
         )
     }
 }

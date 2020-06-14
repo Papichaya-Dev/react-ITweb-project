@@ -22,8 +22,8 @@ import AddEducation from './components/add-credentials/AddEducation';
 import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 import Posts from './components/posts/Posts';
-import LandingPage from './components/LandingPage/LandingPage';
 import Post from './components/post/Post';
+import HomePage from './components/HomePage/HomePage';
 
 //Check for token
 if(localStorage.jwtToken){
@@ -43,7 +43,7 @@ if(localStorage.jwtToken){
     store.dispatch(clearCurrentProfile());
 
     //Redirect to login
-    window.location.href='/login';
+    window.location.href='/';
   }
 }
 
@@ -54,8 +54,8 @@ class App extends Component {
      <Router>
        <div className="App">
           <Navbar/>
-          <Route exact path="/" component={LandingPage} />
-          <div className="container">
+          <Route exact path="/" component={Landing} />
+          {/* <div className="container"> */}
             <Route exact path="/register" component={Register}/>
             <Route exact path="/login" component={Login}/>
             <Route exact path="/profiles" component={Profiles}/>
@@ -81,10 +81,13 @@ class App extends Component {
             <Switch>
             <PrivateRoute exact path="/post/:id" component={Post}/>
             </Switch>
+            <Switch>
+            <PrivateRoute exact path="/home" component={HomePage}/>
+            </Switch>
             
-          </div>
+          {/* </div> */}
    
-          <Footer/>
+          {/* <Footer/> */}
         </div>
       </Router>
       </Provider> 
