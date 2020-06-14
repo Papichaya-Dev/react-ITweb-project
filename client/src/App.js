@@ -24,6 +24,19 @@ import Profile from './components/profile/Profile';
 import Posts from './components/posts/Posts';
 import Post from './components/post/Post';
 import HomePage from './components/HomePage/HomePage';
+import NewsPage from './components/NewsPage/NewsPage';
+import ArticlePage from './components/ArticlePage/ArticlePage';
+import ReviewPage from './components/ReviewPage/ReviewPage';
+import NewsOne from './components/NewsPage/NewsOne';
+import NewsTwo from './components/NewsPage/NewsTwo';
+import ArticleOne from './components/ArticlePage/ArticleOne';
+import ArticleTwo from './components/ArticlePage/ArticleTwo';
+import ReviewOne from './components/ReviewPage/ReviewOne';
+import ReviewTwo from './components/ReviewPage/ReviewTwo';
+import ReviewThree from './components/ReviewPage/ReviewThree';
+import ReviewFour from './components/ReviewPage/ReviewFour';
+
+
 
 //Check for token
 if(localStorage.jwtToken){
@@ -53,7 +66,7 @@ class App extends Component {
      <Provider store = {store}>
      <Router>
        <div className="App">
-          <Navbar/>
+          {/* <Navbar/> */}
           <Route exact path="/" component={Landing} />
           {/* <div className="container"> */}
             <Route exact path="/register" component={Register}/>
@@ -84,6 +97,41 @@ class App extends Component {
             <Switch>
             <PrivateRoute exact path="/home" component={HomePage}/>
             </Switch>
+            <Switch>
+            <PrivateRoute exact path="/news" component={NewsPage}/>
+            </Switch>
+            <Switch>
+            <PrivateRoute exact path="/article" component={ArticlePage}/>
+            </Switch>
+            <Switch>
+            <PrivateRoute exact path="/review" component={ReviewPage}/>
+            </Switch>
+            <Switch>
+            <PrivateRoute exact path="/newsone" component={NewsOne}/>
+            </Switch>
+            <Switch>
+            <PrivateRoute exact path="/newstwo" component={NewsTwo}/>
+            </Switch>
+            <Switch>
+            <PrivateRoute exact path="/articleone" component={ArticleOne}/>
+            </Switch>
+            <Switch>
+            <PrivateRoute exact path="/articletwo" component={ArticleTwo}/>
+            </Switch>
+            <Switch>
+            <PrivateRoute exact path="/reviewone" component={ReviewOne}/>
+            </Switch>
+            <Switch>
+            <PrivateRoute exact path="/reviewtwo" component={ReviewTwo}/>
+            </Switch>
+            <Switch>
+            <PrivateRoute exact path="/reviewthree" component={ReviewThree}/>
+            </Switch>
+            <Switch>
+            <PrivateRoute exact path="/reviewfour" component={ReviewFour}/>
+            </Switch>
+            
+            
             
           {/* </div> */}
    

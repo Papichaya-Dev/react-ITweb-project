@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "../Layout/Navbar"
+import Navbar from "../Layout/Navbar";
 import {Animated} from "react-animated-css";
 import styled from 'styled-components';
 import { Card, Button, Container, Row, Col, Spinner ,ListGroup,ListGroupItem} from 'react-bootstrap';
 import Swiper from 'react-id-swiper';
 
-const TitleReview = styled.div`
+const TitleNew = styled.div`
     margin-left:600px;
     margin-top:20px;
 	text-decoration: none;
@@ -18,7 +18,7 @@ const TitleReview = styled.div`
     font-weight:bolder;
  
 `
-const TitleReviewTwo = styled.div`
+const TitleNewTwo = styled.div`
     
     margin-top:-10px;
 	text-decoration: none;
@@ -29,7 +29,7 @@ const TitleReviewTwo = styled.div`
     font-size: 23px;
     font-weight:bolder;
 `
-const TitleReviewThree = styled.div`
+const TitleNewThree = styled.div`
     margin-top:-5px;
 	text-decoration: none;
 	color: black;
@@ -43,7 +43,7 @@ const TitleReviewThree = styled.div`
 const CustomCardNew = styled(Card)`
 margin-left:200px;
   width:22rem;
-  height:28rem;
+  height:25rem;
   margin-top:-30px;
   font-family: 'Kanit', sans-serif;
   background-color:black;
@@ -55,7 +55,7 @@ margin-left:200px;
 		cursor: pointer;
     }
 `;
-const TextCardReview = styled(Card.Text)`
+const TextCardNew = styled(Card.Text)`
     transition: transform .10s;
     transition: 300ms ;
     
@@ -90,8 +90,8 @@ margin-left:200px;
 const CustomCardReview = styled(Card)`
 margin-left:200px;
   width:22rem;
-  height:26rem;
-  margin-top:-20px;
+  height:25rem;
+  margin-top:-30px;
   font-family: 'Kanit', sans-serif;
   background-color:black;
   color:white;
@@ -123,6 +123,22 @@ const CustomRow = styled(Row)`
 margin-top:50px;
 `;
 
+const TextArticle = styled.div`
+color:black;
+font-family: 'Source Sans Pro', sans-serif;
+font-size:50px;
+margin-left:200px;
+margin-top:-15px;
+opacity:0.8;
+`
+const TextReview= styled.div`
+color:black;
+font-family: 'Source Sans Pro', sans-serif;
+font-size:50px;
+margin-left:200px;
+margin-top:-20px;
+opacity:0.8;
+`
 const FooterHome = styled.div`
 background-color:black;
   width: 100%;
@@ -181,8 +197,7 @@ margin-top:40px;
    }
 `;
 const BackgroundBody = styled.div`
-background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%);
-
+	background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%);
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -190,97 +205,81 @@ background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%);
   width: '100vw';
         height: '100vh' ;
 `;
-class ReviewPage extends React.Component{
-    readReview(){
+class NewsPage extends React.Component{
+    readNew(){
         console.log("Fetch")
-        this.props.history.push("/reviewone")
+        this.props.history.push("/newsone")
     }
-    readReviewTwo(){
+    readNewTwo(){
       console.log("Fetch")
-      this.props.history.push("/reviewtwo")
-    }
-    readReviewThree(){
-      console.log("Fetch")
-      this.props.history.push("/reviewthree")
-    }
-    readReviewFour(){
-      console.log("Fetch")
-      this.props.history.push("/reviewfour")
-    }
-    state = {
-      likes: 0
-    };
-    addLike = () => {
-      let newCount = this.state.likes + 1;
-        this.setState({
-        likes: newCount
-      });
-    };
-    addLikeTwo = () => {
-      let newCount = this.state.likes + 1;
-        this.setState({
-        likes: newCount
-      });
-    };
+      this.props.history.push("/newstwo")
+  }
+  state = {
+    likes: 0
+  };
+  addLike = () => {
+    let newCount = this.state.likes + 1;
+      this.setState({
+      likes: newCount
+    });
+  };
     render(){
         return (
            
        <div>
-         <BackgroundBody>
+          <BackgroundBody>
            <Navbar/>
-           <TitleReview>Review</TitleReview>
-           <TitleReviewTwo>รวบรวมรีวิวเกี่ยวกับเกม อุปกรณ์คอมพิวเตอร์</TitleReviewTwo>
-           <TitleReviewThree>ครบถ้วน รีวิวจริง ไว้ที่นี้เเล้ว</TitleReviewThree>
+           <TitleNew>News</TitleNew>
+           <TitleNewTwo>รวบรวมข่าวสารเกี่ยวกับอุปกรณ์คอมพิวเตอร์</TitleNewTwo>
+           <TitleNewThree>ที่น่าสนใจทั้งหมดไว้ที่นี้แล้ว</TitleNewThree>
            <CustomRow>
             <CustomCol md={4}>
-              <CustomCardReview  >
-                 <Card.Img  onClick={()=> this.readReview()} variant="top" src="https://steamcdn-a.akamaihd.net/steam/apps/341940/capsule_616x353.jpg?t=1558373076" />
-                 <Card.Body onClick={()=> this.readReview()} >
-                       <Card.Title >Hatred – ศาลเตี้ยล้างบางผู้คน กับเนื้อหาสุดดาร์ค</Card.Title>
-                       <TextCardReview  >วันนี้เรามาพบกับรีวิวเกมที่เป็นหนึ่งในเกมที่ถูกแบนจากหลายๆประเทศ ด้วยความรุนแรงและเนื้อหาที่มืดมน ของชายผู้บ้าคลั่งออกไล่ฆ่าผู้คนด้วยเหตุผลที่เข้าใจได้อย่าง Hatred . . .</TextCardReview>
+              <CustomCardNew  >
+                 <Card.Img onClick={()=> this.readNew()} variant="top" src="https://i.ytimg.com/vi/I0rRrXq0Y4Y/maxresdefault.jpg" />
+                 <Card.Body onClick={()=> this.readNew()} >
+                       <Card.Title>เปิดเผยข้อมูล Playstation 5 กับ Controller “Dualsense”</Card.Title>
+                       <TextCardNew>ช่วงเวลาในวันที่ 8 เมษายน ที่ผ่านมา ทาง Playstation บริษัทเจ้าของเครื่องเล่นเกมชั้นนำของโลก ก็ได้เปิดเผยข้อมูลสำคัญ . . . </TextCardNew>
                  </Card.Body>
-                 <button onClick={this.addLikeTwo}>❤️Likes: {this.state.likes} </button>
-              </CustomCardReview> 
-             
-             
+                 <button onClick={this.addLike}>❤️Likes: {this.state.likes} </button>
+              </CustomCardNew> 
            </CustomCol>
 
             <CustomColTwo md={4}>  
-              <CustomCardReview >
-                 <Card.Img onClick={()=> this.readReviewTwo()} variant="top" src="https://images.gog-statics.com/35cd661ed60c46beb5a99a744f6e70ab12c0b4055a92028ef0b2460ff09e6962_product_card_v2_mobile_slider_639.jpg" />
-                  <Card.Body onClick={()=> this.readReviewTwo()} >
-                       <Card.Title>Bioshock Infinite – ดำดิ่งสู่ความลับของเมืองลอยฟ้าแห่ง Columbia</Card.Title>
-                       <TextCardReview>สำหรับรีวิวในครั้งนี้ คือเกม FPS จากปี 2013 ที่ผสมผสานความเป็น Action กับ RPG ไว้อย่างลงตัว และเนื้อเรื่องที่ซับซ้อนน่าติดตามกับ Bioshock Infinite . . .</TextCardReview>
+              <CustomCardNew onClick={()=> this.readNewTwo()} >
+                 <Card.Img variant="top" src="https://gameworldobserver.com/wp-content/uploads/2019/12/Epic-Games.jpeg" />
+                  <Card.Body>
+                       <Card.Title>Epic game store เตรียมแจกเกมฟรี ภายในวันที่ 11 มิถุนายนนี้</Card.Title>
+                       <TextCardNew>เรียกได้ว่าแทบจะกลายเป็นกิจวัตรประจำสัปดาห์ไปแล้วสำหรับบริษัทอย่าง Epic game เจ้าของ engine ชื่อดังอย่าง Unreal engine ที่จะแจกเกมฟรี . . .</TextCardNew>
+                         
                   </Card.Body>
-                  
-              </CustomCardReview> 
+              </CustomCardNew> 
             </CustomColTwo>
 
 
 
             <CustomColTwo md={4}>
-              <CustomCardReview onClick={()=> this.readReviewThree()} >
-                <Card.Img variant="top" src="https://i.ytimg.com/vi/0Wb3qffszQY/maxresdefault.jpg" />
+              <CustomCardNew>
+                <Card.Img variant="top" src="https://3.bp.blogspot.com/-IEQXM8Y_QaU/W_aTiSja_oI/AAAAAAAABNQ/dVoN3ly8TNoYYsSMUe9C1ahE004C_PR_QCLcBGAs/s1600/118839789.jpg" />
                  <Card.Body>
-                    <Card.Title>HyperX cloud earbuds – Earbuds ใส่สบายจากค่าย HyperX</Card.Title>
-                    <TextCardReview>วันนี้ทางเราขอนำเสนอรีวิวหนึ่งในหูฟังจากทาง HyperX ที่ไม่ได้มีดีเพียงแค่เสียง แต่รวมไปถึงการสวมใส่ที่ออกแบบมา . . .</TextCardReview>
+                    <Card.Title>Newest</Card.Title>
+                    <TextCardNew>ช่วงกักตัวฉันนั่งเซฟที่เที่ยวทุกวัน โควิดจบเมื่อไหร่ฉันจะไปเที่ยว แต่ที่ไปแน่ๆ คือไปกินอาหารเกาหลี</TextCardNew>
                          
                  </Card.Body>
-              </CustomCardReview> 
+              </CustomCardNew> 
               </CustomColTwo>
 
             </CustomRow>
 <CustomRow>
 <CustomCol md={4}>
-<CustomCardReview onClick={()=> this.readReviewFour()} >
-  <Card.Img variant="top" src="https://www.nintendo.com/content/dam/noa/en_US/games/switch/n/no-time-to-relax-switch/no-time-to-relax-switch-hero.jpg" />
+<CustomCardArticle >
+  <Card.Img variant="top" src="https://static.wixstatic.com/media/5d23ce_2d9f6226623f49cd93e045bcf92d5be7.jpg" />
   <Card.Body>
-    <Card.Title>No time to relax เกมบอร์ดสุดป่วนจำลองการใช้ชีวิต</Card.Title>
+    <Card.Title>News</Card.Title>
     <TextCardNewTwo>
-    วันนี้เรามาพบกับรีวิวเกม ‘No time to relax’ เกมกระดานจำลองชีวิตสุดป่วนที่พร้อมให้เราและเพื่อได้แข่งขันกันพัฒนาชีวิตให้สมบูรณ์ที่สุด . . .
+    ปั้นกระดาษให้เป็น ‘103paper’ แบรนด์ที่ชุบชีวิตกระดาษเหลือทิ้งให้เกิดใหม่เป็นแจกัน Thai Heritage แบรนด์ออนไลน์มือใหม่ที่ตั้งใจเปลี่ยนภาพขนมไทยด้วยจานลายครามและฝาชี
     </TextCardNewTwo>
   </Card.Body>
-</CustomCardReview>
+</CustomCardArticle>
 </CustomCol>
 <CustomColTwo md={4}>  
               <CustomCardArticle>
@@ -292,6 +291,7 @@ class ReviewPage extends React.Component{
                   </Card.Body>
               </CustomCardArticle> 
             </CustomColTwo>
+            
 </CustomRow>
             
             
@@ -307,7 +307,6 @@ class ReviewPage extends React.Component{
   </Card.Body>
 </CustomCardReview>
 <ButtonNext variant="dark">1</ButtonNext>{' '}<ButtonNextTwo variant="dark">2</ButtonNextTwo>{' '}<ButtonNextThree variant="dark">3</ButtonNextThree>{' '}
-
 <FooterHome>ITDismember</FooterHome>
 </BackgroundBody>
         </div>
@@ -315,4 +314,4 @@ class ReviewPage extends React.Component{
     }
 }
 
-export default ReviewPage;
+export default NewsPage;

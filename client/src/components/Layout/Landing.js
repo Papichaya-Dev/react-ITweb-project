@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 
-const Rectangle = styled.div`
+const Background = styled.div`
 	width: 100%;
 	height: 100vh;
 	background-color: black;
@@ -119,7 +119,7 @@ class Landing extends Component {
     render() {
         return (
           <div>
-				<Rectangle>
+				<Background>
 					<Maincontainer>
 						<Nameweb>ITD.</Nameweb>
 						<Rectangle_text>WELCOME TO ITDISMEMBER</Rectangle_text>
@@ -129,7 +129,7 @@ class Landing extends Component {
             <Button_Register  to="/register">Sign Up</Button_Register>
             <Button_login to= "/login" >Login</Button_login>
           </Maincontainer>
-				</Rectangle>
+				</Background>
 			</div>
 		);
   }

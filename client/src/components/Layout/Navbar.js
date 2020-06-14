@@ -4,15 +4,55 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 import { clearCurrentProfile } from '../../actions/profileActions';
-import { Nav, Form, FormControl, Button, Dropdown, DropdownButton } from 'react-bootstrap';
 import styled from 'styled-components';
+import logo from '../image/logo.png';
 
 const NavbarBackground = styled.nav`
-background:black;
-width:100vw;
-height:15vh;
+height:20vh;
 background-image: url("https://i.imgur.com/sJS1H8y.gif?noredirect");
 `;
+
+const ImageLogo = styled.img`
+width:80px;
+margin-left: -180px;
+color:white;
+`;
+
+const NavText = styled(Link)`
+  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'IM Fell French Canon SC', serif;
+	font-size: 25px;
+	color: white;
+	margin-left: 25px;
+	/* letter-spacing: 0.10rem; */
+`;
+
+const NavTextUsers = styled(Link)`
+	font-family: 'IM Fell French Canon SC', serif;
+	font-size: 25px;
+	color: white;
+	margin-left: 100px;
+	/* letter-spacing: 0.10rem; */
+`;
+
+const NavTextProfile = styled(Link)`
+	font-family: 'IM Fell French Canon SC', serif;
+	font-size: 25px;
+	color: white;
+	margin-left: 30px;
+  margin-right:55px;
+	/* letter-spacing: 0.10rem; */
+`;
+
+const NavLogout = styled.a`
+	font-family: 'IM Fell French Canon SC', serif;
+	font-size: 25px;
+	color: white;
+	margin-left: -50px;
+  margin-right:-100px;
+`;
+
+
 
 
 class Navbar extends Component {
@@ -27,24 +67,24 @@ class Navbar extends Component {
       const authLinks = (
         <ul className="navbar-nav ml-auto">
            <li className="nav-item">
-                    <Link className="nav-link" to="/feed">Post Feed</Link>
+                    <NavTextUsers className="nav-link" to="/profiles">Users</NavTextUsers>
                   </li>
            <li className="nav-item">
-                    <Link className="nav-link" to="/dashboard">Dashboard</Link>
+                    <NavTextProfile className="nav-link" to="/dashboard">My Profile</NavTextProfile>
                   </li>
           <li className="nav-item">
-            <a href = "" 
+            <NavLogout href = "" 
             onClick={this.onLogoutClick.bind(this)} 
             className="nav-link">
             <img 
             className="rounded-circle"
               src={user.avatar}
               alt={user.name} 
-              style={{width: '25px', marginLeft: '5px'}}
+              style={{width: '40px', marginRight: '10px'}}
               title="You must have a Gravatar connected to your email to display an image"
               />{''}
               Logout
-            </a>
+            </NavLogout>
           </li>
         </ul>
 
@@ -65,7 +105,7 @@ class Navbar extends Component {
           
             <NavbarBackground className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
             <div className="container">
-              <Link className="navbar-brand" to="/">DevConnector</Link>
+            <ImageLogo src={logo} alt="logoo" />
               <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
                 <span className="navbar-toggler-icon"></span>
               </button>
@@ -73,12 +113,24 @@ class Navbar extends Component {
               <div className="collapse navbar-collapse" id="mobile-nav">
                 <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
-                    <Link  className="nav-link" to="/home"> Home
-                    </Link>
+                    <NavText  className="nav-link" to="/home"> Home
+                    </NavText>
                   </li>
                   <li className="nav-item">
-                    <Link  className="nav-link" to="/profiles"> Developers
-                    </Link>
+                    <NavText  className="nav-link" to="/news"> News
+                    </NavText>
+                  </li>
+                  <li className="nav-item">
+                    <NavText  className="nav-link" to="/article"> Article
+                    </NavText>
+                  </li>
+                  <li className="nav-item">
+                    <NavText  className="nav-link" to="/review"> Review
+                    </NavText>
+                  </li>
+                  <li className="nav-item">
+                    <NavText  className="nav-link" to="/feed"> Post Feed
+                    </NavText>
                   </li>
                 </ul>
                 {isAuthenticated ? authLinks : guestLinks}
