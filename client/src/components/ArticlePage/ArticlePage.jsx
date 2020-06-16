@@ -247,65 +247,20 @@ class ArticlePage extends React.Component {
 
 						<CustomColTwo md={4}>
 							<CustomCardArticle onClick={() => this.readNewThree()}>
-								<Card.Img
+								<CardImage
 									variant="top"
-									src="https://3.bp.blogspot.com/-IEQXM8Y_QaU/W_aTiSja_oI/AAAAAAAABNQ/dVoN3ly8TNoYYsSMUe9C1ahE004C_PR_QCLcBGAs/s1600/118839789.jpg"
+									src="https://mercular.s3.ap-southeast-1.amazonaws.com/upload/contents/2018/09/what-is-a-sound-card-885x400.jpg"
 								/>
 								<Card.Body>
-									<Card.Title>Newest</Card.Title>
+									<Card.Title>Sound Card คืออะไร และสำคัญขนาดไหน</Card.Title>
 									<TextCardNew>
-										ช่วงกักตัวฉันนั่งเซฟที่เที่ยวทุกวัน โควิดจบเมื่อไหร่ฉันจะไปเที่ยว แต่ที่ไปแน่ๆ
-										คือไปกินอาหารเกาหลี
+										สำหรับสื่อบันเทิงต่างๆในปัจจุบัน เราไม่อาจปฏิเสธิได้เลยว่า ‘เสียง’
+										คือหนึ่งในสื่อที่มีอิทธิพลอย่างมาก ไม่ว่าจะเป็น . . .
 									</TextCardNew>
 								</Card.Body>
 							</CustomCardArticle>
 						</CustomColTwo>
 					</CustomRow>
-					<CustomRow>
-						<CustomCol md={4}>
-							<CustomCardArticle>
-								<Card.Img
-									variant="top"
-									src="https://static.wixstatic.com/media/5d23ce_2d9f6226623f49cd93e045bcf92d5be7.jpg"
-								/>
-								<Card.Body>
-									<Card.Title>News</Card.Title>
-									<TextCardNewTwo>
-										ปั้นกระดาษให้เป็น ‘103paper’
-										แบรนด์ที่ชุบชีวิตกระดาษเหลือทิ้งให้เกิดใหม่เป็นแจกัน Thai Heritage
-										แบรนด์ออนไลน์มือใหม่ที่ตั้งใจเปลี่ยนภาพขนมไทยด้วยจานลายครามและฝาชี
-									</TextCardNewTwo>
-								</Card.Body>
-							</CustomCardArticle>
-						</CustomCol>
-						<CustomColTwo md={4}>
-							<CustomCardArticle>
-								<Card.Img
-									variant="top"
-									src="https://www.themacho.co/wp-content/uploads/2018/11/%E0%B8%81%E0%B8%81.jpg"
-								/>
-								<Card.Body>
-									<Card.Title>Article</Card.Title>
-									<TextCardNewTwo>
-										{' '}
-										ข่าวเรื่องที่ 1 กดปุ่มข้างล่างเพื่ออ่านต่อ ปั้นกระดาษให้เป็น ‘103paper’
-										เป็นแจกัน Thai Heritage เปลี่ยนภาพขนมไทยด้วยจานลายครามและฝาชี
-									</TextCardNewTwo>
-								</Card.Body>
-							</CustomCardArticle>
-						</CustomColTwo>
-					</CustomRow>
-					<CustomCol md={4} />
-					<CustomCardReview>
-						<Card.Img
-							variant="top"
-							src="https://i.pinimg.com/236x/90/d1/22/90d122f66983b3941213c8e27eeff04d--oasis-band-oasis-live.jpg"
-						/>
-						<Card.Body>
-							<Card.Title>New</Card.Title>
-							<TextCardNewThree>ข่าวเรื่องที่ 1 กดปุ่มข้างล่างเพื่ออ่านต่อ</TextCardNewThree>
-						</Card.Body>
-					</CustomCardReview>
 					<ButtonNext variant="dark">1</ButtonNext> <ButtonNextTwo variant="dark">2</ButtonNextTwo>{' '}
 					<ButtonNextThree variant="dark">3</ButtonNextThree> <FooterHome>ITDismember</FooterHome>
 				</BackgroundBody>

@@ -6,10 +6,10 @@ import Swiper from 'react-id-swiper';
 import YouTube from 'react-youtube';
 
 const BackgroundHeader = styled.div`
-	background-image: url("https://i.ytimg.com/vi/98pssleA9tg/maxresdefault.jpg");
+	background-image: url("https://www.gump.in.th/uploaded_files/images/Razer/hammerhead%20Duo%20-%2006.jpg");
 	height: 600px;
-	margin-top: -25px;
-	margin-left: -180px;
+	margin-top: -40px;
+	margin-left: -80px;
 	/* background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -28,11 +28,6 @@ const BackgroundBody = styled.div`
 const TextTopicHead = styled(Animated)`
 margin-top:-300px;
 font-family: 'Source Sans Pro';
-`;
-
-const VideoOne = styled(YouTube)`
-	margin-top: 5px;
-	margin-left: 450px;
 `;
 
 const TextCredit = styled.div`
@@ -64,16 +59,7 @@ const TextTopicOpen = styled(Animated)`
 	color: black;
 	font-weight: 100;
 	margin-top: 5px;
-	margin-left: 150px;
-`;
-const TextTopicOpenTwo = styled(Animated)`
-	font-family: 'Kanit', sans-serif;
-	font-weight: bolder;
-	font-size: 50px;
-	color: black;
-	font-weight: 100;
-	margin-top: -30px;
-	margin-left: 270px;
+	margin-left: 30px;
 `;
 const TextContent = styled.div`
 	font-family: 'Kanit', sans-serif;
@@ -92,7 +78,7 @@ const TextTopicContent = styled.div`
 	margin-left: 180px;
 `;
 const Image = styled.div`
-	background-image: url("https://images.firstpost.com/wp-content/uploads/2019/10/hyperx-cloud-earbuds-8.jpg");
+	background-image: url("https://specphone.com/web/wp-content/uploads/2019/05/Review-Razer-Hammerhead-Duo-SpecPhone-023.jpg");
 	background-position: center;
 	background-size: cover;
 	width: 40rem;
@@ -116,17 +102,17 @@ const params = {
 };
 
 const NewsOne = styled.div`
-	background-image: url("https://media.kingston.com/hyperx/key-features/hx-keyfeatures-headset-cloud-earbuds-2-sm.jpg");
-	width: 32rem;
-	height: 21.4rem;
+	background-image: url("https://www.jib.co.th/img_master/uploads/NYX/052019/17052019/hammerhead_Duo_2.jpg");
+	width: 55rem;
+	height: 34rem;
 	margin-top: 13px;
 	border-block: 10vh;
 `;
 
 const NewsTwo = styled.div`
-	background-image: url("https://www.idgcdn.com.au/article/images/740x500/dimg/hyperx_cloud_earbuds.png");
-	width: 38.5rem;
-	height: 22.5em;
+	background-image: url("https://www.fpsthailand.com/index/wp-content/uploads/2019/05/fps-Razer-Hammerhead-Duo-11-1024x682.jpg");
+	width: 55rem;
+	height: 34rem;
 	margin-top: 13px;
 	border-block: 10vh;
 `;
@@ -159,46 +145,27 @@ class ReviewFive extends Component {
 				<BackgroundBody>
 					<BackgroundHeader />
 					<TextTopicOpen animationIn="fadeInRightBig" animationInDuration={1500}>
-						<TextTopicReview> HyperX cloud earbuds </TextTopicReview>
-						<TextTopicOpenTwo>Earbuds ใส่สบายจากค่าย HyperX</TextTopicOpenTwo>
+						<TextTopicReview> Razer Hammerhead Duo (In-ear)</TextTopicReview>
 					</TextTopicOpen>
 					<TextContent>
-						ในปัจจุบันที่การเล่นเกมไม่ได้อยู่เพียงแค่บนคอมพิวเตอร์อีกต่อไป
-						หากรวมไปถึงการเล่นเกมอย่างจริงจังในระดับอีสปอร์ตบนแพลตฟอร์มมือถือเอง ก็เป็นที่<br />นิยมอย่างมากในยุคปัจจุบัน
-						วันนี้ทางเราขอนำเสนอรีวิวหนึ่งในหูฟังจากทาง HyperX ที่ไม่ได้มีดีเพียงแค่เสียง
-						แต่รวมไปถึงการสวมใส่ที่ออกแบบมาเพื่อ<br />ความสบายในการสวมใส่อีกด้วย HyperX Cloud Earbuds
+						สำหรับปี 2019 นั้นได้มีหูฟัง In-ear ตัวใหม่วางจำหน่ายจากทาง Razer
+						ซึ่งมีราคาที่สูสีกับคู่แข่งอย่าง HyperX อย่างมากทั้งในด้านราคาและประสิทธิภาพ <br />แต่ทั้ง 2
+						นี้ต่างกันอย่างสิ้นเชิงในด้านประเภทของหูฟัง และนี่ คือรีวิวของ ‘Razer Hammerhead Duo’
 					</TextContent>
 					<TextTopicContent> สเปคพื้นฐาน </TextTopicContent>
 					<Image />
 					<TextContent>
-						ความถี่: 20Hz-20,000Hz <br />ความต้านทาน: 65 Ω <br />น้ำหนัก: 19 ก. <br />ประเภทและความยาวสาย: 4
-						ตอน 1.2 ม.
-						<br />การเชื่อมต่อ: แจ็ค 3.5<br />เรียกได้ว่าเป็นสเปคมาตรฐานสำหรับหูฟังราคา 1450 บาท
-						และจุดเด่นที่ความยาวที่ออกแบบมาเหมาะสมกับการใช้งานทั้งคอมพิวเตอร์และมือถือ โดยความยาว <br />1.2
-						เมตรสามารถใช้ได้กับโทรศัพท์โดยไม่มีปัญหาอะไร
-						แต่อาจเป็นปัญหาเล็กน้อยหากผู้ใช้งานใช้กับคอมพิวเตอร์ PC ที่ตั้งไว้ที่พื้นและห่างจากตัวผู้ใช้งาน
+						ตัว Hammerhead Duo มาพร้อมกับตัวเชื่อมต่อแบบ analog 3.5 mm. พร้อมมีไมค์ในตัว และตัวสาย
+						เป็นแบบสายถักตามแบบฉบับของ Razer <br />โดยตัวผลิตภัณฑ์ได้มียางสำหรับหูฟังทั้งหมด 3
+						ขนาดสำหรับการเปลี่ยน ให้เหมาะสมกับหูของแต่ละคน เรียกได้ว่ารูปแบบของผลิตภัณฑ์นั้นทำได้ตาม<br />มาตรฐานของราคา
 					</TextContent>
-					{/* <VideoOne
-						videoId="6OhkjiEM_5I"
-						opts={opts}
-						onReady={this.videoOnReady}
-						onply={this.videoOnReady}
-						onStateChange={this.videoStateChange}
-					/>;
-					<TextCredit>Credit : https://www.youtube.com/watch?v=6OhkjiEM_5I</TextCredit> */}
+
 					<TextContent>
-						สำหรับตัวเชื่อมต่อถูกออกแบบมาแบบแจ็ค 3.5 ทรงตั้งฉาก 90 องศา
-						ซึ่งเป็นการออกแบบมาสำหรับการใช้งานเพื่อโทรศัพท์มือถือ และการใช้งานกับ<br />เครื่องเกมพกพาได้อย่างดี
-						แต่เป็นที่น่าเสียดายที่ตัวสายไม่มีการแยก line ของไมค์และหูฟังแยกออกจากกัน
-						โดยตัวผลิตภัณฑ์มาพร้อมกับกล่องสำหรับเก็บหูฟัง <br />และยางทรง Earbuds อีก 2
-						ขนาดสำหรับผู้ใช้งานที่มีทรงของหูขนาดเล็กและใหญ่
-						เพื่อให้ผู้ใช้งานสามารถใส่ได้โดยไม่คับเกินไปหรือหลวมเกินไป ตัวยางของหูฟังมา<br />ในทรงของ
-						Earbuds ซึ่งทำให้ผู้ใช้ใส่สบายกว่าหูฟังที่มียางแบบ In-ear
-						เนื่องจากตัวยางไม่ได้เข้าไปในหูเราแต่แนบอยู่กับช่วงใบหูเราเท่านั้น แต่ด้วยรูปทรงและวัสดุ<br />ของยาง
-						เมื่อใช้งานไประยะหนึ่งตัวยางอาจเกินอาการหลวมและหลุดออกจากตัวลำโพงได้ง่าย
-						จึงต้องระมัดระวังในการใส่และถิดในระดับหนึ่ง และด้วยยางทรง <br />Earbuds
-						ทำให้ตัดเสียงรอบข้างได้น้อยกว่ายางทรง In-ear
-						อาจทำให้เกิดการรบกวนจากภายนอกที่มากกว่าหูฟังรุ่นอื่นเล็กน้อย
+						สำหรับจุดเด่นของ Hammerhead Duo ซึ่งเป็นจุดขายตามชื่อนั้นคือการใช้ Driver 2 ตัว ภายในลำโพง
+						นั่นคือ Dedicated Dynamic Driver และ <br />Balanced Armature Driver
+						ซึ่งเป็นเทคโนโลยีใหม่เรียกว่า Dual Driver ซึ่งจะเป็นการแยกส่วนการควบคุมของเสียงแต่ละระดับ โดย
+						Driver หนึ่งจะควบคุม<br />เสียงเบส ในขณะที่อีก ตัวจะควบคุมเสียงกลางและแหลม
+						ช่วยให้เสียงที่ออกมามีความชัดเจนมากยิ่งขึ้น
 					</TextContent>
 					<br />
 					<Swiper {...params}>
@@ -206,12 +173,13 @@ class ReviewFive extends Component {
 						<NewsTwo />
 					</Swiper>
 					<TextContent>
-						สำหรับเนื้อเสียงของหูฟัง จะเน้นหนักไปทางเสียงเบส
-						ทำให้ในการเล่นเกมจะสามารถแยกเสียงต่ำได้ชัดเจนเช่นสียงของการเดินต่างๆสำหรับเกม FPS<br />
-						แต่ไม่เหมาะกับการฟังเพลงที่จริงจังเพราะในส่วนของลำโพงไม่สามารถแสดงผลของเสียงที่มีรายละเอียดที่ลึกในบางจุดของดนตรีได้อย่างชัดเจน
-						อาจทำให้มี<br />อาการเสียงเพี้ยนในบางจุดหากสังเกตการฟังอย่างดี HyperX Cloud Earbuds
-						คือหูฟังในราคา 1450 บาทที่ได้ตามมาตรฐานตลาด และด้วยความใส่สบายและ<br />เนื้อเสียงที่เหมาะกับการเล่นเกมนอกสถานที่
-						ทำให้หูฟังตัวนี้สามารถเป็นตัวเริ่มต้นของผู้ที่ต้องการความจริงจังกับการเล่นเกมบนโทรศัพท์มือถือหรือเครื่องเกม<br />พกพาได้ดี
+						สำหรับเนื้อเสียงของตัวหูฟังสามารถทำได้ดีสำหรับเสียงเบสจากการใช้ Driver ควบคุมแยกจากเสียงอื่น
+						และยังสามารถรักษาคุณภาพสำหรับเสียงกลาง<br />และเสียงแหละได้ดีอยู่
+						เนื้อเสียงที่ความชัดเจนและไม่ทับซ้อนกัน ช่วยให้การเล่นเกมมีความชัดเจนอน่างมาก
+						ในด้านการฟังเพลงก็สามารถทำได้ดีตามมาตรฐาน<br />สำหรับหูฟังที่ถูก
+						ออกแบบมาสำหรับการเล่นเกมโดยเฉพาะ <br />
+						<br />Razer Hammerhead Duo เป็นหูฟัง In-ear ที่มีประสทธิภาพสูงและคุ้มกับราคา 1,590 บาท เป็น
+						ตัวเริ่มต้นและตัวจบที่ดีสำหรับผู้ที่กำลังต้องการเพิ่ม<br />ความจริงจังกับการเล่นเกม
 					</TextContent>
 					<FooterHome>ITDismember</FooterHome>
 				</BackgroundBody>

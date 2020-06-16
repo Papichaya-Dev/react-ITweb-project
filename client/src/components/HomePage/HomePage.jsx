@@ -49,9 +49,7 @@ margin-top:50px;
 
 `;
 
-const BackgroundHome = styled.div`
-	background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%);
-`;
+const BackgroundHome = styled.div`background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%);`;
 const HeaderHome = styled.div`
 	background-color: black;
 	opacity: 0.30;
@@ -91,6 +89,14 @@ const NewsFour = styled.div`
 	height: 20rem;
 	border-block: 10vh;
 	margin-top: 13px;
+`;
+const TextTop = styled.div`
+	color: black;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 50px;
+	margin-left: 200px;
+	margin-top: 25px;
+	opacity: 0.8;
 `;
 const TextNewest = styled.div`
 	color: black;
@@ -156,7 +162,7 @@ class HomePage extends React.Component {
 		super(props);
 		this.state = {};
 	}
-	
+
 	readNew() {
 		console.log('Fetch');
 		this.props.history.push('/ReviewTwo');
@@ -168,7 +174,9 @@ class HomePage extends React.Component {
 					<Navbar />
 					<TopicText>Daily news !</TopicText>
 					<Swiper {...params}>
-						<NewsOne onClick={() => this.readNew()} />
+						<NewsOne onClick={() => this.readNew()}>
+							<TextTop />
+						</NewsOne>
 						<NewsTwo />
 						<NewsThree />
 						<NewsFour />
@@ -299,7 +307,7 @@ class HomePage extends React.Component {
 
 						{/* </Animated> */}
 					</div>
-					<Footer/>
+					<Footer />
 				</BackgroundHome>
 			</div>
 		);
@@ -307,4 +315,3 @@ class HomePage extends React.Component {
 }
 
 export default HomePage;
-

@@ -6,9 +6,9 @@ import Swiper from 'react-id-swiper';
 import YouTube from 'react-youtube';
 
 const BackgroundHeader = styled.div`
-	background-image: url("https://i.ytimg.com/vi/98pssleA9tg/maxresdefault.jpg");
-	height: 600px;
-	margin-top: -25px;
+	background-image: url("https://www.lynxeye.com/wp-content/uploads/2017/08/samsung-1.jpg");
+	height: 800px;
+	margin-top: -350px;
 	margin-left: -180px;
 	/* background-attachment: fixed;
 	background-position: center;
@@ -28,11 +28,6 @@ const BackgroundBody = styled.div`
 const TextTopicHead = styled(Animated)`
 margin-top:-300px;
 font-family: 'Source Sans Pro';
-`;
-
-const VideoOne = styled(YouTube)`
-	margin-top: 5px;
-	margin-left: 450px;
 `;
 
 const TextCredit = styled.div`
@@ -72,8 +67,8 @@ const TextTopicOpenTwo = styled(Animated)`
 	font-size: 50px;
 	color: black;
 	font-weight: 100;
-	margin-top: -30px;
-	margin-left: 270px;
+	margin-top: 10px;
+	margin-left: -80px;
 `;
 const TextContent = styled.div`
 	font-family: 'Kanit', sans-serif;
@@ -92,7 +87,7 @@ const TextTopicContent = styled.div`
 	margin-left: 180px;
 `;
 const Image = styled.div`
-	background-image: url("https://images.firstpost.com/wp-content/uploads/2019/10/hyperx-cloud-earbuds-8.jpg");
+	background-image: url("https://scontent.fbkk12-4.fna.fbcdn.net/v/t1.15752-9/101876602_869378646876559_6796938325307455286_n.png?_nc_cat=103&_nc_sid=b96e70&_nc_eui2=AeHBv7Sc1HKLlbUefOmfvir8dvrPpLsx5RN2-s-kuzHlE-hNHSSUCPA7tZSIbxAxUyd1RgZoOtke9YxosN3Pmlbf&_nc_ohc=81L5jbta6v8AX85455Z&_nc_ht=scontent.fbkk12-4.fna&oh=4fdcfd4ef82a534bd576422cc9034231&oe=5F0618B6");
 	background-position: center;
 	background-size: cover;
 	width: 40rem;
@@ -159,60 +154,29 @@ class NewsFour extends Component {
 				<BackgroundBody>
 					<BackgroundHeader />
 					<TextTopicOpen animationIn="fadeInRightBig" animationInDuration={1500}>
-						<TextTopicReview> HyperX cloud earbuds </TextTopicReview>
-						<TextTopicOpenTwo>Earbuds ใส่สบายจากค่าย HyperX</TextTopicOpenTwo>
+						<TextTopicOpenTwo>
+							หลุด SSD จากทาง Samsung ขนาด 8 TP<br /> พร้อมราคาสุดโหด
+						</TextTopicOpenTwo>
 					</TextTopicOpen>
 					<TextContent>
-						ในปัจจุบันที่การเล่นเกมไม่ได้อยู่เพียงแค่บนคอมพิวเตอร์อีกต่อไป
-						หากรวมไปถึงการเล่นเกมอย่างจริงจังในระดับอีสปอร์ตบนแพลตฟอร์มมือถือเอง ก็เป็นที่<br />นิยมอย่างมากในยุคปัจจุบัน
-						วันนี้ทางเราขอนำเสนอรีวิวหนึ่งในหูฟังจากทาง HyperX ที่ไม่ได้มีดีเพียงแค่เสียง
-						แต่รวมไปถึงการสวมใส่ที่ออกแบบมาเพื่อ<br />ความสบายในการสวมใส่อีกด้วย HyperX Cloud Earbuds
+						เรียกได้ว่าหลุดมาอย่างกระชั้นชิดกันทีเดียวกับตัวของ Solid state drive หรือ SSD จากทาง Samsung
+						ซึ่งเพิ่มดีกรี ความสุดยอดด้วยความจุถึง 8 TB ทีเดียว<br />
+						ซึ่งมาพร้อมกับราคาที่ใหญ่ยิ่งเช่นเดียวกัน
 					</TextContent>
-					<TextTopicContent> สเปคพื้นฐาน </TextTopicContent>
+
 					<Image />
 					<TextContent>
-						ความถี่: 20Hz-20,000Hz <br />ความต้านทาน: 65 Ω <br />น้ำหนัก: 19 ก. <br />ประเภทและความยาวสาย: 4
-						ตอน 1.2 ม.
-						<br />การเชื่อมต่อ: แจ็ค 3.5<br />เรียกได้ว่าเป็นสเปคมาตรฐานสำหรับหูฟังราคา 1450 บาท
-						และจุดเด่นที่ความยาวที่ออกแบบมาเหมาะสมกับการใช้งานทั้งคอมพิวเตอร์และมือถือ โดยความยาว <br />1.2
-						เมตรสามารถใช้ได้กับโทรศัพท์โดยไม่มีปัญหาอะไร
-						แต่อาจเป็นปัญหาเล็กน้อยหากผู้ใช้งานใช้กับคอมพิวเตอร์ PC ที่ตั้งไว้ที่พื้นและห่างจากตัวผู้ใช้งาน
+						จากรายงานของทาง PCgamers ได้มีการพบเห็น SSD ของทาง Samsung หลุดมาบนหน้าร้านค้าของเว็บไซต์
+						จำหน่ายสินค้าออนไลน์อย่าง Amazon <br />โดยจากสเปคพื้นฐานนั้น SSD ตัวนี้ให้ความจุถึง 8 TB
+						เลยทีเดียว ซึ่งชื่อรหัสที่ถูกตั้งไว้ ของรุ่นนี้มีชื่อว่า 870 QVO SATA Samsung SSD
+						ซึ่งราคาที่ถูกระบุไว้<br />ก็สูงพอๆกับความจุเช่นกัน เพราะราคาของ SSD ตัวนี้สูง ถึง 900$(ประมาณ
+						28179 บาทไทย) เลยทีเดียว และจากข้อมูลที่หลุดมานั้น ได้ระบุว่า SSD ตัวนี้<br />จะวางขายในวันที่
+						24 สิงหาคม ภายในปีนี้<br />
+						<br />เวลานี้เราต้องมารอดูกันว่าราคาที่แท้จริงจะเป็นอย่างไรในวันจำหน่ายจริงที่จะถึงในเร็วๆนี้
+						:-)
 					</TextContent>
-					{/* <VideoOne
-						videoId="6OhkjiEM_5I"
-						opts={opts}
-						onReady={this.videoOnReady}
-						onply={this.videoOnReady}
-						onStateChange={this.videoStateChange}
-					/>;
-					<TextCredit>Credit : https://www.youtube.com/watch?v=6OhkjiEM_5I</TextCredit> */}
-					<TextContent>
-						สำหรับตัวเชื่อมต่อถูกออกแบบมาแบบแจ็ค 3.5 ทรงตั้งฉาก 90 องศา
-						ซึ่งเป็นการออกแบบมาสำหรับการใช้งานเพื่อโทรศัพท์มือถือ และการใช้งานกับ<br />เครื่องเกมพกพาได้อย่างดี
-						แต่เป็นที่น่าเสียดายที่ตัวสายไม่มีการแยก line ของไมค์และหูฟังแยกออกจากกัน
-						โดยตัวผลิตภัณฑ์มาพร้อมกับกล่องสำหรับเก็บหูฟัง <br />และยางทรง Earbuds อีก 2
-						ขนาดสำหรับผู้ใช้งานที่มีทรงของหูขนาดเล็กและใหญ่
-						เพื่อให้ผู้ใช้งานสามารถใส่ได้โดยไม่คับเกินไปหรือหลวมเกินไป ตัวยางของหูฟังมา<br />ในทรงของ
-						Earbuds ซึ่งทำให้ผู้ใช้ใส่สบายกว่าหูฟังที่มียางแบบ In-ear
-						เนื่องจากตัวยางไม่ได้เข้าไปในหูเราแต่แนบอยู่กับช่วงใบหูเราเท่านั้น แต่ด้วยรูปทรงและวัสดุ<br />ของยาง
-						เมื่อใช้งานไประยะหนึ่งตัวยางอาจเกินอาการหลวมและหลุดออกจากตัวลำโพงได้ง่าย
-						จึงต้องระมัดระวังในการใส่และถิดในระดับหนึ่ง และด้วยยางทรง <br />Earbuds
-						ทำให้ตัดเสียงรอบข้างได้น้อยกว่ายางทรง In-ear
-						อาจทำให้เกิดการรบกวนจากภายนอกที่มากกว่าหูฟังรุ่นอื่นเล็กน้อย
-					</TextContent>
+
 					<br />
-					<Swiper {...params}>
-						<NewsOne />
-						<NewsTwo />
-					</Swiper>
-					<TextContent>
-						สำหรับเนื้อเสียงของหูฟัง จะเน้นหนักไปทางเสียงเบส
-						ทำให้ในการเล่นเกมจะสามารถแยกเสียงต่ำได้ชัดเจนเช่นสียงของการเดินต่างๆสำหรับเกม FPS<br />
-						แต่ไม่เหมาะกับการฟังเพลงที่จริงจังเพราะในส่วนของลำโพงไม่สามารถแสดงผลของเสียงที่มีรายละเอียดที่ลึกในบางจุดของดนตรีได้อย่างชัดเจน
-						อาจทำให้มี<br />อาการเสียงเพี้ยนในบางจุดหากสังเกตการฟังอย่างดี HyperX Cloud Earbuds
-						คือหูฟังในราคา 1450 บาทที่ได้ตามมาตรฐานตลาด และด้วยความใส่สบายและ<br />เนื้อเสียงที่เหมาะกับการเล่นเกมนอกสถานที่
-						ทำให้หูฟังตัวนี้สามารถเป็นตัวเริ่มต้นของผู้ที่ต้องการความจริงจังกับการเล่นเกมบนโทรศัพท์มือถือหรือเครื่องเกม<br />พกพาได้ดี
-					</TextContent>
 					<FooterHome>ITDismember</FooterHome>
 				</BackgroundBody>
 			</div>

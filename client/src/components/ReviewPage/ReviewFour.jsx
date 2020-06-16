@@ -155,7 +155,7 @@ class ReviewFour extends Component {
 				<BackgroundBody>
 					<BackgroundHeader />
 					<TextTopicOpen animationIn="fadeInRightBig" animationInDuration={1500}>
-						<TextTopicReview> No time to relax </TextTopicReview>
+						<TextTopicReview> Razer Hammerhead Duo (In-ear) </TextTopicReview>
 						<TextTopicOpenTwo>เกมบอร์ดสุดป่วนจำลองการใช้ชีวิต</TextTopicOpenTwo>
 					</TextTopicOpen>
 					<TextContent>

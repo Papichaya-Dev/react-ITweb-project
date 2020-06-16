@@ -228,9 +228,13 @@ class NewsPage extends React.Component {
 					<TitleNewThree>ที่น่าสนใจทั้งหมดไว้ที่นี้แล้ว</TitleNewThree>
 					<CustomRow>
 						<CustomCol md={4}>
-							<CustomCardNew onClick={() => this.readNews()}>
-								<Card.Img variant="top" src="https://i.ytimg.com/vi/I0rRrXq0Y4Y/maxresdefault.jpg" />
-								<Card.Body>
+							<CustomCardNew>
+								<Card.Img
+									onClick={() => this.readNews()}
+									variant="top"
+									src="https://i.ytimg.com/vi/I0rRrXq0Y4Y/maxresdefault.jpg"
+								/>
+								<Card.Body onClick={() => this.readNews()}>
 									<Card.Title>เปิดเผยข้อมูล Playstation 5 กับ Controller “Dualsense”</Card.Title>
 									<TextCardNew>
 										ช่วงเวลาในวันที่ 8 เมษายน ที่ผ่านมา ทาง Playstation
@@ -242,28 +246,31 @@ class NewsPage extends React.Component {
 						</CustomCol>
 
 						<CustomColTwo md={4}>
-							<CustomCardNew onClick={() => this.readNewsTwo()}>
+							<CustomCardNew>
 								<CardImage
+									onClick={() => this.readNewsTwo()}
 									variant="top"
 									src="https://gameworldobserver.com/wp-content/uploads/2019/12/Epic-Games.jpeg"
 								/>
-								<Card.Body>
+								<Card.Body onClick={() => this.readNewsTwo()}>
 									<Card.Title>Epic game store เตรียมแจกเกมฟรี ภายในวันที่ 11 มิถุนายนนี้</Card.Title>
 									<TextCardNew>
 										เรียกได้ว่าแทบจะกลายเป็นกิจวัตรประจำสัปดาห์ไปแล้วสำหรับบริษัทอย่าง Epic game
-										เจ้าของ engine ชื่อดังอย่าง Unreal engine ที่จะแจกเกมฟรี . . .
+										เจ้าของ engine ชื่อดังอย่าง Unreal engine ที่จะ . . .
 									</TextCardNew>
 								</Card.Body>
+								<button onClick={this.addLike}>❤️Likes: {this.state.likes} </button>
 							</CustomCardNew>
 						</CustomColTwo>
 
 						<CustomColTwo md={4}>
-							<CustomCardNew onClick={() => this.readNewsThree()}>
+							<CustomCardNew>
 								<CardImage
+									onClick={() => this.readNewsThree()}
 									variant="top"
 									src="https://gameranx.com/wp-content/uploads/2020/01/1d56ce75-b00e-4469-a03b-8e752a868537.jpg"
 								/>
-								<Card.Body>
+								<Card.Body onClick={() => this.readNewsThree()}>
 									<Card.Title>
 										Ghost recon breakpoint เตรียมเพิ่มเพื่อนร่วมทาง AI ในเดือนกรกฎาคมนี้
 									</Card.Title>
@@ -272,54 +279,48 @@ class NewsPage extends React.Component {
 										ภายในเดือนนี้ พร้อมกับ . . .
 									</TextCardNew>
 								</Card.Body>
+								<button onClick={this.addLike}>❤️Likes: {this.state.likes} </button>
 							</CustomCardNew>
 						</CustomColTwo>
 					</CustomRow>
 					<CustomRow>
 						<CustomCol md={4}>
-							<CustomCardArticle onClick={() => this.readNewsFour()}>
+							<CustomCardArticle>
 								<Card.Img
+									onClick={() => this.readNewsFour()}
 									variant="top"
-									src="https://static.wixstatic.com/media/5d23ce_2d9f6226623f49cd93e045bcf92d5be7.jpg"
+									src="https://scontent.fbkk12-4.fna.fbcdn.net/v/t1.15752-9/101876602_869378646876559_6796938325307455286_n.png?_nc_cat=103&_nc_sid=b96e70&_nc_eui2=AeHBv7Sc1HKLlbUefOmfvir8dvrPpLsx5RN2-s-kuzHlE-hNHSSUCPA7tZSIbxAxUyd1RgZoOtke9YxosN3Pmlbf&_nc_ohc=81L5jbta6v8AX85455Z&_nc_ht=scontent.fbkk12-4.fna&oh=4fdcfd4ef82a534bd576422cc9034231&oe=5F0618B6"
 								/>
-								<Card.Body>
-									<Card.Title>News</Card.Title>
+								<Card.Body onClick={() => this.readNewsFour()}>
+									<Card.Title>หลุด SSD จากทาง Samsung ขนาด 8 TP พร้อมราคาสุดโหด</Card.Title>
 									<TextCardNewTwo>
-										ปั้นกระดาษให้เป็น ‘103paper’
-										แบรนด์ที่ชุบชีวิตกระดาษเหลือทิ้งให้เกิดใหม่เป็นแจกัน Thai Heritage
-										แบรนด์ออนไลน์มือใหม่ที่ตั้งใจเปลี่ยนภาพขนมไทยด้วยจานลายครามและฝาชี
+										เรียกได้ว่าหลุดมาอย่างกระชั้นชิดกันทีเดียวกับตัวของ Solid state drive หรือ SSD
+										จากทาง Samsung ซึ่งเพิ่มดีกรี . . .
 									</TextCardNewTwo>
 								</Card.Body>
+								<button onClick={this.addLike}>❤️Likes: {this.state.likes} </button>
 							</CustomCardArticle>
 						</CustomCol>
 						<CustomColTwo md={4}>
-							<CustomCardArticle onClick={() => this.readNewsFive()}>
+							<CustomCardArticle>
 								<Card.Img
+									onClick={() => this.readNewsFive()}
 									variant="top"
-									src="https://www.themacho.co/wp-content/uploads/2018/11/%E0%B8%81%E0%B8%81.jpg"
+									src="https://i.ytimg.com/vi/hTawLr62caw/maxresdefault.jpg"
 								/>
-								<Card.Body>
-									<Card.Title>Article</Card.Title>
+								<Card.Body onClick={() => this.readNewsFive()}>
+									<Card.Title>
+										World war 3 เกมยิงสงครามยุคปัจจุบันเตรียมเปิดตัวใหม่อีกครั้งกับผู้จัดจำหน่ายใหม่
+									</Card.Title>
 									<TextCardNewTwo>
-										{' '}
-										ข่าวเรื่องที่ 1 กดปุ่มข้างล่างเพื่ออ่านต่อ ปั้นกระดาษให้เป็น ‘103paper’
-										เป็นแจกัน Thai Heritage เปลี่ยนภาพขนมไทยด้วยจานลายครามและฝาชี
+										เรียกได้ว่าเป็นหนึ่งในเกมที่เปิดตัวได้อย่างยิ่งใหญ่และพบกับปัญหาจนสุดท้ายก็ดับไปอย่าง
+										World war 3 เกมยิง แนวสงครามขนาดใหญ่ . . .
 									</TextCardNewTwo>
 								</Card.Body>
+								<button onClick={this.addLike}>❤️Likes: {this.state.likes} </button>
 							</CustomCardArticle>
 						</CustomColTwo>
 					</CustomRow>
-					<CustomCol md={4} />
-					<CustomCardReview>
-						<Card.Img
-							variant="top"
-							src="https://i.pinimg.com/236x/90/d1/22/90d122f66983b3941213c8e27eeff04d--oasis-band-oasis-live.jpg"
-						/>
-						<Card.Body>
-							<Card.Title>New</Card.Title>
-							<TextCardNewThree>ข่าวเรื่องที่ 1 กดปุ่มข้างล่างเพื่ออ่านต่อ</TextCardNewThree>
-						</Card.Body>
-					</CustomCardReview>
 					<ButtonNext variant="dark">1</ButtonNext> <ButtonNextTwo variant="dark">2</ButtonNextTwo>{' '}
 					<ButtonNextThree variant="dark">3</ButtonNextThree> <FooterHome>ITDismember</FooterHome>
 				</BackgroundBody>

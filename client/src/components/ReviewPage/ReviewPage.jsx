@@ -169,6 +169,10 @@ const BackgroundBody = styled.div`
 	width: '100vw';
 	height: '100vh';
 `;
+const CardImage = styled(Card.Img)`
+	height:13rem;
+`;
+
 class ReviewPage extends React.Component {
 	readReview() {
 		console.log('Fetch');
@@ -287,49 +291,36 @@ class ReviewPage extends React.Component {
 							</CustomCardReview>
 						</CustomCol>
 						<CustomColTwo md={4}>
-							<CustomCardArticle onClick={() => this.readReviewFive()}>
-								<Card.Img
+							<CustomCardReview onClick={() => this.readReviewFive()}>
+								<CardImage
 									variant="top"
-									src="https://www.themacho.co/wp-content/uploads/2018/11/%E0%B8%81%E0%B8%81.jpg"
+									src="https://www.gump.in.th/uploaded_files/images/Razer/hammerhead%20Duo%20-%2006.jpg"
 								/>
 								<Card.Body>
-									<Card.Title>Article</Card.Title>
+									<Card.Title>Razer Hammerhead Duo (In-ear)</Card.Title>
 									<TextCardNewTwo>
-										{' '}
-										ข่าวเรื่องที่ 1 กดปุ่มข้างล่างเพื่ออ่านต่อ ปั้นกระดาษให้เป็น ‘103paper’
-										เป็นแจกัน Thai Heritage เปลี่ยนภาพขนมไทยด้วยจานลายครามและฝาชี
+										สำหรับปี 2019 นั้นได้มีหูฟัง In-ear ตัวใหม่วางจำหน่ายจากทาง Razer
+										ซึ่งมีราคาที่สูสีกับคู่แข่งอย่าง HyperX อย่างมากทั้งในด้านราคาและ . . .
 									</TextCardNewTwo>
 								</Card.Body>
-							</CustomCardArticle>
+							</CustomCardReview>
 						</CustomColTwo>
 						<CustomColTwo md={4}>
-							<CustomCardArticle onClick={() => this.readReviewSix()}>
-								<Card.Img
+							<CustomCardReview onClick={() => this.readReviewSix()}>
+								<CardImage
 									variant="top"
-									src="https://www.themacho.co/wp-content/uploads/2018/11/%E0%B8%81%E0%B8%81.jpg"
+									src="https://lh3.googleusercontent.com/proxy/xYBqfavbAW0SSA04nJ_PdEkeXaFQCEc2pMEYfBOgqQokLB9x3jd26dLQ5DYic_zsX8Ax-H1Pl1i4Gdr5e8zygcacEgsGUFdwnPabSfd3VSVR9f5-bDmbTXs3EG17awj0OB6ULIUdUdAKsrmxYKUze2eP57wc"
 								/>
 								<Card.Body>
-									<Card.Title>Article</Card.Title>
+									<Card.Title> Razer Kraken pro v.2 จบในตัวไปกับ Razer</Card.Title>
 									<TextCardNewTwo>
-										{' '}
-										ข่าวเรื่องที่ 1 กดปุ่มข้างล่างเพื่ออ่านต่อ ปั้นกระดาษให้เป็น ‘103paper’
-										เป็นแจกัน Thai Heritage เปลี่ยนภาพขนมไทยด้วยจานลายครามและฝาชี
+										ในปัจจุบันมีหูฟังในรูปแบบ Headset มากมายวางจำหน่ายในท้องตลาด
+										ซึ่งความหลากหลายที่เกิดขึ้นทำ ให้มีหูฟัง Headset . . .
 									</TextCardNewTwo>
 								</Card.Body>
-							</CustomCardArticle>
+							</CustomCardReview>
 						</CustomColTwo>
 					</CustomRow>
-					<CustomCol md={4} />
-					<CustomCardReview>
-						<Card.Img
-							variant="top"
-							src="https://i.pinimg.com/236x/90/d1/22/90d122f66983b3941213c8e27eeff04d--oasis-band-oasis-live.jpg"
-						/>
-						<Card.Body>
-							<Card.Title>New</Card.Title>
-							<TextCardNewThree>ข่าวเรื่องที่ 1 กดปุ่มข้างล่างเพื่ออ่านต่อ</TextCardNewThree>
-						</Card.Body>
-					</CustomCardReview>
 					<ButtonNext variant="dark">1</ButtonNext> <ButtonNextTwo variant="dark">2</ButtonNextTwo>{' '}
 					<ButtonNextThree variant="dark">3</ButtonNextThree> <FooterHome>ITDismember</FooterHome>
 				</BackgroundBody>

@@ -5,8 +5,8 @@ import { Animated } from 'react-animated-css';
 import Swiper from 'react-id-swiper';
 
 const BackgroundHeader = styled.div`
-	background-image: url("https://media2.giphy.com/media/TLCoCqjkU9yinZuDIk/source.gif");
-	height: 573px;
+	background-image: url("https://thumbs.gfycat.com/MisguidedCircularCowbird-max-1mb.gif");
+	height: 650px;
 	margin-top: -300px;
 	background-attachment: fixed;
 	background-position: center;
@@ -16,7 +16,6 @@ const BackgroundHeader = styled.div`
 
 const BackgroundBody = styled.div`
 	background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
-	background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
 	background-blend-mode: multiply;
 	background-attachment: fixed;
 	background-position: center;
@@ -42,11 +41,11 @@ const TextTopicHeadphone = styled.div`
 const TextTopicc = styled.div`
 	font-family: 'Kanit', sans-serif;
 	font-weight: bolder;
-	font-size: 30px;
+	font-size: 60px;
 	color: black;
 	font-weight: 100;
-	margin-top: 5px;
-	margin-left: 180px;
+	margin-top: 350px;
+	margin-left: 200px;
 `;
 const TextTopiccc = styled.div`
 	font-family: 'Kanit', sans-serif;
@@ -57,7 +56,7 @@ const TextTopiccc = styled.div`
 	margin-left: 180px;
 `;
 const Imagee = styled.div`
-	background-image: url("https://us.123rf.com/450wm/jay72274/jay722740606/jay72274060600017/428214-white-earbuds-isolated-on-black-background.jpg?ver=6");
+	background-image: url("https://scontent.fbkk12-2.fna.fbcdn.net/v/t1.15752-9/82986548_1547449925429949_4487863352537831584_n.png?_nc_cat=104&_nc_sid=b96e70&_nc_eui2=AeGrW8HIaczoWtZKP8sTpxcu4BTDEON00zPgFMMQ43TTMwQl3c0YJtBfef0TrrcmChRn4-joAK3-Kt58-m8v_ZGi&_nc_ohc=kghtAlPMdhEAX--QG9i&_nc_ht=scontent.fbkk12-2.fna&oh=f78cd880902081f00fe65cbfc825a18c&oe=5F0AF3F2");
 	background-position: center;
 	background-size: cover;
 	width: 40rem;
@@ -71,11 +70,11 @@ const Imagee = styled.div`
 `;
 
 const Imageeee = styled.div`
-	background-image: url("https://www.wearable-technologies.com/wp-content/uploads/2018/10/Razer-Nari-Ultimate-1.png");
+	background-image: url("https://notebookspec.com/web/wp-content/uploads/2016/10/sound-card.jpg");
 	background-position: center;
 	background-size: cover;
 	width: 40rem;
-	height: 20rem;
+	height: 22rem;
 	margin-left: 430px;
 	margin-top: 20px;
 	transition: transform .2s;
@@ -100,7 +99,7 @@ const params = {
 	}
 };
 const NewsOne = styled.div`
-	background-image: url("https://article.images.consumerreports.org/f_auto/prod/content/dam/CRO%20Images%202019/Magazine/10October/CR-Electronics-Inlinehero-galaxy-pods-vs-airpods-v3-0819");
+	background-image: url("https://images-na.ssl-images-amazon.com/images/I/61nLrOctSWL._AC_SY355_.jpg");
 	width: 30rem;
 	height: 20rem;
 	margin-top: 13px;
@@ -111,10 +110,16 @@ const NewsOne = styled.div`
 	}
 `;
 const NewsTwo = styled.div`
-	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSj1Qxb39tr0vf0E-B8GHxw4Vq3gKkns92p2wnMfsKS1kxSgSAj&usqp=CAU");
+	background-image: url("https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/M/H/153964_1580759090.jpg");
 	width: 30rem;
 	height: 20rem;
 
+	margin-top: 13px;
+`;
+const NewsThree = styled.div`
+	background-image: url("https://notebookspec.com/web/wp-content/uploads/2016/10/sound-card.jpg");
+	width: 55rem;
+	height: 20rem;
 	margin-top: 13px;
 `;
 
@@ -128,13 +133,14 @@ const FooterHome = styled.div`
 	color: white;
 	margin-top: 150px;
 `;
-
-// fire.firestore().collection('Content').add({
-// 	title: '“หูฟัง” อาวุธสำคัญสำหรับเหล่าเกมเมอร์',
-// 	body:
-// 		'เสียงเป็นหนึ่งในปัจจัยที่สำคัญสำหรับการเล่นเกม โดยเฉพาะเกมที่ทิศทางของเสียงมีความสำคัญอย่างเกมแนว Shooting ที่ทิศทางของเสียงสามารถบ่งบอกถึงตำแหน่งของศัตรูให้เรารู้ได้ และอุปกรณ์ที่จะช่วยให้เราสามารถสัมผัสเสียงได้อย่างมีประสิทธิภาพคือ “หูฟัง” นั่นเอง ในวันนี้เราจะมีดูประเภทของหูฟังที่เป็นที่นิยมในการเล่นเกม และข้อดีข้อเสียของหูฟังในแต่ละประเภทครับ1.Earbudsหูฟังประเภท Earbuds คือ 1 ใน หูฟังรูปแบบที่เก่าแก่ที่สุดของโลกตั้งแต่สมัยเทป ซึ่งปัจจุบันยังได้รับความนิยมอย่างต่อเนื่อง ด้วยจุดเด่นที่ความสบายในการสวมใส่ และขนาดที่สามารถพกพาได้สะดวก ซึ่ง Earbuds แต่ Earbuds จะไม่สามารถกันเสียงรบกวนจากภายนอกได้มากนัก จึงทำให้ Earbuds อาจไม่ตอบโจทย์กับเกมเมอร์ที่ต้องการความจริงจังในการฟังเสียงที่แน่นอนและชัดเจน เช่น การเล่นเกม CSGO (Counter Strike: Global Offensive)2. In-ear Monitors1 ในหูฟังที่เป็นที่นิยมมากที่สุดในปัจจุบัน ซึ่งเราสามารถเห็นได้อย่างแพร่หลาย โดนเฉพาะกับสมาร์ทโฟนแบรนด์ชั้นนำ In-Ear Monitors เป็นหูฟังที่มีขนาดเล็ก พกพาสะดวก และจุดเด่นคือเสียงที่มีความชัดเจนมากกว่า Earbuds จากการใช้งานแบบสอดเข้าหู ซึ่งจะเป็นการป้องกันเสียงรบกวนจากภายนอก รวมไปถึงลำโพงที่สามารถส่งผ่านเสียงเข้าสู่เราได้โดยตรง แต่ไม่สามารถใช้ได้นานนัก เพราะอาจเกิดอาการปวดบริเวณหู รวมไปถึงเสี่ยงต่ออาการอักเสบ หากไม่ทำคสามสะอาดให้ดี และใช้งานหูฟังประเภทนี้เป็นเวลานานจนเกินไป3.Headphoneรู้จักกันดีในชื่อ “หูฟังคาดหัว” Headphone เป็นหูฟังขนาดใหญ่ที่สามารถครอบได้ทั้งหู โดยจุดเด่นอยู่ที่ความสามารถในการแสดงผมทิศทางของเสียงได้อย่างละเอียด และสามารถปิดกั้นเสียงจากภายนอกได้ดี แต่อาจไม่สะดวกสำหรับการพกพาจากขนาดที่ค่อนข้างใหญ่ Headphone คือหูฟังที่ได้รับความนิยมอย่างมากในหมู่เกมเมอร์ ด้วยรูปแบบเสียงของ Headphone ที่ขายในท้องตลาดนั้น ถูกออกแบบมาเพื่อใช้สำหรับการเล่นเกมเป็นส่วนใหญ่ และมีราคาที่หลากหลาย',
-// 	published: '15 May 2020'
-// });
+const TextTopicContent = styled.div`
+	font-family: 'Kanit', sans-serif;
+	font-size: 35px;
+	color: #00008b;
+	font-weight: 100;
+	margin-top: 25px;
+	margin-left: 180px;
+`;
 
 class ArticleThree extends Component {
 	render() {
@@ -143,39 +149,41 @@ class ArticleThree extends Component {
 				<Navbar />
 				<BackgroundBody>
 					<BackgroundHeader />
-					<TextTopicHead animationIn="fadeInRight" animationInDuration={1500}>
-						<TextTopicHeadphone>Headphone</TextTopicHeadphone>
-					</TextTopicHead>
-					<TextTopicc>“หูฟัง” อาวุธสำคัญสำหรับเหล่าเกมเมอร์</TextTopicc>
+					<TextTopicHead animationIn="fadeInRight" animationInDuration={1500} />
+					<TextTopicc>"Sound Card" คืออะไร และสำคัญขนาดไหน ?</TextTopicc>
 					<Imagee />
 					<TextTopiccc>
-						1.Earbuds หูฟังประเภท Earbuds คือ 1 ใน หูฟังรูปแบบที่เก่าแก่ที่สุดของโลกตั้งแต่สมัยเทป
-						ซึ่งปัจจุบันยังได้รับความนิยมอย่างต่อเนื่อง ด้วยจุดเด่นที่<br />ความสบายในการสวมใส่
-						และขนาดที่สามารถพกพาได้สะดวก ซึ่ง Earbuds แต่ Earbuds จะไม่สามารถกันเสียงรบกวนจากภายนอกได้มากนัก
-						จึงทำให้ Earbuds <br />อาจไม่ตอบโจทย์กับเกมเมอร์ที่ต้องการความจริงจังในการฟังเสียงที่แน่นอนและชัดเจน
-						เช่น การเล่นเกม CSGO (Counter Strike: Global Offensive)
+						สำหรับสื่อบันเทิงต่างๆในปัจจุบัน เราไม่อาจปฏิเสธิได้เลยว่า ‘เสียง’
+						คือหนึ่งในสื่อที่มีอิทธิพลอย่างมาก ไม่ว่าจะเป็น การเพิ่มความสมจริงภายในเกม
+						<br />หรือสร้างบรรยากาศให้กับผู้เสพสื่อนั้นๆเข้าถึงความบันเทิงได้มากขึ้น และในวันนี้ทาง IT
+						Disassembly จะขอพาทุกท่านมารู้จักกับอุปกรณ์ที่เป็นกุญแจสำคัญ<br />
+						ของการมีพลังเสียงที่ยอดเยี่ยมภายในคอมพิวเตอร์กัน ครับ
+					</TextTopiccc>
+					<TextTopicContent> Soundcard คืออะไร </TextTopicContent>
+
+					<TextTopiccc>
+						Soundcard คืออุปกรณ์ Hardware ภายในเครื่องคอมพิวเตอร์
+						เป็นแผงวงจรที่ทำหน้าที่สร้างและจัดการเสียงต่างๆ ที่เกิดขึ้นก่อนจะแสดงผลไปที่ลำโพง<br />หรือหูฟัง
+						ดังนั้น Soundcard จึงมีอิธิพลอย่างมากกับคุณภาพเสียงที่แสดงออกมา ยิ่ง คุณภาพของ Soundcard สูง
+						คอมพิวเตอร์ยิ่งผลิตเสียงได้ยอดเยี่ยมเท่านั้น
+					</TextTopiccc>
+					<TextTopicContent> Soundcard มีแบบไหนบ้าง </TextTopicContent>
+
+					<TextTopiccc>
+						ตัวของ Soundcard จะถูกแบ่งออกเป็น 2 แบบ หลักๆ ได้แก่<br /> - On board เป็น soundcard
+						แบบชิปที่ถูกติดตั้งบน Mainboard <br />- External เป็น Soundcard ที่เชื่อมต่อกับคอมพิสเตอร์ด้วย
+						USB โดยปกติแล้ว External Soundcard มักมีประสิทธิภาพที่ดีกว่าแบบ On board <br />เนื่องจากชิปเซ็ตภานใน
+						และการทำงาน ที่มีสเกลที่ใหญ่กว่าชิปขนาดเล็ก ทำให้ External Soundcard
+						เป็นที่นิยมสำหรับผู้ที่มีความจริงจังในการเสพสื่อบันเทิงบน คอมพิวเตอร์<br />
+						<br />และนี้คือข้อมูลเบื้องต้นของ Soundcard โดยเราจะเจาะลึกข้อมูลในส่วนของ External Soundcard
+						ในบทความหน้า
 					</TextTopiccc>
 					<Swiper {...params}>
-						<NewsOne onClick={() => this.readNew()} />
+						<NewsOne />
 						<NewsTwo />
+						<NewsThree />
 					</Swiper>
-					<TextTopiccc>
-						2. In-ear Monitors 1 ในหูฟังที่เป็นที่นิยมมากที่สุดในปัจจุบัน ซึ่งเราสามารถเห็นได้อย่างแพร่หลาย
-						โดนเฉพาะกับสมาร์ทโฟนแบรนด์ชั้นนำ In-Ear Monitors <br />เป็นหูฟังที่มีขนาดเล็ก พกพาสะดวก
-						และจุดเด่นคือเสียงที่มีความชัดเจนมากกว่า Earbuds จากการใช้งานแบบสอดเข้าหู
-						ซึ่งจะเป็นการป้องกันเสียงรบกวน<br />จากภายนอก
-						รวมไปถึงลำโพงที่สามารถส่งผ่านเสียงเข้าสู่เราได้โดยตรง แต่ไม่สามารถใช้ได้นานนัก
-						เพราะอาจเกิดอาการปวดบริเวณหู รวมไปถึงเสี่ยงต่ออาการ<br />อักเสบ หากไม่ทำคสามสะอาดให้ดี
-						และใช้งานหูฟังประเภทนี้เป็นเวลานานจนเกินไป
-					</TextTopiccc>
-					<Imageeee />
-					<TextTopiccc>
-						3.Headphone รู้จักกันดีในชื่อ “หูฟังคาดหัว” Headphone เป็นหูฟังขนาดใหญ่ที่สามารถครอบได้ทั้งหู
-						โดยจุดเด่นอยู่ที่ความสามารถในการแสดงผล<br />ทิศทางของเสียงได้อย่างละเอียด
-						และสามารถปิดกั้นเสียงจากภายนอกได้ดี แต่อาจไม่สะดวกสำหรับการพกพาจากขนาดที่ค่อนข้างใหญ่ Headphone
-						คือหูฟังที่ได้<br />รับความนิยมอย่างมากในหมู่เกมเมอร์ ด้วยรูปแบบเสียงของ Headphone
-						ที่ขายในท้องตลาดนั้น ถูกออกแบบมาเพื่อใช้สำหรับการเล่นเกมเป็นส่วนใหญ่ และ<br />มีราคาที่หลากหลาย
-					</TextTopiccc>
+
 					<FooterHome>ITDismember</FooterHome>
 				</BackgroundBody>
 			</div>

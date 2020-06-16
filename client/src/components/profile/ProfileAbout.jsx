@@ -5,6 +5,10 @@ class ProfileAbout extends Component {
 	render() {
 		const { profile } = this.props;
 
+		// if (!profile.user) {
+		// 	return;
+		// }
+
 		//Get first name
 		const firstName = profile.user.name.trim().split(' ')[0];
 

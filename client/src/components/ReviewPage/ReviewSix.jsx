@@ -6,9 +6,10 @@ import Swiper from 'react-id-swiper';
 import YouTube from 'react-youtube';
 
 const BackgroundHeader = styled.div`
-	background-image: url("https://steamcdn-a.akamaihd.net/steam/apps/341940/capsule_616x353.jpg?t=1558373076");
-	height: 573px;
-	margin-top: -315px;
+	background-image: url("https://notebookspec.com/web/wp-content/uploads/2017/01/kraken71v2_gallery07-v2.jpg");
+	height: 710px;
+	margin-top: -150px;
+	margin-left: -5px;
 	/* background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -18,13 +19,15 @@ const BackgroundHeader = styled.div`
 const BackgroundBody = styled.div`
 	background-image: linear-gradient(350deg, #e0c3fc 0%, #8ec5fc 100%);
 	background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-	background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
-
 	background-blend-mode: multiply;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+`;
+const TextTopicHead = styled(Animated)`
+margin-top:-300px;
+font-family: 'Source Sans Pro';
 `;
 
 const VideoOne = styled(YouTube)`
@@ -43,21 +46,21 @@ const TextCredit = styled.div`
 
 const TextTopicReview = styled.div`
 	width: 300;
-	font-size: 120px;
+	font-size: 80px;
 	font-family: 'Source Sans Pro';
 	color: black;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	margin-top: -10px;
-	margin-left: 420px;
+	margin-top: 10px;
+	margin-left: 220px;
 `;
 
 const TextTopicOpen = styled(Animated)`
 	font-family: 'Kanit', sans-serif;
 	font-weight: bolder;
-	font-size: 50px;
+	font-size: 30px;
 	color: black;
 	font-weight: 100;
 	margin-top: 5px;
@@ -70,7 +73,7 @@ const TextTopicOpenTwo = styled(Animated)`
 	color: black;
 	font-weight: 100;
 	margin-top: -30px;
-	margin-left: 180px;
+	margin-left: 400px;
 `;
 const TextContent = styled.div`
 	font-family: 'Kanit', sans-serif;
@@ -89,7 +92,7 @@ const TextTopicContent = styled.div`
 	margin-left: 180px;
 `;
 const Image = styled.div`
-	background-image: url("https://scummpub.files.wordpress.com/2018/10/hatred-review-pc-482788-17-e1540843849883.jpg");
+	background-image: url("https://itcity.co.th/wp-content/uploads/2018/10/Rzr_KrakenProV2_gallery_6-1500x750.jpg");
 	background-position: center;
 	background-size: cover;
 	width: 40rem;
@@ -105,7 +108,7 @@ const Image = styled.div`
 const params = {
 	slidesPerView: 'auto',
 	centeredSlides: true,
-	spaceBetween: 30,
+	spaceBetween: 50,
 	pagination: {
 		el: '.swiper-pagination',
 		clickable: true
@@ -113,22 +116,19 @@ const params = {
 };
 
 const NewsOne = styled.div`
-	background-image: url("https://i2.wp.com/www.txclan.de/wp-content/uploads/2020/04/Hatred-Screenshot-890x520-min-700x409-1.jpg?resize=700%2C409&ssl=1");
-	width: 30rem;
-	height: 20rem;
+	background-image: url("https://game.mthai.com/app/uploads/2016/10/Screen-Shot-2559-10-25-at-2.54.51-PM.png");
+	width: 50rem;
+	height: 28rem;
 	margin-top: 13px;
 	border-block: 10vh;
-	transition: transform .2s;
-	&:hover {
-		transform: scale(1.2);
-	}
 `;
-const NewsTwo = styled.div`
-	background-image: url("https://s.isanook.com/ga/0/ui/191/955190/06_1413534701.jpg");
-	width: 30rem;
-	height: 20rem;
 
+const NewsTwo = styled.div`
+	background-image: url("https://www.playulti.com/static/thumb/2018/7/10/attach-1533869877953.jpg");
+	width: 50rem;
+	height: 28rem;
 	margin-top: 13px;
+	border-block: 10vh;
 `;
 
 const FooterHome = styled.div`
@@ -141,7 +141,6 @@ const FooterHome = styled.div`
 	color: white;
 	margin-top: 150px;
 `;
-
 class ReviewSix extends Component {
 	render() {
 		const opts = {
@@ -149,7 +148,7 @@ class ReviewSix extends Component {
 			width: '640',
 
 			playerVars: {
-				//www.youtube.com/watch?v=V18SS6PZc6w
+				//www.youtube.com/watch?v=6OhkjiEM_5I
 
 				autoplay: 1
 			}
@@ -160,67 +159,48 @@ class ReviewSix extends Component {
 				<BackgroundBody>
 					<BackgroundHeader />
 					<TextTopicOpen animationIn="fadeInRightBig" animationInDuration={1500}>
-						<TextTopicReview> Hatred </TextTopicReview>
-						<TextTopicOpenTwo>" ศาลเตี้ยล้างบางผู้คน กับเนื้อหาสุดดาร์ค "</TextTopicOpenTwo>
+						<TextTopicReview> Razer Kraken pro v.2 </TextTopicReview>
+						<TextTopicOpenTwo>จบในตัวไปกับ Razer</TextTopicOpenTwo>
 					</TextTopicOpen>
 					<TextContent>
-						เหรียญมี 2 ด้านเสมอ เช่นเดีวกันกับอุตสาหกรรมเกม ที่มีทั้งเกมที่มีเนื้อหาที่สร้างสรรค์
-						และเกมที่มีเนื้อหาที่รุนแรงอย่างไร้เหตุผลวันนี้เรามาพบกับรีวิวเกม<br />ที่เป็นหนึ่งในเกมที่ถูกแบนจากหลายๆประเทศ
-						ด้วยความรุนแรงและเนื้อหาที่มืดมน ของชายผู้บ้าคลั่งออกไล่ฆ่าผู้คน ด้วยเหตุผลที่เข้าใจได้อย่าง
-						Hatred
+						ในปัจจุบันมีหูฟังในรูปแบบ Headset มากมายวางจำหน่ายในท้องตลาด ซึ่งความหลากหลายที่เกิดขึ้นทำ
+						ให้มีหูฟัง Headset รูปแบบที่มี Soundcard <br />ในตัวเอง
+						ทำให้ไม่จำเป็นต้องมีอุปกรณ์เสริมแยกออกมาอย่าง External soundcard ให้ต้องจ่ายเงินเพิ่ม
+						และวันนี้เราอยู่กับหนึ่งในหูฟัง Headset ที่เรียกได้ว่า<br />จบในตัวละคุ้ม ราคาอย่างมากกับ “Razer
+						Kraken Pro V.2”
 					</TextContent>
-					<TextTopicContent> Story </TextTopicContent>
-					<VideoOne
-						videoId="V18SS6PZc6w"
-						opts={opts}
-						onReady={this.videoOnReady}
-						onply={this.videoOnReady}
-						onStateChange={this.videoStateChange}
-					/>;
-					<TextCredit>Credit : https://www.youtube.com/watch?v=V18SS6PZc6w</TextCredit>
+					<TextTopicContent> สเปคพื้นฐาน </TextTopicContent>
+					<Image />
 					<TextContent>
-						ภายในเกมเราจะรับบทเป็นชายร่างใหญ่ผู้มาพร้อมความเกียจชังและความบ้าคลั่งอย่างเต็มเปี่ยมและพร้อมที่จะฆ่าทุกๆคนที่เข้ามาเห็นไม่ว่าใครก็ตาม<br />
-						เนื้อเรื่องภายในเกมแทบไม่บอกอะไรกับผู้เล่นเลย โดยเราจะได้รับรู้เพียงแค่ทัศนคติของตัวเอกเท่านั้น
-						รวมถึงทำความเข้าใจกับบุคลิกและเป้าหมายของตัวเอก
-						<br />ผ่านบทสนทนาที่พูดระหว่างทำการสังหารผู้คนบนท้องถนน
-						เนื้อเรื่องภายในเกมจึงเป็เพียงการติดตามชีวิตและภารกิจของชายคลั่งเท่านั้น
+						-Frequency response : 12 Hz - 28 kHz<br />
+						-Impedance : 32 Ohm @ 1 kHz<br />
+						-Sensitivity (@1 kHz) : 123 dB<br />
+						-Input power : 30 mW (Max)<br />
+						-Drivers : 50 mm, with Neodymium magnets<br />
+						-Inner ear cup diameter : 56 mm / 2.2 in<br />
+						สำหรับในด้านของสเปคพื้นฐานนั้นต้องบอกได้ว่าครบตามมาตรฐานของหูฟังในราคาช่วง 3000 บาท ทีเดียว
+						อีกทั้งตัวของหูฟังนั้นยังมี driver ของตนเอง<br />ที่มากับ Soundcard ในตัวของ hardware เอง
+						ทำให้หูฟังตัว นี้ไม่จำเป็นต้องใช้ soundcard จากบอร์ดหรือ soundcard เสริมเลย
+						ทำให้จบในตัวของมันเอง ซึ่งทาง <br />Razer ก็ได้ มีซอร์ฟแวร์ Razer synapse
+						ที่จะช่วยปรับเสียงของหูฟังให้ได้ตามแบบที่เราชอบได้เลย ทำให้รองรับผู้ใช้งานแทบ ทุกกลุ่ม
 					</TextContent>
-					<TextTopicContent> Presentation </TextTopicContent>
+
+					<TextContent>
+						ในส่วนของเนื้อเสียงนั้น ตัวลำโพงมีเสียงออกไปทางเบสที่หนักกว่าเสียงอื่นๆ ทำให้เหมาะกับการเล่นเกม
+						แนวยิงหรือ FPS อีกทั้งตัวหูฟังยังรองรับ<br />ระบบสียงที่หลากหลาย ทั้ง Stereo 5.1 และ 7.1
+						ช่วยให้เราเลือกมิติเสียง ที่เหมาะกับเกมนั้นๆได้ อีกทั้งยังสามารถทำการเพิ่มความหนักของเสียงหรือ
+						Bass Boost <br />สำหรับเกมเมอร์สาย ฮาร์ดคอร์ที่ต้องการเสียงที่หนักแน่นเร้าใจอีกด้วย
+					</TextContent>
+					<br />
 					<Swiper {...params}>
-						<NewsOne onClick={() => this.readNew()} />
+						<NewsOne />
 						<NewsTwo />
 					</Swiper>
 					<TextContent>
-						ตัวเกม Hatred นำเสนอภาพบรรยากาศที่เป็นสีขาวดำตลอดทั้งเกม
-						ให้ความรู้สึกที่มืดมนและหดหู่ในเวลาเดียวกัน แต่ตัวเกมจะมีสีสันต่างๆเฉพาะในสิ่งที่<br />สื่อถึงความรุนแรงเพียงเท่านั้น
-						เช่นไฟที่กำลังลุกไหม้อาคารหรือรถ หรือสีแดงสดของเลือดจากผู้คน
-						เมื่อผสมรวมเข้ากับฉากของเกมที่เป็นสีขาวดำแล้วยิ่งเสริม<br />ความรุนแรงของเกมให้เด่นชัดยิ่งขึ้นอย่างมาก
-						ฉากของตัวเกมจะเป็นรูปแบบพื้นที่เปิดให้เราสามารถสำรวจและเข้าไปฆ่าล้างบางได้ทั้งฉาก
-						โดยจะมีเป้าหมายหลักใน<br />แต่ละฉากที่แตกต่างกันออกไป
-						เมื่อผู้เล่นสามารถทำเป้าหมายหลักได้ครบตัวเกมจะตัดเข้าสู่ฉากต่อไปในรูปของด่านที่ต่อกันจนถึงด่านสุดท้าย
-						แม้บางด่านจะมี<br />ความเป็นเส้นตรงจนเกินไปอยู่บ้าง แต่ด้วยด่านที่มีความหลากหลาย
-						ก็ทำให้ผู้เล่นไม่รู้สึกเบื่อกับเกม แต่หากผู้เล่นต้องการความหลากหลายของการนำเสนอ<br />เกมนี้อาจไม่ตอบโจทย์เท่าไหร่นัก
-						เพราะตัวเกมมีเพียงการฆ่าและผ่านด่านไปเรื่อยๆเท่านั้น แม้จะมีเป้าหมายเสริมให้ผู้เล่นเข้าไปทำ
-						แต่ก็ยังเป็นคอนเซ็ปเดิมนั่นคือ<br />การเดินหน้าฆ่าใหม่หมดอยู่ดี
-					</TextContent>
-					<TextTopicContent> Gameplay </TextTopicContent>
-					<TextContent>
-						เกมการเล่นของ Hatred มีความเรียบง่ายอย่างมาก โดยตัวเกมมีมุมมองการบังคับแบบ Isometric
-						หรือมุมมองด้านบนตามสไตล์เกมยิงยุคเก่าอย่าง<br /> Alien shooter series โดยตัวเกมจัดอยู่ในหมวด
-						shooting โดยใช้การเล็งด้วย cursor ของเม้าส์ และโดยเกมมีระบบประหารเมื่อเหยื่ออยู่ในสภาพที่ใกล้ตาย
-						<br />ผู้เล่าสามารถเข้าไปใกล้เพื่อกดใช้ท่าสังหารได้ โดยจะได้รับพลังชีวิตคืนเป็นโบนัส
-						ตัวเกมมีรูปแบบเดินหน้ายิงผ่านด่าน โดยจะมีเป้าหมายหลักเป็นสถาที่สำคัญ<br />ที่ผู้เล่นต้องเข้าไปถล่มให้สิ้นซาก
-						และเป้าหมายรองที่จะได้เป็นคะแนนพิเศษในช่วงท้ายของด่าน แม้ว่าจะมีเป้าหมายให้ทำหลายจุดภายในเกม
-						แต่ก็ยังคงรูปแบบเดิม<br />นั่นคือการบุกเข้าไปในสถาที่เป้าหมาย และสังหารทุกคนในนั้นอยู่ดี
-						ซึ่งหากใครที่มองหาความหลากหลายในเกมการเล่น เกมนี้จะไม่เหมาะกับท่านเป็นอย่างยิ่ง
-					</TextContent>
-					<Image />
-					<TextTopicContent> Conclusion </TextTopicContent>
-					<TextContent>
-						Bioshock Infinite คือภาคต่อที่ยอดเยี่ยมของเกมซีรีย์ Bioshock ทั้งเนื้อหาที่สดใหม่แตกต่างจาก 2
-						ภาคแรก เกมการเล่นที่ถูกปรับให้มีความแอคชั่น<br />มากขึ้น แต่ยังรักษาความเป็น RPG
-						อันเป็นเอกลักษณ์ได้อย่างดี ทำให้เกมนี้เป็นอีกหนึ่งเกมที่ไม่ควรพลาดสำหรับแฟนเกม FPS และ
-						แฟนเกมซีรีย์ Bioshock<br /> ด้วยประการทั้งปวง
+						สำหรับข้อเสียของหูฟังตัวนี้คือการที่ไม่สามารถใช้รวมกัย External soundcard ได้ทำให้ไม่สามารถ
+						ปรับปรุงเสียงของหูฟังได้สำหรับคนที่มี <br />External soundcard ที่คุณภาพดีกว่าที่อยู่ในหูฟัง
+						และการแสดงผลของ เสียงที่ไม่ละเอียดมากนักสำหรับใช้ในการฟังเพลงอย่างจริงจัง และตัววัสดุ<br />ที่เป็นยางตรง
+						Earmuff ที่ร้อนและ อาจจะทำให้ไม่สบายเมื่อใช้งานเป็นเวลานาน
 					</TextContent>
 					<FooterHome>ITDismember</FooterHome>
 				</BackgroundBody>
