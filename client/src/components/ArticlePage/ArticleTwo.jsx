@@ -5,10 +5,10 @@ import { Animated } from 'react-animated-css';
 import Swiper from 'react-id-swiper';
 
 const BackgroundHeader = styled.div`
-	background-image: url("https://media1.giphy.com/media/1cMSWoZlxhO8w/giphy.gif");
+	background-image: url("https://66.media.tumblr.com/77f7bf80c6ec3be2cb81351a4b178dc4/tumblr_olqufuXnlU1tdhimpo1_400.gifv");
 	height: 450px;
 	margin-top: -25px;
-    margin-bottom:100px;
+	margin-bottom: 100px;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -17,10 +17,7 @@ const BackgroundHeader = styled.div`
 
 const BackgroundBody = styled.div`
 	background-image: linear-gradient(-20deg, #dcb0ed 0%, #99c99c 100%);
-	background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
-	background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
-	background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
-	background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+	background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
 	background-blend-mode: multiply;
 	background-attachment: fixed;
 	background-position: center;
@@ -42,7 +39,7 @@ const TextTopic = styled.div`
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin-top: 280px;
-    margin-left:50px;
+	margin-left: 50px;
 `;
 const TextTopicc = styled.div`
 	font-family: 'Kanit', sans-serif;
@@ -62,7 +59,7 @@ const TextTopiccc = styled.div`
 	margin-left: 180px;
 `;
 const Imagee = styled.div`
-	background-image: url("https://us.123rf.com/450wm/jay72274/jay722740606/jay72274060600017/428214-white-earbuds-isolated-on-black-background.jpg?ver=6");
+	background-image: url("https://lh3.googleusercontent.com/_0ZcxLsBJpvhl_DnbhzuojHRFzTpKs3uumLw8Dqq9aZU5X9-HhjnVqP81HT7Di9D4HA");
 	background-position: center;
 	background-size: cover;
 	width: 40rem;
@@ -76,51 +73,30 @@ const Imagee = styled.div`
 `;
 
 const Imageeee = styled.div`
-	background-image: url("https://www.wearable-technologies.com/wp-content/uploads/2018/10/Razer-Nari-Ultimate-1.png");
+	background-image: url("https://freesoftforpc.com/wp-content/uploads/2020/03/Smule-App-For-Windows.png");
 	background-position: center;
 	background-size: cover;
-	width: 40rem;
-	height: 20rem;
-	margin-left: 430px;
+	width: 50rem;
+	height: 27rem;
+	margin-left: 400px;
 	margin-top: 20px;
-	transition: transform .2s;
-	&:hover {
-		transform: scale(1.2);
 	}
 `;
 const params = {
-	effect: 'coverflow',
-	grabCursor: true,
-	centeredSlides: true,
 	slidesPerView: 'auto',
-	coverflowEffect: {
-		rotate: 50,
-		stretch: 0,
-		depth: 100,
-		modifier: 1,
-		slideShadows: true
-	},
+	centeredSlides: true,
+	spaceBetween: 30,
 	pagination: {
-		el: '.swiper-pagination'
+		el: '.swiper-pagination',
+		clickable: true
 	}
 };
 const NewsOne = styled.div`
-	background-image: url("https://article.images.consumerreports.org/f_auto/prod/content/dam/CRO%20Images%202019/Magazine/10October/CR-Electronics-Inlinehero-galaxy-pods-vs-airpods-v3-0819");
-	width: 30rem;
-	height: 20rem;
+	background-image: url("https://assets.entrepreneur.com/images/misc/1552318025_karaoke-app-for-iphone.jpg");
+	width: 50rem;
+	height: 25rem;
 	margin-top: 13px;
 	border-block: 10vh;
-	transition: transform .2s;
-	&:hover {
-		transform: scale(1.2);
-	}
-`;
-const NewsTwo = styled.div`
-	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSj1Qxb39tr0vf0E-B8GHxw4Vq3gKkns92p2wnMfsKS1kxSgSAj&usqp=CAU");
-	width: 30rem;
-	height: 20rem;
-
-	margin-top: 13px;
 `;
 
 const FooterHome = styled.div`
@@ -133,13 +109,6 @@ const FooterHome = styled.div`
 	color: white;
 	margin-top: 150px;
 `;
-
-// fire.firestore().collection('Content').add({
-// 	title: '“หูฟัง” อาวุธสำคัญสำหรับเหล่าเกมเมอร์',
-// 	body:
-// 		'เสียงเป็นหนึ่งในปัจจัยที่สำคัญสำหรับการเล่นเกม โดยเฉพาะเกมที่ทิศทางของเสียงมีความสำคัญอย่างเกมแนว Shooting ที่ทิศทางของเสียงสามารถบ่งบอกถึงตำแหน่งของศัตรูให้เรารู้ได้ และอุปกรณ์ที่จะช่วยให้เราสามารถสัมผัสเสียงได้อย่างมีประสิทธิภาพคือ “หูฟัง” นั่นเอง ในวันนี้เราจะมีดูประเภทของหูฟังที่เป็นที่นิยมในการเล่นเกม และข้อดีข้อเสียของหูฟังในแต่ละประเภทครับ1.Earbudsหูฟังประเภท Earbuds คือ 1 ใน หูฟังรูปแบบที่เก่าแก่ที่สุดของโลกตั้งแต่สมัยเทป ซึ่งปัจจุบันยังได้รับความนิยมอย่างต่อเนื่อง ด้วยจุดเด่นที่ความสบายในการสวมใส่ และขนาดที่สามารถพกพาได้สะดวก ซึ่ง Earbuds แต่ Earbuds จะไม่สามารถกันเสียงรบกวนจากภายนอกได้มากนัก จึงทำให้ Earbuds อาจไม่ตอบโจทย์กับเกมเมอร์ที่ต้องการความจริงจังในการฟังเสียงที่แน่นอนและชัดเจน เช่น การเล่นเกม CSGO (Counter Strike: Global Offensive)2. In-ear Monitors1 ในหูฟังที่เป็นที่นิยมมากที่สุดในปัจจุบัน ซึ่งเราสามารถเห็นได้อย่างแพร่หลาย โดนเฉพาะกับสมาร์ทโฟนแบรนด์ชั้นนำ In-Ear Monitors เป็นหูฟังที่มีขนาดเล็ก พกพาสะดวก และจุดเด่นคือเสียงที่มีความชัดเจนมากกว่า Earbuds จากการใช้งานแบบสอดเข้าหู ซึ่งจะเป็นการป้องกันเสียงรบกวนจากภายนอก รวมไปถึงลำโพงที่สามารถส่งผ่านเสียงเข้าสู่เราได้โดยตรง แต่ไม่สามารถใช้ได้นานนัก เพราะอาจเกิดอาการปวดบริเวณหู รวมไปถึงเสี่ยงต่ออาการอักเสบ หากไม่ทำคสามสะอาดให้ดี และใช้งานหูฟังประเภทนี้เป็นเวลานานจนเกินไป3.Headphoneรู้จักกันดีในชื่อ “หูฟังคาดหัว” Headphone เป็นหูฟังขนาดใหญ่ที่สามารถครอบได้ทั้งหู โดยจุดเด่นอยู่ที่ความสามารถในการแสดงผมทิศทางของเสียงได้อย่างละเอียด และสามารถปิดกั้นเสียงจากภายนอกได้ดี แต่อาจไม่สะดวกสำหรับการพกพาจากขนาดที่ค่อนข้างใหญ่ Headphone คือหูฟังที่ได้รับความนิยมอย่างมากในหมู่เกมเมอร์ ด้วยรูปแบบเสียงของ Headphone ที่ขายในท้องตลาดนั้น ถูกออกแบบมาเพื่อใช้สำหรับการเล่นเกมเป็นส่วนใหญ่ และมีราคาที่หลากหลาย',
-// 	published: '15 May 2020'
-// });
 
 class ArticleTwo extends Component {
 	render() {
@@ -154,33 +123,28 @@ class ArticleTwo extends Component {
 					<TextTopicc>แนะนำแอพพลิเคชั่น "smule" แอพสำหรับสายร้องเพลง</TextTopicc>
 					<Imagee />
 					<TextTopiccc>
-						1.Earbuds หูฟังประเภท Earbuds คือ 1 ใน หูฟังรูปแบบที่เก่าแก่ที่สุดของโลกตั้งแต่สมัยเทป
-						ซึ่งปัจจุบันยังได้รับความนิยมอย่างต่อเนื่อง ด้วยจุดเด่นที่<br />ความสบายในการสวมใส่
-						และขนาดที่สามารถพกพาได้สะดวก ซึ่ง Earbuds แต่ Earbuds จะไม่สามารถกันเสียงรบกวนจากภายนอกได้มากนัก
-						จึงทำให้ Earbuds <br />อาจไม่ตอบโจทย์กับเกมเมอร์ที่ต้องการความจริงจังในการฟังเสียงที่แน่นอนและชัดเจน
-						เช่น การเล่นเกม CSGO (Counter Strike: Global Offensive)
+						สำหรับช่วงของการกักตัว Covid-19 ทำให้หลายต่อหลายคนไม่สามารถออกจากบ้านได้
+						ทำให้กิจกรรมหลายๆอย่างนอกสถานที่ถูกระงับไป ซึ่ง<br />หนึ่งในกิจกรรมโปรดของแอดมินคือการ
+						‘ร้องเพลงคาราโอเกะ’ นั่นเอง และ แอพพลิเคชั่นที่พอจะช่วยบะเทาความอย่างของแอดมินได้คือ Smule
+						<br />แอพพลิเคชั่น Smule เป็นแอพพลิเคชั่นสำหรับการร้องเพลงคาราโอเกะโดยเฉพาะ
+						โดยตัวแอพพลิเคชั่นนี้อยู่ในทั้งแพลตฟอร์ม IOS และ Android ซึ่งภายใน<br />ตัวแอพพลิเคชั่นจะมี song
+						book ซึ่งก็คือเพลงที่เราสามารถทำการร้องได้ โดย song book
+						นี้ถูกจัดทำขึ้นทั้งจากทางผู้ใช้งานแอพพลิเคชั่นและจากทาง Official
 					</TextTopiccc>
 					<Swiper {...params}>
 						<NewsOne onClick={() => this.readNew()} />
-						<NewsTwo />
 					</Swiper>
 					<TextTopiccc>
-						2. In-ear Monitors 1 ในหูฟังที่เป็นที่นิยมมากที่สุดในปัจจุบัน ซึ่งเราสามารถเห็นได้อย่างแพร่หลาย
-						โดนเฉพาะกับสมาร์ทโฟนแบรนด์ชั้นนำ In-Ear Monitors <br />เป็นหูฟังที่มีขนาดเล็ก พกพาสะดวก
-						และจุดเด่นคือเสียงที่มีความชัดเจนมากกว่า Earbuds จากการใช้งานแบบสอดเข้าหู
-						ซึ่งจะเป็นการป้องกันเสียงรบกวน<br />จากภายนอก
-						รวมไปถึงลำโพงที่สามารถส่งผ่านเสียงเข้าสู่เราได้โดยตรง แต่ไม่สามารถใช้ได้นานนัก
-						เพราะอาจเกิดอาการปวดบริเวณหู รวมไปถึงเสี่ยงต่ออาการ<br />อักเสบ หากไม่ทำคสามสะอาดให้ดี
-						และใช้งานหูฟังประเภทนี้เป็นเวลานานจนเกินไป
+						ภายในแอพพลิเคชั่นสามารถเลือกการร้องได้ว่าจะเข้าร่วมกับผู้ใช้งานคนอื่นๆ หรือเปิดการร้องแบบคู่หรือ
+						Duet ด้วยตัวเอง ไปจนถึงการร้องแบบ<br />เดี่ยวหรือเป็นกลุ่ม
+						โดยตัวแอพพลิเคชั่นจะอนุญาติให้ผู้ใช้งานใช้เพียงแค่การเข้าร่วมกับผู้อื่นเท่านั้นหากไม่ใช่สมาชิกรายเดือนของแอพพลิเคชั่น<br />
+						ภายในตัวแอพพลิเคชั่นเราสามารถดูการเคลื่อนไหวต่างๆของเพื่อนที่เราติดตามได้
+						รวมไปถึงเราจะได้คำเชิญร่วมการร้องแบบคู่หรือกลุ่มจากคนที่เรา<br />ติดตามอีกด้วย
+						ทำให้บางครั้งประสบการณ์การร้องเพลงต่างๆอาจไม่เหมือนเดิมเพราะเปลี่ยนเพื่อนร่วมร้องเพลง
+						โดยตัวแอพยังมีลูกเล่นอีกมากมาย<br />ทั้งการไลฟ์ และการส่งของขวัญ
 					</TextTopiccc>
+					<TextTopiccc>สำหรับผู้ที่สนใจสามารถเข้าไปดาวน์โหลดได้ที่ google store และ apple store</TextTopiccc>
 					<Imageeee />
-					<TextTopiccc>
-						3.Headphone รู้จักกันดีในชื่อ “หูฟังคาดหัว” Headphone เป็นหูฟังขนาดใหญ่ที่สามารถครอบได้ทั้งหู
-						โดยจุดเด่นอยู่ที่ความสามารถในการแสดงผล<br />ทิศทางของเสียงได้อย่างละเอียด
-						และสามารถปิดกั้นเสียงจากภายนอกได้ดี แต่อาจไม่สะดวกสำหรับการพกพาจากขนาดที่ค่อนข้างใหญ่ Headphone
-						คือหูฟังที่ได้<br />รับความนิยมอย่างมากในหมู่เกมเมอร์ ด้วยรูปแบบเสียงของ Headphone
-						ที่ขายในท้องตลาดนั้น ถูกออกแบบมาเพื่อใช้สำหรับการเล่นเกมเป็นส่วนใหญ่ และ<br />มีราคาที่หลากหลาย
-					</TextTopiccc>
 					<FooterHome>ITDismember</FooterHome>
 				</BackgroundBody>
 			</div>

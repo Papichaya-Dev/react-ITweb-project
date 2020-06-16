@@ -136,7 +136,7 @@ const FooterHome = styled.div`
 // 	published: '15 May 2020'
 // });
 
-class ArticleOne extends Component {
+class ArticleThree extends Component {
 	render() {
 		return (
 			<div>
@@ -182,4 +182,4 @@ class ArticleOne extends Component {
 		);
 	}
 }
-export default ArticleOne;
+export default ArticleThree;

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Navbar from '../Layout/Navbar';
 import styled from 'styled-components';
 import { Animated } from 'react-animated-css';
-import Swiper from 'react-id-swiper';
-import YouTube from 'react-youtube';
 
 const BackgroundHeader = styled.div`
 	background-image: url("https://cdn2.unrealengine.com/Diesel%2Funtitled-page%2FEGS_News_Evergreen-1920x1080-8ca7376077d174b4fc77c92462c7adb546b4fb18.jpg");
@@ -25,11 +23,6 @@ const BackgroundBody = styled.div`
 	background-repeat: no-repeat;
 	background-size: cover;
 `;
-const TextTopicHead = styled(Animated)`
-margin-top:-300px;
-font-family: 'Source Sans Pro';
-`;
-
 
 const TextTopicNew = styled.div`
 	width: 300;
@@ -96,33 +89,28 @@ const FooterHome = styled.div`
 `;
 class NewsTwo extends Component {
 	render() {
-		const opts = {
-			height: '390',
-			width: '640',
-
-			playerVars: {
-				//www.youtube.com/watch?v=6OhkjiEM_5I
-
-				autoplay: 1
-			}
-		};
 		return (
 			<div>
 				<Navbar />
 				<BackgroundBody>
 					<BackgroundHeader />
 					<TextTopicOpen animationIn="fadeInRightBig" animationInDuration={1500}>
-						<TextTopicNew> Epic game store  </TextTopicNew>
+						<TextTopicNew> Epic game store </TextTopicNew>
 						<TextTopicOpenTwo>เตรียมแจกเกมฟรี ภายในวันที่ 11 มิถุนายนนี้</TextTopicOpenTwo>
 					</TextTopicOpen>
 					<TextContent>
-					เรียกได้ว่าแทบจะกลายเป็นกิจวัตรประจำสัปดาห์ไปแล้วสำหรับบริษัทอย่าง Epic game เจ้าของ engine ชื่อดังอย่าง Unreal engine ที่จะแจก<br/>
-					เกมฟรีสำหรับผู้ใช้งาน Epic game store ทุกสัปดาห์ ซึ่งในเวลานี้ได้มีการประกาศผ่านทางหน้าร้านค้าเป็นเวลานับถอยหลังอีก 5 วัน ซึ่งก็คือ<br/>วันที่ 11 มิถุนายนที่จะถึงนี้ เวลา 4 ทุ่มในบ้านเรา ก่อนการแจกเกมใหม่
+						เรียกได้ว่าแทบจะกลายเป็นกิจวัตรประจำสัปดาห์ไปแล้วสำหรับบริษัทอย่าง Epic game เจ้าของ engine
+						ชื่อดังอย่าง Unreal engine ที่จะแจก<br />
+						เกมฟรีสำหรับผู้ใช้งาน Epic game store ทุกสัปดาห์
+						ซึ่งในเวลานี้ได้มีการประกาศผ่านทางหน้าร้านค้าเป็นเวลานับถอยหลังอีก 5 วัน ซึ่งก็คือ<br />วันที่
+						11 มิถุนายนที่จะถึงนี้ เวลา 4 ทุ่มในบ้านเรา ก่อนการแจกเกมใหม่
 					</TextContent>
 					<Image />
 					<TextContent>
-					Epic game store เป็นแพลตฟอร์มการซื้อค้าเกมในรูปแบบ digital ที่เปิดให้บริการมาเข้าย่างปีที่ 2 เป็นที่เรียบร้อย และยังมีการแจกเกมฟรีแทบทุก<br/>
-					สัปดาห์ตลอดเวลาที่เปิดให้บริการ สำหรับผู้ที่สนใจสามารถเข้าไปเยี่ยมชมได้ที่ https://www.epicgames.com/store/th/
+						Epic game store เป็นแพลตฟอร์มการซื้อค้าเกมในรูปแบบ digital ที่เปิดให้บริการมาเข้าย่างปีที่ 2
+						เป็นที่เรียบร้อย และยังมีการแจกเกมฟรีแทบทุก<br />
+						สัปดาห์ตลอดเวลาที่เปิดให้บริการ สำหรับผู้ที่สนใจสามารถเข้าไปเยี่ยมชมได้ที่
+						https://www.epicgames.com/store/th/
 					</TextContent>
 					<FooterHome>ITDismember</FooterHome>
 				</BackgroundBody>

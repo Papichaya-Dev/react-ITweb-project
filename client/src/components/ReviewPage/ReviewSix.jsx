@@ -142,7 +142,7 @@ const FooterHome = styled.div`
 	margin-top: 150px;
 `;
 
-class ReviewOne extends Component {
+class ReviewSix extends Component {
 	render() {
 		const opts = {
 			height: '390',
@@ -228,4 +228,4 @@ class ReviewOne extends Component {
 		);
 	}
 }
-export default ReviewOne;
+export default ReviewSix;

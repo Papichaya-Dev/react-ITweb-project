@@ -14,7 +14,6 @@ import Landing from './components/Layout/Landing'
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Dashboard from './components/dashboard/Dashboard';
-import './App.css';
 import CreateProfile from './components/create-profile/CreateProfile';
 import EditProfile from './components/edit-profile/EditProfile';
 import AddExperience from './components/add-credentials/AddExperience';
@@ -29,12 +28,18 @@ import ArticlePage from './components/ArticlePage/ArticlePage';
 import ReviewPage from './components/ReviewPage/ReviewPage';
 import NewsOne from './components/NewsPage/NewsOne';
 import NewsTwo from './components/NewsPage/NewsTwo';
+import NewsThree from './components/NewsPage/NewsThree';
+import NewsFour from './components/NewsPage/NewsFour';
+import NewsFive from './components/NewsPage/NewsFive';
 import ArticleOne from './components/ArticlePage/ArticleOne';
 import ArticleTwo from './components/ArticlePage/ArticleTwo';
+import ArticleThree from './components/ArticlePage/ArticleThree';
 import ReviewOne from './components/ReviewPage/ReviewOne';
 import ReviewTwo from './components/ReviewPage/ReviewTwo';
 import ReviewThree from './components/ReviewPage/ReviewThree';
 import ReviewFour from './components/ReviewPage/ReviewFour';
+import ReviewFive from './components/ReviewPage/ReviewFive';
+import ReviewSix from './components/ReviewPage/ReviewSix';
 
 
 
@@ -113,10 +118,22 @@ class App extends Component {
             <PrivateRoute exact path="/newstwo" component={NewsTwo}/>
             </Switch>
             <Switch>
+            <PrivateRoute exact path="/newsthree" component={NewsThree}/>
+            </Switch>
+            <Switch>
+            <PrivateRoute exact path="/newsfour" component={NewsFour}/>
+            </Switch>
+            <Switch>
+            <PrivateRoute exact path="/newsfive" component={NewsFive}/>
+            </Switch>
+            <Switch>
             <PrivateRoute exact path="/articleone" component={ArticleOne}/>
             </Switch>
             <Switch>
             <PrivateRoute exact path="/articletwo" component={ArticleTwo}/>
+            </Switch>
+            <Switch>
+            <PrivateRoute exact path="/articlethree" component={ArticleThree}/>
             </Switch>
             <Switch>
             <PrivateRoute exact path="/reviewone" component={ReviewOne}/>
@@ -129,6 +146,12 @@ class App extends Component {
             </Switch>
             <Switch>
             <PrivateRoute exact path="/reviewfour" component={ReviewFour}/>
+            </Switch>
+            <Switch>
+            <PrivateRoute exact path="/reviewfive" component={ReviewFive}/>
+            </Switch>
+            <Switch>
+            <PrivateRoute exact path="/reviewsix" component={ReviewSix}/>
             </Switch>
             
             
