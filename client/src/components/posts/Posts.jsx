@@ -5,6 +5,9 @@ import PostForm from './PostFrom';
 import Spinner from '../common/Spinner';
 import { getPosts } from '../../actions/postActions';
 import PostFeed from './PostFeed';
+import styled from 'styled-components';
+
+const BackgroundPost = styled.div`background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);`;
 
 class Posts extends Component {
 	componentDidMount() {
@@ -20,7 +23,8 @@ class Posts extends Component {
 			postContent = <PostFeed posts={posts} />;
 		}
 		return (
-			<div className="feed">
+			<BackgroundPost className="feed">
+				<BackgroundPost />
 				<div className="contianner">
 					<div className="row">
 						<div className="col-md-12">
@@ -29,7 +33,7 @@ class Posts extends Component {
 						</div>
 					</div>
 				</div>
-			</div>
+			</BackgroundPost>
 		);
 	}
 }

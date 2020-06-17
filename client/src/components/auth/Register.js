@@ -22,6 +22,33 @@ const TitleSingInTwo = styled.div`
 	font-weight: 500;
 	margin-bottom: 10%;
 `;
+const TitleSingInInfo = styled.div`
+	font-family: 'Kanit', sans-serif;
+	font-size: 15px;
+	color: gray;
+	font-weight: 500;
+	margin-bottom: 10%;
+  margin-left:-10px;
+`;
+const Slot = styled.input`
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #3498db;
+	padding: 14px 10px;
+	width: 300px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+    margin-left:-30px;
+	:focus {
+		width: 280px;
+		border-color: #a6009b;
+	}
+`;
 const Block = styled.form`
 	width: 500px;
 	padding: 40px;
@@ -120,7 +147,7 @@ class Register extends Component {
         <TitleSingIn className="gray-text text-darken-3">Sign Up</TitleSingIn>
           <TitleSingInTwo className="gray-text text-darken-3">Create your account :-)</TitleSingInTwo>
           <form noValidate onSubmit={this.onSubmit}>
-          <TextFieldGroup
+          <Slot
               placeholder="Name"
               name="name"
               value={this.state.name}
@@ -128,7 +155,7 @@ class Register extends Component {
               error={errors.name}
               autoComplete="off"
               />
-            <TextFieldGroup 
+            <Slot
               placeholder="Email"
               name="email"
               type="email"
@@ -137,8 +164,8 @@ class Register extends Component {
               error={errors.email}
               autoComplete="off"
               info="This site uses Gravatar so if you want a profile image, use a Gravatar email"
-              />
-             <TextFieldGroup 
+              /><TitleSingInInfo>if you want a profile image, use a Gravatar email.</TitleSingInInfo>
+             <Slot
               placeholder="Password"
               name="password"
               type="password"
@@ -147,7 +174,7 @@ class Register extends Component {
               error={errors.password}
               autoComplete="off"
               />
-              <TextFieldGroup 
+              <Slot
               placeholder="Confirm Password"
               name="password2"
               type="password"

@@ -2,6 +2,9 @@ import React from 'react';
 import Navbar from '../Layout/Navbar';
 import styled from 'styled-components';
 import { Card, Button, Row, Col } from 'react-bootstrap';
+import { deletePost, addLike, removeLike } from '../../actions/postActions';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 const TitleNew = styled.div`
 	margin-left: 600px;
@@ -209,6 +212,18 @@ class NewsPage extends React.Component {
 		console.log('Fetch');
 		this.props.history.push('/newsfive');
 	}
+	onLikeClick(id) {
+		this.props.addLike(id);
+	}
+
+	findUserLike(likes) {
+		const { auth } = this.props;
+		if (likes.filter((like) => like.user === auth.user.id).length > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	state = {
 		likes: 0
 	};
@@ -219,6 +234,7 @@ class NewsPage extends React.Component {
 		});
 	};
 	render() {
+		const { post, auth, showActions } = this.props;
 		return (
 			<div>
 				<BackgroundBody>
@@ -329,4 +345,19 @@ class NewsPage extends React.Component {
 	}
 }
 
-export default NewsPage;
+NewsPage.defaultProps = {
+	showActions: true
+};
+
+NewsPage.propTypes = {
+	deletePost: PropTypes.func.isRequired,
+	addLike: PropTypes.func.isRequired,
+	removeLike: PropTypes.func.isRequired,
+	post: PropTypes.object.isRequired,
+	auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = (state) => ({
+	auth: state.auth
+});
+export default connect(mapStateToProps, { deletePost, addLike, removeLike })(NewsPage);

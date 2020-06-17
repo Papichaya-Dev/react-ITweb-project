@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link ,withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
@@ -8,7 +8,59 @@ import InputGroup from '../common/InputGroup';
 import SelectListGroup from '../common/SelectListGroup';
 import { createProfile, getCurrentProfile } from '../../actions/profileActions';
 import isEmpty from '../../validation/is-empty';
+import styled from 'styled-components';
 
+const ButtonBack = styled(Link)`
+	font-family: 'DM Serif Display', serif;
+    font-weight:bolder;
+	padding: 0.2rem;
+	width: 130px;
+	height: 50px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: -300px;
+	margin-top: 30px;
+	letter-spacing: 0.1rem;
+	opacity: 1;
+    background-color:black;
+    color: white;
+	
+`;
+const ButtonSubmit = styled.input`
+	font-family: 'DM Serif Display', serif;
+	font-weight: bolder;
+	padding: 0.2rem;
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 250px;
+	margin-top: 10px;
+	letter-spacing: 0.1rem;
+	opacity: 1;
+	background-color: black;
+	color: white;
+`;
+
+const TitleInfo = styled.div`
+	font-family: 'Kanit', sans-serif;
+	font-size: 15px;
+	color: gray;
+	font-weight: 500;
+	margin-bottom: 10%;
+	margin-left: -10px;
+`;
+
+const Background = styled.div`
+	background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%);
+	width: 100%;
+`;
+
+const TextTopic = styled.h1`font-weight: bold;`;
 class CreateProfile extends Component {
 	constructor(props) {
 		super(props);
@@ -172,14 +224,14 @@ class CreateProfile extends Component {
 		];
 
 		return (
-			<div className="create-profile">
+			<Background className="create-profile">
 				<div className="container">
 					<div className="row">
 						<div className="col-md-8 m-auto">
-						<Link to="/dashboard" className="btn btn-light">
+							<ButtonBack to="/dashboard" className="btn btn-light">
 								Go back
-							</Link>
-							<h1 className="display-4 text-center">Edit Profile</h1>
+							</ButtonBack>
+							<TextTopic className="display-4 text-center">Edit Profile</TextTopic>
 							<small className="d-block pb-3">* = required fields</small>
 							<form onSubmit={this.onSubmit}>
 								<TextFieldGroup
@@ -188,7 +240,7 @@ class CreateProfile extends Component {
 									value={this.state.handle}
 									onChange={this.onChange}
 									error={errors.handle}
-									info="A unique handle for your profile URL. Your full name, company name,
+									info="A unique handle for your profile URL. Your full name,
                                     nickname"
 								/>
 								<SelectListGroup
@@ -201,13 +253,13 @@ class CreateProfile extends Component {
 									info="Give us an idea of where you are at in your career"
 								/>
 								<TextFieldGroup
-									placeholder="Company"
+									placeholder="University or School or Company"
 									name="company"
 									value={this.state.company}
 									onChange={this.onChange}
 									options={options}
 									error={errors.company}
-									info="Could be your own company or one you work for"
+									info="Could be your own University or School or Company "
 								/>
 								<TextFieldGroup
 									placeholder="Website"
@@ -215,24 +267,16 @@ class CreateProfile extends Component {
 									value={this.state.website}
 									onChange={this.onChange}
 									error={errors.website}
-									info="Could be your own website or a company one "
+									info="Could be your own website ( eg. Facebbok , Twitter ) "
 								/>
 								<TextFieldGroup
-									placeholder="* Skills"
+									placeholder="* Hobbies and Interests"
 									name="skills"
 									value={this.state.skills}
 									onChange={this.onChange}
 									error={errors.skills}
 									info="Please use comma separated values (eg.
-                                        HTML,CSS,JavaScript,PHP"
-								/>
-								<TextFieldGroup
-									placeholder="Github Username"
-									name="githubusername"
-									value={this.state.githubusername}
-									onChange={this.onChange}
-									error={errors.githubusername}
-									info="If you want your latest repos and a Github link, include your username"
+                                       sleep,eat,play)"
 								/>
 								<TextAreaFieldGroup
 									placeholder="* Short Bio"
@@ -240,29 +284,16 @@ class CreateProfile extends Component {
 									value={this.state.bio}
 									onChange={this.onChange}
 									error={errors.bio}
-									info="Tell us a little about yourself"
+									info="Tell us a little about yourself :-)"
 								/>
-								<div className="mb-3">
-									<button
-										type="button"
-										onClick={() => {
-											this.setState((prevState) => ({
-												displaySocialInputs: !prevState.displaySocialInputs
-											}));
-										}}
-										className="btn btn-light"
-									>
-										Add Social Network Links
-									</button>
-									<span className="text-muted">Optional</span>
-								</div>
+								<div className="mb-3" />
 								{socialInputs}
-								<input type="submit" value="Submit" className="btn btn-info btn-block mt-4" />
+								<ButtonSubmit className="btn btn-dark" type="submit" value="Submit" />
 							</form>
 						</div>
 					</div>
 				</div>
-			</div>
+			</Background>
 		);
 	}
 }

@@ -7,52 +7,83 @@ import { getPost } from '../../actions/postActions';
 import { Link } from 'react-router-dom';
 import CommentForm from './CommentForm';
 import CommentFeed from './CommentFeed';
+import styled from 'styled-components';
 
+const BackgroundComment = styled.div`
+	background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+	background-image: linear-gradient(to right, #434343 0%, black 100%);
+	background-image: url("https://i.gifer.com/S9CS.gif");
+	width: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+`;
+
+const ButtonBack = styled(Link)`
+	font-family: 'DM Serif Display', serif;
+    font-weight:bolder;
+	padding: 0.2rem;
+	width: 130px;
+	height: 50px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: -150px;
+	margin-top: 20px;
+	letter-spacing: 0.1rem;
+	opacity: 1;
+    background-color:black;
+    color: white;
+	
+`;
 class Post extends Component {
-    componentDidMount(){
-        this.props.getPost(this.props.match.params.id);
-    }
-    render() {
-        const { post, loading } = this.props.post;
-        let postContent;
+	componentDidMount() {
+		this.props.getPost(this.props.match.params.id);
+	}
+	render() {
+		const { post, loading } = this.props.post;
+		let postContent;
 
-        if(post === null || loading || Object.keys(post).length === 0) {
-            postContent = <Spinner/>
-        } else {
-            postContent = (
-                <div>
-                    <PostItem post={post} showActions={false}/>
-                    <CommentForm postId={post._id}/>
-                    <CommentFeed postId={post._id} comments={post.comments}/>
-                </div>
-            );
-        }
+		if (post === null || loading || Object.keys(post).length === 0) {
+			postContent = <Spinner />;
+		} else {
+			postContent = (
+				<div>
+					<PostItem post={post} showActions={false} />
+					<CommentForm postId={post._id} />
+					<CommentFeed postId={post._id} comments={post.comments} />
+				</div>
+			);
+		}
 
-
-        return (
-            <div className="post">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <Link to="/feed" className="btn btn-light mb-3">
-                                Back To Feed
-                            </Link>
-                            {postContent}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+		return (
+			<BackgroundComment>
+				<div className="post">
+					<div className="container">
+						<div className="row">
+							<div className="col-md-12">
+								<ButtonBack to="/feed" className="btn btn-light mb-3">
+									Back To Feed
+								</ButtonBack>
+								{postContent}
+							</div>
+						</div>
+					</div>
+				</div>
+			</BackgroundComment>
+		);
+	}
 }
 
 Post.propTypes = {
-    getPost: PropTypes.func.isRequired,
-    post: PropTypes.object.isRequired
-}
+	getPost: PropTypes.func.isRequired,
+	post: PropTypes.object.isRequired
+};
 
-const mapStateToProps = state => ({
-    post: state.post
-})
+const mapStateToProps = (state) => ({
+	post: state.post
+});
 
 export default connect(mapStateToProps, { getPost })(Post);

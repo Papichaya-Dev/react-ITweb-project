@@ -3,6 +3,53 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import { addPost } from '../../actions/postActions';
+import Navbar from '../Layout/Navbar';
+import styled from 'styled-components';
+
+const TitlePost = styled.div`
+	margin-top: 10px;
+	text-decoration: none;
+	color: black;
+	font-family: 'Kanit', sans-serif;
+	text-align: center;
+	justify-content: center;
+	font-size: 23px;
+	font-weight: bolder;
+`;
+const BackgroundPost = styled.div`
+	/* background-color: #cddcdc; */
+	/* background-image: radial-gradient(at 50% 100%, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
+		linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+	background-blend-mode: screen, overlay; */
+	background-image: url("https://media0.giphy.com/media/LhmtEI5hSfhny/source.gif");
+
+	margin-top: -25px;
+`;
+const ButtonSubmit = styled.button`
+	font-family: 'DM Serif Display', serif;
+	border: 2px solid black;
+	padding: 0.2rem;
+	color: white;
+	width: 130px;
+	height: 50px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 300ms ease-in-out;
+	margin-left: 30px;
+	margin-top: -5px;
+	letter-spacing: 0.1rem;
+	transition: transform .1s;
+	opacity: 0.9;
+	background-color: black;
+
+	&:hover {
+		background-color: black;
+		color: white;
+		cursor: pointer;
+	}
+`;
 
 class PostFrom extends Component {
 	constructor(props) {
@@ -44,8 +91,11 @@ class PostFrom extends Component {
 		const { errors } = this.state;
 		return (
 			<div className="post-form mb-3">
-				<div className="card card-info">
-					<div className="card-header bg-dark text-white">Say Somthing...</div>
+				<Navbar />
+				<BackgroundPost className="card card-info">
+					<TitlePost>
+						ร่วมสนทนาหัวข้อที่น่าสนใจ <br />หรือ Q & A ถามตอบข้อสงสัยกับแอดมินได้เลยค่ะ 🦋✨
+					</TitlePost>
 					<div className="card-body">
 						<form onSubmit={this.onSubmit}>
 							<div className="form-group">
@@ -57,12 +107,10 @@ class PostFrom extends Component {
 									error={errors.text}
 								/>
 							</div>
-							<button type="submit" className="btn btn-dark">
-								Submit
-							</button>
+							<ButtonSubmit type="submit">Submit</ButtonSubmit>
 						</form>
 					</div>
-				</div>
+				</BackgroundPost>
 			</div>
 		);
 	}

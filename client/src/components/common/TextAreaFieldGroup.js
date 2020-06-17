@@ -1,6 +1,12 @@
 import React from 'react'
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const BackgroundPost = styled.textarea`
+background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+`
+const TextPost = styled.div`font-family: 'Kanit', sans-serif;`;
 
 const TextAreaFieldGroup = ({
     name,
@@ -12,7 +18,7 @@ const TextAreaFieldGroup = ({
 }) => {
     return (
         <div className="form-group">
-        <textarea
+        <BackgroundPost
         className={classnames('form-control form-control-lg',{
           'is-invalid': error
           

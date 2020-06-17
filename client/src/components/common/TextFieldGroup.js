@@ -3,26 +3,20 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Slot = styled.input`
+const FieldInput = styled.input`
+background-color:white;
 	border: 0;
-	background: none;
+	background: white;
 	display: block;
 	margin: 20px auto;
 	text-align: center;
-	border: 2px solid #3498db;
+	border: 1px solid black;
 	padding: 14px 10px;
-	width: 300px;
+	width: 500px;
 	outline: none;
-	color: white;
-	border-radius: 24px;
+	border-radius: 10px;
 	transition: 0.25s;
-    margin-left:-30px;
-	:focus {
-		width: 280px;
-		border-color: #a6009b;
-	}
-`;
-
+    margin-left:5px;`
 const TextFieldGroup = ({
     name,
     placeholder,
@@ -37,7 +31,7 @@ const TextFieldGroup = ({
     return (
         <span>
         <div className="form-group">
-        <Slot 
+        <FieldInput
         type={type}
         className={classnames({
           'is-invalid': error

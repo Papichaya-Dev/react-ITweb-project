@@ -5,12 +5,12 @@ class ProfileAbout extends Component {
 	render() {
 		const { profile } = this.props;
 
-		// if (!profile.user) {
-		// 	return;
-		// }
+		if (!profile.user) {
+			return;
+		}
 
 		//Get first name
-		const firstName = profile.user.name.trim().split(' ')[0];
+		const firstName = profile.user.name;
 
 		//Skill List
 		const skills = profile.skills.map((skill, index) => (

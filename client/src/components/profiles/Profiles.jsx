@@ -4,7 +4,24 @@ import PropTypes from 'prop-types';
 import Spinner from '../common/Spinner';
 import { getProfiles } from '../../actions/profileActions';
 import ProfileItem from './ProfileItem';
+import Navbar from '../Layout/Navbar';
+import styled from 'styled-components';
 
+const BackgroundProfile = styled.div`background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);`;
+
+const TextTopic = styled.h1`
+	font-family: 'Kanit', sans-serif;
+	margin-left: 350px;
+	margin-top: 20px;
+	text-decoration: none;
+	color: black;
+	width: 300px;
+	text-align: center;
+	justify-content: center;
+	font-size: 50px;
+	font-weight: bolder;
+`;
+const TextTopicTwo = styled.p`margin-left: -100px;`;
 class Profiles extends Component {
 	componentDidMount() {
 		this.props.getProfiles();
@@ -26,17 +43,18 @@ class Profiles extends Component {
 		}
 
 		return (
-			<div className="profiles">
+			<BackgroundProfile className="profiles">
+				<Navbar />
 				<div className="container">
 					<div className="row">
 						<div className="col-md-12">
-							<h1 className="display-4 text-center">Developer Profiles</h1>
-							<p className="lead text-center">Browse and connect with developers</p>
+							<TextTopic className="display-4 text-center">Admin Page</TextTopic>
+							<TextTopicTwo className="lead text-center">Browse and connect with Users</TextTopicTwo>
 							{profileItems}
 						</div>
 					</div>
 				</div>
-			</div>
+			</BackgroundProfile>
 		);
 	}
 }

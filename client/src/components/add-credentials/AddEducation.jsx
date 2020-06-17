@@ -5,6 +5,51 @@ import TextFieldGroup from '../common/TextFieldGroup';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addEducation } from '../../actions/profileActions';
+import styled from 'styled-components';
+
+const Background = styled.div`
+	background: linear-gradient(-180deg, #bcc5ce 0%, #929ead 98%),
+		radial-gradient(at top left, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+	background-blend-mode: screen;
+	width: 100%;
+`;
+
+const ButtonSubmit = styled.input`
+	font-family: 'DM Serif Display', serif;
+	font-weight: bolder;
+	padding: 0.2rem;
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 250px;
+	margin-top: 10px;
+	letter-spacing: 0.1rem;
+	opacity: 1;
+	background-color: black;
+	color: white;
+`;
+const ButtonBack = styled(Link)`
+	font-family: 'DM Serif Display', serif;
+    font-weight:bolder;
+	padding: 0.2rem;
+	width: 130px;
+	height: 50px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: -330px;
+	margin-top: 30px;
+	letter-spacing: 0.1rem;
+	opacity: 1;
+    background-color:black;
+    color: white;
+	
+`;
+const TextTopic = styled.h1`font-weight: bold;`;
 
 class AddEducation extends Component {
 	constructor(props) {
@@ -63,13 +108,13 @@ class AddEducation extends Component {
 		const { errors } = this.state;
 
 		return (
-			<div className="add-education">
+			<Background className="add-education">
 				<div className="container">
 					<div className="row">
 						<div className="col-md-8 m-auto">
-							<Link to="/dashboard" className="btn btn-light">
+							<ButtonBack to="/dashboard" className="btn btn-light">
 								Go back
-							</Link>
+							</ButtonBack>
 							<h1 className="display-4 text-center">Add Education</h1>
 							<p className="lead text-center">Add any school</p>
 							<small className="d-block pb-3">* = required field</small>
@@ -134,12 +179,12 @@ class AddEducation extends Component {
 									error={errors.description}
 									info="Tell us about the the program"
 								/>
-								<input type="submit" value="Submit" className="btn btn-info btn-block mt-4" />
+								<ButtonSubmit className="btn btn-dark" type="submit" value="Submit" />
 							</form>
 						</div>
 					</div>
 				</div>
-			</div>
+			</Background>
 		);
 	}
 }

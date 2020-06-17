@@ -8,6 +8,10 @@ import ProfileAction from './ProfileAction';
 import Experience from './Experience'
 import Education from './Education';
 import Navbar from '../Layout/Navbar';
+import styled from 'styled-components';
+
+const Background = styled.div`background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+height: 100vh;`;
 
 class Dashboard extends Component {
     componentDidMount(){
@@ -35,7 +39,7 @@ class Dashboard extends Component {
                          <p className="lead text-muted">Welcome <Link to={`/profile/${profile.handle}`}> 
                          {user.name}</Link></p>
                          <ProfileAction/>
-                         <Experience experience={profile.experience}/>
+                         {/* <Experience experience={profile.experience}/> */}
                          <Education education={profile.education}/>
                          <div style={{ marginBottom: '60px'}}/>
                          <button onClick={this.onDeleteClick.bind(this)} className="btn btn-danger">Delete My Account
@@ -57,17 +61,18 @@ class Dashboard extends Component {
             
         }
         return (
-            <div className="dashboard">
-
+            
+            <Background className="dashboard">
+<Navbar/>
                 <div className= "container">
                     <div className="row">
                         <div className="col-md-12">
-                            <h1 className="display-4">Dashboard</h1>
+                            <h1 className="display-4">My Profile</h1>
                         {dashboardContent}
                         </div>
                     </div>
                 </div>
-            </div>
+            </Background>
         )
     }
 }

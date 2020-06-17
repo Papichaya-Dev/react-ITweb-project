@@ -48,7 +48,18 @@ margin-top:50px;
 
 
 `;
-
+const TextCardNew = styled(Card.Text)`
+    transition: transform .10s;
+    transition: 300ms ;
+    
+ &:hover {
+		color: #5226FF;
+		cursor: pointer;
+	}
+`;
+const CardImage = styled(Card.Img)`
+	height:12.3rem;
+`;
 const BackgroundHome = styled.div`background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%);`;
 const HeaderHome = styled.div`
 	background-color: black;
@@ -97,6 +108,10 @@ const TextTop = styled.div`
 	margin-left: 200px;
 	margin-top: 25px;
 	opacity: 0.8;
+`;
+const TextCardNewsTitle = styled(Card.Title)`
+    font-family: 'Kanit', sans-serif;
+	font-size:19px;
 `;
 const TextNewest = styled.div`
 	color: black;
@@ -157,6 +172,15 @@ const FooterHome = styled.div`
 	font-size: 50px;
 	color: white;
 `;
+const TextCardReview = styled(Card.Text)`
+    transition: transform .10s;
+    transition: 300ms ;
+    
+ &:hover {
+		color: #5226FF;
+		cursor: pointer;
+	}
+`;
 class HomePage extends React.Component {
 	constructor(props) {
 		super(props);
@@ -187,47 +211,54 @@ class HomePage extends React.Component {
 							<CustomCol md={4}>
 								<CustomCardNew>
 									<Card.Img
+										onClick={() => this.readNews()}
 										variant="top"
-										src="https://maxthetrax.com/wp-content/uploads/2016/12/john-and-yoko_byKishinShinoyama.jpg"
+										src="https://i.ytimg.com/vi/I0rRrXq0Y4Y/maxresdefault.jpg"
 									/>
-									<Card.Body>
-										<Card.Title>Newest</Card.Title>
-										<Card.Text>ข่าวเรื่องที่ 1 กดปุ่มข้างล่างเพื่ออ่านต่อ</Card.Text>
-										<Button style={{ marginLeft: '95px' }} variant="outline-light">
-											กดเพื่ออ่านต่อ
-										</Button>
+									<Card.Body onClick={() => this.readNews()}>
+										<Card.Title>เปิดเผยข้อมูล Playstation 5 กับ Controller “Dualsense”</Card.Title>
+										<TextCardNew>
+											ช่วงเวลาในวันที่ 8 เมษายน ที่ผ่านมา ทาง Playstation
+											บริษัทเจ้าของเครื่องเล่นเกมชั้นนำของโลก ก็ได้เปิดเผยข้อมูลสำคัญ . . .{' '}
+										</TextCardNew>
 									</Card.Body>
 								</CustomCardNew>
 							</CustomCol>
 
 							<CustomColTwo md={4}>
 								<CustomCardNew>
-									<Card.Img
+									<CardImage
+										onClick={() => this.readNewsTwo()}
 										variant="top"
-										src="https://maxthetrax.com/wp-content/uploads/2016/12/john-and-yoko_byKishinShinoyama.jpg"
+										src="https://gameworldobserver.com/wp-content/uploads/2019/12/Epic-Games.jpeg"
 									/>
-									<Card.Body>
-										<Card.Title>Newest</Card.Title>
-										<Card.Text> ข่าวเรื่องที่ 1 กดปุ่มข้างล่างเพื่ออ่านต่อ</Card.Text>
-										<Button style={{ marginLeft: '95px' }} variant="outline-light">
-											กดเพื่ออ่านต่อ
-										</Button>
+									<Card.Body onClick={() => this.readNewsTwo()}>
+										<Card.Title>
+											Epic game store เตรียมแจกเกมฟรี ภายในวันที่ 11 มิถุนายนนี้
+										</Card.Title>
+										<TextCardNew>
+											เรียกได้ว่าแทบจะกลายเป็นกิจวัตรประจำสัปดาห์ไปแล้วสำหรับบริษัทอย่าง Epic game
+											เจ้าของ engine ชื่อดังอย่าง Unreal engine ที่จะ . . .
+										</TextCardNew>
 									</Card.Body>
 								</CustomCardNew>
 							</CustomColTwo>
 
 							<CustomColTwo md={4}>
 								<CustomCardNew>
-									<Card.Img
+									<CardImage
+										onClick={() => this.readNewsThree()}
 										variant="top"
-										src="https://maxthetrax.com/wp-content/uploads/2016/12/john-and-yoko_byKishinShinoyama.jpg"
+										src="https://gameranx.com/wp-content/uploads/2020/01/1d56ce75-b00e-4469-a03b-8e752a868537.jpg"
 									/>
-									<Card.Body>
-										<Card.Title>Newest</Card.Title>
-										<Card.Text>ข่าวเรื่องที่ 1 กดปุ่มข้างล่างเพื่ออ่านต่อ</Card.Text>
-										<Button style={{ marginLeft: '95px' }} variant="outline-light">
-											กดเพื่ออ่านต่อ
-										</Button>
+									<Card.Body onClick={() => this.readNewsThree()}>
+										<Card.Title>
+											Ghost recon breakpoint เตรียมเพิ่มเพื่อนร่วมทาง AI ในเดือนกรกฎาคมนี้
+										</Card.Title>
+										<TextCardNew>
+											รอคอยกันมานานกับอัพเดทใหม่ของเกม Ghost Recon Breakpoint ที่กำลังจะปล่อย
+											patch ภายในเดือนนี้ พร้อมกับ . . .
+										</TextCardNew>
 									</Card.Body>
 								</CustomCardNew>
 							</CustomColTwo>
@@ -240,73 +271,106 @@ class HomePage extends React.Component {
 							<CustomCardArticle>
 								<Card.Img
 									variant="top"
-									src="https://m.media-amazon.com/images/M/MV5BNjMxZGNlZGUtYzM3OS00NjhiLTliZDMtM2Y5ODVjOTgzYjE2XkEyXkFqcGdeQXVyNzIwNDA4NzI@._V1_SX1533_CR0,0,1533,999_AL_.jpg"
+									onClick={() => this.readNew()}
+									src="https://i.insider.com/5dd2d2f27eece55b137c4a2c?width=1100&format=jpeg&auto=webp"
 								/>
-								<Card.Body>
-									<Card.Title>Article</Card.Title>
-									<Card.Text>ข่าวเรื่องที่ 1 กดปุ่มข้างล่างเพื่ออ่านต่อ</Card.Text>
-									<Button style={{ marginLeft: '95px' }} variant="outline-light">
-										กดเพื่ออ่านต่อ
-									</Button>
+								<Card.Body onClick={() => this.readNew()}>
+									<TextCardNewsTitle>“หูฟัง” อาวุธสำคัญสำหรับเหล่าเกมเมอร์"</TextCardNewsTitle>
+									<TextCardNew>
+										1.Earbuds หูฟังประเภท Earbuds คือ 1 ใน
+										หูฟังรูปแบบที่เก่าแก่ที่สุดของโลกตั้งแต่สมัยเทป
+										ซึ่งปัจจุบันยังได้รับความนิยมอย่างต่อเนื่อง . . .
+									</TextCardNew>
 								</Card.Body>
 							</CustomCardArticle>
 						</CustomCol>
+
 						<CustomColTwo md={4}>
 							<CustomCardArticle>
-								<Card.Img
+								<CardImage
 									variant="top"
-									src="https://m.media-amazon.com/images/M/MV5BNjMxZGNlZGUtYzM3OS00NjhiLTliZDMtM2Y5ODVjOTgzYjE2XkEyXkFqcGdeQXVyNzIwNDA4NzI@._V1_SX1533_CR0,0,1533,999_AL_.jpg"
+									onClick={() => this.readNewTwo()}
+									src="https://newcastlebeach.org/images/smule-9.jpg"
 								/>
-								<Card.Body>
-									<Card.Title>Article</Card.Title>
-									<Card.Text> ข่าวเรื่องที่ 1 กดปุ่มข้างล่างเพื่ออ่านต่อ</Card.Text>
-									<Button style={{ marginLeft: '95px' }} variant="outline-light">
-										กดเพื่ออ่านต่อ
-									</Button>
+								<Card.Body onClick={() => this.readNewTwo()}>
+									<Card.Title>"Smule" แอพสำหรับสายร้องเพลง</Card.Title>
+									<TextCardNew>
+										สำหรับช่วงของการกักตัว Covid-19 ทำให้หลายต่อหลายคนไม่สามารถออกจากบ้านได้
+										ทำให้กิจกรรมหลายๆอย่างนอกสถานที่ถูกระงับไป ซึ่ง . . .
+									</TextCardNew>
 								</Card.Body>
 							</CustomCardArticle>
 						</CustomColTwo>
+
 						<CustomColTwo md={4}>
-							<CustomCardArticle>
-								<Card.Img
+							<CustomCardArticle onClick={() => this.readNewThree()}>
+								<CardImage
 									variant="top"
-									src="https://m.media-amazon.com/images/M/MV5BNjMxZGNlZGUtYzM3OS00NjhiLTliZDMtM2Y5ODVjOTgzYjE2XkEyXkFqcGdeQXVyNzIwNDA4NzI@._V1_SX1533_CR0,0,1533,999_AL_.jpg"
+									src="https://mercular.s3.ap-southeast-1.amazonaws.com/upload/contents/2018/09/what-is-a-sound-card-885x400.jpg"
 								/>
 								<Card.Body>
-									<Card.Title>Article</Card.Title>
-									<Card.Text> ข่าวเรื่องที่ 1 กดปุ่มข้างล่างเพื่ออ่านต่อ</Card.Text>
-									<Button style={{ marginLeft: '95px' }} variant="outline-light">
-										กดเพื่ออ่านต่อ
-									</Button>
+									<Card.Title>Sound Card คืออะไร และสำคัญขนาดไหน</Card.Title>
+									<TextCardNew>
+										สำหรับสื่อบันเทิงต่างๆในปัจจุบัน เราไม่อาจปฏิเสธิได้เลยว่า ‘เสียง’
+										คือหนึ่งในสื่อที่มีอิทธิพลอย่างมาก ไม่ว่าจะเป็น . . .
+									</TextCardNew>
 								</Card.Body>
 							</CustomCardArticle>
 						</CustomColTwo>
 					</CustomRow>
 
 					<TextReview>Review</TextReview>
-					<CustomCol md={4} />
-					<CustomCardReview>
-						<Card.Img
-							variant="top"
-							src="https://petmaya.com/wp-content/uploads/2016/09/nirvana-nevermind-07.jpg"
-						/>
-						<Card.Body>
-							<Card.Title>Article</Card.Title>
-							<Card.Text>ข่าวเรื่องที่ 1 กดปุ่มข้างล่างเพื่ออ่านต่อ</Card.Text>
-							<Button style={{ marginLeft: '95px' }} variant="outline-dark">
-								กดเพื่ออ่านต่อ
-							</Button>
-						</Card.Body>
-					</CustomCardReview>
+					<CustomRow>
+						<CustomCol md={4}>
+							<CustomCardArticle>
+								<Card.Img
+									onClick={() => this.readReview()}
+									variant="top"
+									src="https://steamcdn-a.akamaihd.net/steam/apps/341940/capsule_616x353.jpg?t=1558373076"
+								/>
+								<Card.Body onClick={() => this.readReview()}>
+									<Card.Title>Hatred – ศาลเตี้ยล้างบางผู้คน กับเนื้อหาสุดดาร์ค</Card.Title>
+									<TextCardReview>
+										วันนี้เรามาพบกับรีวิวเกมที่เป็นหนึ่งในเกมที่ถูกแบนจากหลายๆประเทศ
+										ด้วยความรุนแรงและเนื้อหาที่มืดมน
+										ของชายผู้บ้าคลั่งออกไล่ฆ่าผู้คนด้วยเหตุผลที่เข้าใจได้อย่าง Hatred . . .
+									</TextCardReview>
+								</Card.Body>
+							</CustomCardArticle>
+						</CustomCol>
 
-					<div>
-						{/* <Animated animationIn="fadeInLeft" animationInDuration={1000}>
-            <News onClick={()=> this.readNew()}></News>
-                */}
-						<p className="info">{this.state.content}</p>
+						<CustomColTwo md={4}>
+							<CustomCardArticle>
+								<Card.Img
+									onClick={() => this.readReviewTwo()}
+									variant="top"
+									src="https://images.gog-statics.com/35cd661ed60c46beb5a99a744f6e70ab12c0b4055a92028ef0b2460ff09e6962_product_card_v2_mobile_slider_639.jpg"
+								/>
+								<Card.Body onClick={() => this.readReviewTwo()}>
+									<Card.Title>
+										Bioshock Infinite – ดำดิ่งสู่ความลับของเมืองลอยฟ้าแห่ง Columbia
+									</Card.Title>
+									<TextCardReview>
+										สำหรับรีวิวในครั้งนี้ คือเกม FPS จากปี 2013 ที่ผสมผสานความเป็น Action กับ RPG
+										ไว้อย่างลงตัว และเนื้อเรื่องที่ซับซ้อนน่าติดตามกับ Bioshock Infinite . . .
+									</TextCardReview>
+								</Card.Body>
+							</CustomCardArticle>
+						</CustomColTwo>
 
-						{/* </Animated> */}
-					</div>
+						<CustomColTwo md={4}>
+							<CustomCardArticle onClick={() => this.readReviewThree()}>
+								<Card.Img variant="top" src="https://i.ytimg.com/vi/0Wb3qffszQY/maxresdefault.jpg" />
+								<Card.Body>
+									<Card.Title>HyperX cloud earbuds – Earbuds ใส่สบายจากค่าย HyperX</Card.Title>
+									<TextCardReview>
+										วันนี้ทางเราขอนำเสนอรีวิวหนึ่งในหูฟังจากทาง HyperX ที่ไม่ได้มีดีเพียงแค่เสียง
+										แต่รวมไปถึงการสวมใส่ที่ออกแบบมา . . .
+									</TextCardReview>
+								</Card.Body>
+							</CustomCardArticle>
+						</CustomColTwo>
+					</CustomRow>
 					<Footer />
 				</BackgroundHome>
 			</div>
