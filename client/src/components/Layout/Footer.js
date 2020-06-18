@@ -19,7 +19,7 @@ export class Footer extends Component {
         return (
             
            <Background>
-               Copyright &copy; {new Date().getFullYear()}ITDismember
+               Copyright &copy; {new Date().getFullYear()}ITDisassembly
            </Background>
           
         )

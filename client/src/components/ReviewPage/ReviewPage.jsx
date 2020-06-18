@@ -309,7 +309,7 @@ class ReviewPage extends React.Component {
 							<CustomCardReview onClick={() => this.readReviewSix()}>
 								<CardImage
 									variant="top"
-									src="https://lh3.googleusercontent.com/proxy/xYBqfavbAW0SSA04nJ_PdEkeXaFQCEc2pMEYfBOgqQokLB9x3jd26dLQ5DYic_zsX8Ax-H1Pl1i4Gdr5e8zygcacEgsGUFdwnPabSfd3VSVR9f5-bDmbTXs3EG17awj0OB6ULIUdUdAKsrmxYKUze2eP57wc"
+									src="https://lh3.googleusercontent.com/proxy/GCYR99LrunDSf98P_sLQGfm-V859RbKfWv-d_ks1qAXtX5QF52ojMYyn1x3kB-MP7V1IwMIQ-LCEbDRGmNgstaPEPqCn_CkiK_MeOnhMeDzSfQ1K3mxBNIIo0o_HveYCgHpudnBCRhM_pnYadPaNDHLf0AKM"
 								/>
 								<Card.Body>
 									<Card.Title> Razer Kraken pro v.2 จบในตัวไปกับ Razer</Card.Title>

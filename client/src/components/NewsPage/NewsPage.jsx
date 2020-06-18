@@ -5,6 +5,7 @@ import { Card, Button, Row, Col } from 'react-bootstrap';
 import { deletePost, addLike, removeLike } from '../../actions/postActions';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Footer from '../Layout/Footer';
 
 const TitleNew = styled.div`
 	margin-left: 600px;
@@ -132,7 +133,7 @@ const FooterHome = styled.div`
 	transition: 100ms;
 	height: 15vh;
 	font-family: 'IM Fell French Canon SC', serif;
-	font-size: 50px;
+	font-size: 30px;
 	color: white;
 	margin-top: 20px;
 `;
@@ -338,7 +339,9 @@ class NewsPage extends React.Component {
 						</CustomColTwo>
 					</CustomRow>
 					<ButtonNext variant="dark">1</ButtonNext> <ButtonNextTwo variant="dark">2</ButtonNextTwo>{' '}
-					<ButtonNextThree variant="dark">3</ButtonNextThree> <FooterHome>ITDismember</FooterHome>
+					<ButtonNextThree variant="dark">3</ButtonNextThree>{' '}
+					<FooterHome>Copyright &copy; {new Date().getFullYear()}ITDisassembly</FooterHome>
+					<Footer />
 				</BackgroundBody>
 			</div>
 		);

@@ -16,7 +16,7 @@ const BackgroundHeader = styled.div`
 
 const BackgroundBody = styled.div`
 	background-image: linear-gradient(350deg, #e0c3fc 0%, #8ec5fc 100%);
-	background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
 	background-blend-mode: multiply;
 	background-attachment: fixed;
 	background-position: center;

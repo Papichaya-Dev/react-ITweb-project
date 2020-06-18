@@ -6,10 +6,10 @@ import styled from 'styled-components';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 
 const ButtonDelete = styled.button`
-	font-family: 'DM Serif Display', serif;
-	margin-top:-150px;
-  margin-left:830px;
-  width:50px;
+font-family: 'DM Serif Display', serif;
+margin-top:-150px;
+margin-left:830px;
+width:50px;
 	}
 `;
 
