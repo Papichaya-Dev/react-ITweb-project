@@ -2,10 +2,11 @@ import React from 'react';
 import Navbar from '../Layout/Navbar';
 import styled from 'styled-components';
 import { Card, Button, Row, Col } from 'react-bootstrap';
-import { deletePost, addLike, removeLike } from '../../actions/postActions';
+import { deletePost, removeLike } from '../../actions/postActions';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Footer from '../Layout/Footer';
+import { getNews, addLike } from '../../actions/NewsAction';
 
 const TitleNew = styled.div`
 	margin-left: 600px;
@@ -213,27 +214,31 @@ class NewsPage extends React.Component {
 		console.log('Fetch');
 		this.props.history.push('/newsfive');
 	}
-	onLikeClick(id) {
-		this.props.addLike(id);
-	}
 
-	findUserLike(likes) {
-		const { auth } = this.props;
-		if (likes.filter((like) => like.user === auth.user.id).length > 0) {
-			return true;
-		} else {
-			return false;
-		}
-	}
 	state = {
 		likes: 0
 	};
-	addLike = () => {
-		let newCount = this.state.likes + 1;
-		this.setState({
-			likes: newCount
-		});
-	};
+
+	componentWillMount() {
+		this.props.getNews();
+	}
+
+	getLikeCount(id) {
+		let likesCount;
+		if (this.props.news) {
+			console.log('have data already');
+			console.log(this.props.news);
+			this.props.news.map((news) => {
+				if (id === news._id) {
+					console.log(news.likes.length);
+					likesCount = news.likes.length;
+				}
+			});
+		} else {
+			console.log("doesn't have data");
+		}
+		return likesCount;
+	}
 	render() {
 		const { post, auth, showActions } = this.props;
 		return (
@@ -258,7 +263,9 @@ class NewsPage extends React.Component {
 										บริษัทเจ้าของเครื่องเล่นเกมชั้นนำของโลก ก็ได้เปิดเผยข้อมูลสำคัญ . . .{' '}
 									</TextCardNew>
 								</Card.Body>
-								<button onClick={this.addLike}>❤️Likes: {this.state.likes} </button>
+								<button onClick={() => this.props.addLike('5eebae228fc7402c183a3fb5')}>
+									❤️Likes: {this.getLikeCount('5eebae228fc7402c183a3fb5')}{' '}
+								</button>
 							</CustomCardNew>
 						</CustomCol>
 
@@ -276,7 +283,7 @@ class NewsPage extends React.Component {
 										เจ้าของ engine ชื่อดังอย่าง Unreal engine ที่จะ . . .
 									</TextCardNew>
 								</Card.Body>
-								<button onClick={this.addLike}>❤️Likes: {this.state.likes} </button>
+								<button>❤️Likes: {this.state.likes} </button>
 							</CustomCardNew>
 						</CustomColTwo>
 
@@ -296,7 +303,7 @@ class NewsPage extends React.Component {
 										ภายในเดือนนี้ พร้อมกับ . . .
 									</TextCardNew>
 								</Card.Body>
-								<button onClick={this.addLike}>❤️Likes: {this.state.likes} </button>
+								<button>❤️Likes: {this.state.likes} </button>
 							</CustomCardNew>
 						</CustomColTwo>
 					</CustomRow>
@@ -315,7 +322,7 @@ class NewsPage extends React.Component {
 										จากทาง Samsung ซึ่งเพิ่มดีกรี . . .
 									</TextCardNewTwo>
 								</Card.Body>
-								<button onClick={this.addLike}>❤️Likes: {this.state.likes} </button>
+								<button>❤️Likes: {this.state.likes} </button>
 							</CustomCardArticle>
 						</CustomCol>
 						<CustomColTwo md={4}>
@@ -334,7 +341,7 @@ class NewsPage extends React.Component {
 										World war 3 เกมยิง แนวสงครามขนาดใหญ่ . . .
 									</TextCardNewTwo>
 								</Card.Body>
-								<button onClick={this.addLike}>❤️Likes: {this.state.likes} </button>
+								<button>❤️Likes: {this.state.likes} </button>
 							</CustomCardArticle>
 						</CustomColTwo>
 					</CustomRow>
@@ -357,10 +364,14 @@ NewsPage.propTypes = {
 	addLike: PropTypes.func.isRequired,
 	removeLike: PropTypes.func.isRequired,
 	post: PropTypes.object.isRequired,
-	auth: PropTypes.object.isRequired
+	auth: PropTypes.object.isRequired,
+	getNews: PropTypes.func.isRequired,
+	news: PropTypes.array,
+	addLike: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => ({
-	auth: state.auth
+	auth: state.auth,
+	news: state.news.news_list
 });
-export default connect(mapStateToProps, { deletePost, addLike, removeLike })(NewsPage);
+export default connect(mapStateToProps, { deletePost, addLike, removeLike, getNews, addLike })(NewsPage);

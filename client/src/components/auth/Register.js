@@ -6,6 +6,7 @@ import { registerUser } from '../../actions/authActions';
 import TextFieldGroup from '../common/TextFieldGroup';
 import styled from 'styled-components';
 import { Button } from 'react-bootstrap';
+import classnames from 'classnames'
 
 const TitleSingIn = styled.div`
 	font-family: 'Kanit', sans-serif;
@@ -148,6 +149,9 @@ class Register extends Component {
           <TitleSingInTwo className="gray-text text-darken-3">Create your account :-)</TitleSingInTwo>
           <form noValidate onSubmit={this.onSubmit}>
           <Slot
+          className={classnames('form-control form-control-lg',{
+            'is-invalid':errors.name
+          })}
               placeholder="Name"
               name="name"
               value={this.state.name}
