@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import isEmpty from '../../validation/is-empty';
 import PropTypes from 'prop-types';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import styled from 'styled-components';
+
+const BackgroundHeader = styled.div`
+	background-color: #111111;
+	border-radius: 10px;
+	height: 400px;
+	font-family: 'Cormorant Garamond', serif;
+`;
+
+const ImageProfile = styled.img`margin-top: 25px;`;
 
 class ProfileHeader extends Component {
 	render() {
@@ -15,10 +25,14 @@ class ProfileHeader extends Component {
 		return (
 			<div className="row">
 				<div className="col-md-12">
-					<div className="card card-body bg-dark  text-light mb-3">
+					<BackgroundHeader className=" text-light mb-3">
 						<div className="row">
 							<div className="col-4 col-md-3 m-auto">
-								<img className="rounded-circle" src={profile.user.avatar} alt={profile.user.name} />
+								<ImageProfile
+									className="rounded-circle"
+									src={profile.user.avatar}
+									alt={profile.user.name}
+								/>
 							</div>
 						</div>
 						<div className="text-center">
@@ -33,39 +47,9 @@ class ProfileHeader extends Component {
 										<FacebookIcon />
 									</a>
 								)}
-
-								{isEmpty(profile.social && profile.social.twitter) ? null : (
-									<a className="text-white p-2" href={profile.social.twitter} target="_blank">
-										<i className="fab fa-twitter fa-2x" />
-									</a>
-								)}
-
-								{isEmpty(profile.social && profile.social.facebook) ? null : (
-									<a className="text-white p-2" href={profile.social.facebook} target="_blank">
-										<i className="fab fa-facebook fa-2x" />
-									</a>
-								)}
-
-								{isEmpty(profile.social && profile.social.linkedin) ? null : (
-									<a className="text-white p-2" href={profile.social.linkedin} target="_blank">
-										<i className="fab fa-linkedin fa-2x" />
-									</a>
-								)}
-
-								{isEmpty(profile.social && profile.social.youtube) ? null : (
-									<a className="text-white p-2" href={profile.social.youtube} target="_blank">
-										<i className="fab fa-twitter fa-2x" />
-									</a>
-								)}
-
-								{isEmpty(profile.social && profile.social.instagram) ? null : (
-									<a className="text-white p-2" href={profile.social.instagram} target="_blank">
-										<i className="fab fa-instagram fa-2x" />
-									</a>
-								)}
 							</p>
 						</div>
-					</div>
+					</BackgroundHeader>
 				</div>
 			</div>
 		);

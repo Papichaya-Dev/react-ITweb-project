@@ -262,12 +262,13 @@ class CreateProfile extends Component {
 									info="Could be your own University or School or Company "
 								/>
 								<TextFieldGroup
-									placeholder="Website"
+									placeholder="Facebook"
 									name="website"
 									value={this.state.website}
 									onChange={this.onChange}
 									error={errors.website}
-									info="Could be your own website ( eg. Facebbok , Twitter ) "
+									info=" 
+ 									your Facebook "
 								/>
 								<TextFieldGroup
 									placeholder="* Hobbies and Interests"

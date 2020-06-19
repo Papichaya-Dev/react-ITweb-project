@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import isEmpty from '../../validation/is-empty';
+import styled from 'styled-components';
 
 class ProfileAbout extends Component {
 	render() {

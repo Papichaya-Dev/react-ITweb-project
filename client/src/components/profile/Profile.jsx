@@ -12,6 +12,12 @@ import styled from 'styled-components';
 
 const BackgroundHome = styled.div`background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%);`;
 
+const ButtonBack = styled(Link)`
+	font-family: 'DM Serif Display', serif;
+   font-size:20px;
+   margin-left:-180px;
+	
+`;
 class Profile extends Component {
 	componentDidMount() {
 		if (this.props.match.params.handle) {
@@ -30,9 +36,9 @@ class Profile extends Component {
 				<div>
 					<div className="row">
 						<div className="col-md-6">
-							<Link to="/profiles" className="btn btn-black mb-3 float-left">
+							<ButtonBack to="/profiles" className="btn btn-black mb-3 float-left">
 								Back To Profiles
-							</Link>
+							</ButtonBack>
 						</div>
 						<div className="col-md-6" />
 					</div>

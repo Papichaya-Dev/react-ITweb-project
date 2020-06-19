@@ -103,7 +103,7 @@ class PostItem extends Component {
 		}
 	}
 	render() {
-		const { post, auth, showActions } = this.props;
+		const { post, auth, showActions, status } = this.props;
 		return (
 			<BackgroundPost className="card card-body mb-3">
 				<div className="row">
@@ -139,7 +139,7 @@ class PostItem extends Component {
 									<ThumbDownAltIcon />
 								</button>
 								<ButtonComment to={`/post/${post._id}`}>Comments</ButtonComment>
-								{post.user === auth.user.id ? (
+								{post.user === auth.user.id || status === 'admin' ? (
 									<ButtonDelete
 										onClick={this.onDeleteClick.bind(this, post._id)}
 										type="button"
@@ -167,11 +167,13 @@ PostItem.propTypes = {
 	addLike: PropTypes.func.isRequired,
 	removeLike: PropTypes.func.isRequired,
 	post: PropTypes.object.isRequired,
-	auth: PropTypes.object.isRequired
+	auth: PropTypes.object.isRequired,
+	status: PropTypes.string
 };
 
 const mapStateToProps = (state) => ({
-	auth: state.auth
+	auth: state.auth,
+	status: state.auth.user.status
 });
 
 export default connect(mapStateToProps, { deletePost, addLike, removeLike })(PostItem);

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Spinner from '../common/Spinner';
-import { getProfiles } from '../../actions/profileActions';
+import { getProfiles, deleteAccount } from '../../actions/profileActions';
 import ProfileItem from './ProfileItem';
 import Navbar from '../Layout/Navbar';
 import styled from 'styled-components';
@@ -10,7 +10,7 @@ import styled from 'styled-components';
 const BackgroundProfile = styled.div`background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);`;
 
 const TextTopic = styled.h1`
-	font-family: 'Kanit', sans-serif;
+	font-family: 'Vollkorn SC', serif;
 	margin-left: 350px;
 	margin-top: 20px;
 	text-decoration: none;
@@ -18,13 +18,16 @@ const TextTopic = styled.h1`
 	width: 300px;
 	text-align: center;
 	justify-content: center;
-	font-size: 50px;
+	font-size: 40px;
 	font-weight: bolder;
 `;
 const TextTopicTwo = styled.p`margin-left: -100px;`;
 class Profiles extends Component {
 	componentDidMount() {
 		this.props.getProfiles();
+	}
+	onDeleteClick(e) {
+		this.props.deleteAccount();
 	}
 
 	render() {
@@ -50,6 +53,7 @@ class Profiles extends Component {
 						<div className="col-md-12">
 							<TextTopic className="display-4 text-center">Admin Page</TextTopic>
 							<TextTopicTwo className="lead text-center">Browse and connect with Users</TextTopicTwo>
+
 							{profileItems}
 						</div>
 					</div>
@@ -61,10 +65,11 @@ class Profiles extends Component {
 
 Profiles.propTypes = {
 	getProfiles: PropTypes.func.isRequired,
-	profile: PropTypes.object.isRequired
+	profile: PropTypes.object.isRequired,
+	deleteAccount: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => ({
 	profile: state.profile
 });
-export default connect(mapStateToProps, { getProfiles })(Profiles);
+export default connect(mapStateToProps, { getProfiles, deleteAccount })(Profiles);
