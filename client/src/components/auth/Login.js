@@ -5,6 +5,7 @@ import { loginUser } from '../../actions/authActions';
 import TextFieldGroup from '../common/TextFieldGroup';
 import styled from 'styled-components';
 import { Button } from 'react-bootstrap';
+import classnames from 'classnames';
 
 const TitleSingIn = styled.div`
 	font-family: 'Kanit', sans-serif;
@@ -111,38 +112,51 @@ class Login extends Component {
           <span>
             <BackgroundSingIn/>
             <Block>
-            <div className="login">
-    <div className="container">
-      <div className="row">
-        <div className="col-md-8 m-auto">
-        <TitleSingIn className="gray-text text-darken-3">Sign In</TitleSingIn>
-          <form onSubmit ={this.onSummit}>
-           <Slot
-              placeholder="Email Address"
-              name="email"
-              type="email"
-              value={this.state.email}
-              onChange={this.onChange}
-              error={errors.email}
-              />
+             <div className="login">
+               <div className="container">
+                 <div className="row">
+                  <div className="col-md-8 m-auto">
+                     <TitleSingIn className="gray-text text-darken-3">Sign In</TitleSingIn>
+                     <form onSubmit ={this.onSummit}>
+                     <Slot
+                      placeholder="Email Address"
+                       name="email"
+                       type="email"
+                       value={this.state.email}
+                       onChange={this.onChange}
+                       error={errors.email}
+                       className={classnames('form-control form-control-lg',{
+                         'is-invalid': errors.email
+                       })}
+                    />
+                    {errors.email && ( 
+                      <div className="invalid-feedback">{errors.email}</div>
+                    )}
 
-            <Slot
-              placeholder="Password"
-              name="password"
-              type="password"
-              value={this.state.password}
-              onChange={this.onChange}
-              error={errors.password}
-              />
-<ButtonSingIn variant="dark" type="submit ">
-						Enter
-					</ButtonSingIn>          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  </Block>
-  </span>
+                    <Slot
+                    placeholder="Password"
+                    name="password"
+                    type="password"
+                    value={this.state.password}
+                    onChange={this.onChange}
+                    error={errors.password}
+                    className={classnames('form-control form-control-lg',{
+                      'is-invalid': errors.password
+                    })}
+                    />
+                     {errors.password && ( 
+                      <div className="invalid-feedback">{errors.password}</div>
+                    )}
+                      <ButtonSingIn variant="dark" type="submit ">
+					                      	Enter
+				            	</ButtonSingIn>          
+                      </form>
+                 </div>
+               </div>
+           </div>
+          </div>
+      </Block>
+    </span>
         );
     }
 }

@@ -12,3 +12,5 @@ export const GET_POST ='GET_POST';
 export const ADD_POST ='ADD_POST';
 export const DELETE_POST ='DELETE_POST';
 export const GET_NEWS_LIKES = 'GET_NEWS_LIKES';
+export const GET_ARTICLE_LIKES = 'GET_ARTICLE_LIKES';
+export const GET_REVIEW_LIKES = 'GET_REVIEW_LIKES';

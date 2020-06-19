@@ -283,7 +283,9 @@ class NewsPage extends React.Component {
 										เจ้าของ engine ชื่อดังอย่าง Unreal engine ที่จะ . . .
 									</TextCardNew>
 								</Card.Body>
-								<button>❤️Likes: {this.state.likes} </button>
+								<button onClick={() => this.props.addLike('5eebadd38fc7402c183a3fb4')}>
+									❤️Likes: {this.getLikeCount('5eebadd38fc7402c183a3fb4')} {' '}
+								</button>
 							</CustomCardNew>
 						</CustomColTwo>
 
@@ -303,7 +305,9 @@ class NewsPage extends React.Component {
 										ภายในเดือนนี้ พร้อมกับ . . .
 									</TextCardNew>
 								</Card.Body>
-								<button>❤️Likes: {this.state.likes} </button>
+								<button onClick={() => this.props.addLike('5eebae888fc7402c183a3fb6')}>
+									❤️Likes: {this.getLikeCount('5eebae888fc7402c183a3fb6')} {' '}
+								</button>
 							</CustomCardNew>
 						</CustomColTwo>
 					</CustomRow>
@@ -322,7 +326,9 @@ class NewsPage extends React.Component {
 										จากทาง Samsung ซึ่งเพิ่มดีกรี . . .
 									</TextCardNewTwo>
 								</Card.Body>
-								<button>❤️Likes: {this.state.likes} </button>
+								<button onClick={() => this.props.addLike('5eebb0a28fc7402c183a3fb7')}>
+									❤️Likes: {this.getLikeCount('5eebb0a28fc7402c183a3fb7')} {' '}
+								</button>
 							</CustomCardArticle>
 						</CustomCol>
 						<CustomColTwo md={4}>
@@ -341,14 +347,15 @@ class NewsPage extends React.Component {
 										World war 3 เกมยิง แนวสงครามขนาดใหญ่ . . .
 									</TextCardNewTwo>
 								</Card.Body>
-								<button>❤️Likes: {this.state.likes} </button>
+								<button onClick={() => this.props.addLike('5eebb0e48fc7402c183a3fb8')}>
+									❤️Likes: {this.getLikeCount('5eebb0e48fc7402c183a3fb8')} {' '}
+								</button>
 							</CustomCardArticle>
 						</CustomColTwo>
 					</CustomRow>
 					<ButtonNext variant="dark">1</ButtonNext> <ButtonNextTwo variant="dark">2</ButtonNextTwo>{' '}
 					<ButtonNextThree variant="dark">3</ButtonNextThree>{' '}
 					<FooterHome>Copyright &copy; {new Date().getFullYear()}ITDisassembly</FooterHome>
-					<Footer />
 				</BackgroundBody>
 			</div>
 		);

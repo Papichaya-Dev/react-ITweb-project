@@ -5,7 +5,7 @@ import { Animated } from 'react-animated-css';
 import Swiper from 'react-id-swiper';
 
 const BackgroundHeader = styled.div`
-	background-image: url("https://media2.giphy.com/media/TLCoCqjkU9yinZuDIk/source.gif");
+	background-image: url("https://steamuserimages-a.akamaihd.net/ugc/860610936970034223/78B6110C47A7FB659A3A8DCAD2E1880FB5EED0F6/");
 	height: 573px;
 	margin-top: -300px;
 	background-attachment: fixed;

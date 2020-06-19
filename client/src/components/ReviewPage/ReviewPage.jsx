@@ -2,6 +2,11 @@ import React from 'react';
 import Navbar from '../Layout/Navbar';
 import styled from 'styled-components';
 import { Card, Button, Row, Col } from 'react-bootstrap';
+import { deletePost, removeLike } from '../../actions/postActions';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import Footer from '../Layout/Footer';
+import { getReview, addLike } from '../../actions/ReviewAction';
 
 const TitleReview = styled.div`
 	margin-left: 600px;
@@ -201,19 +206,29 @@ class ReviewPage extends React.Component {
 	state = {
 		likes: 0
 	};
-	addLike = () => {
-		let newCount = this.state.likes + 1;
-		this.setState({
-			likes: newCount
-		});
-	};
-	addLikeTwo = () => {
-		let newCount = this.state.likes + 1;
-		this.setState({
-			likes: newCount
-		});
-	};
+
+	componentWillMount() {
+		this.props.getReview();
+	}
+
+	getLikeCount(id) {
+		let likesCount;
+		if (this.props.review) {
+			console.log('have data already');
+			console.log(this.props.review);
+			this.props.review.map((review) => {
+				if (id === review._id) {
+					console.log(review.likes.length);
+					likesCount = review.likes.length;
+				}
+			});
+		} else {
+			console.log("doesn't have data");
+		}
+		return likesCount;
+	}
 	render() {
+		const { post, auth, showActions } = this.props;
 		return (
 			<div>
 				<BackgroundBody>
@@ -237,7 +252,9 @@ class ReviewPage extends React.Component {
 										ของชายผู้บ้าคลั่งออกไล่ฆ่าผู้คนด้วยเหตุผลที่เข้าใจได้อย่าง Hatred . . .
 									</TextCardReview>
 								</Card.Body>
-								<button onClick={this.addLikeTwo}>❤️Likes: {this.state.likes} </button>
+								<button onClick={() => this.props.addLike('5eeccc237835e91cf08bdfe8')}>
+									❤️Likes: {this.getLikeCount('5eeccc237835e91cf08bdfe8')}{' '}
+								</button>
 							</CustomCardReview>
 						</CustomCol>
 
@@ -257,30 +274,41 @@ class ReviewPage extends React.Component {
 										ไว้อย่างลงตัว และเนื้อเรื่องที่ซับซ้อนน่าติดตามกับ Bioshock Infinite . . .
 									</TextCardReview>
 								</Card.Body>
+								<button onClick={() => this.props.addLike('5eecccd27835e91cf08bdfe9')}>
+									❤️Likes: {this.getLikeCount('5eecccd27835e91cf08bdfe9')}{' '}
+								</button>
 							</CustomCardReview>
 						</CustomColTwo>
 
 						<CustomColTwo md={4}>
-							<CustomCardReview onClick={() => this.readReviewThree()}>
-								<Card.Img variant="top" src="https://i.ytimg.com/vi/0Wb3qffszQY/maxresdefault.jpg" />
-								<Card.Body>
+							<CustomCardReview>
+								<Card.Img
+									onClick={() => this.readReviewThree()}
+									variant="top"
+									src="https://i.ytimg.com/vi/0Wb3qffszQY/maxresdefault.jpg"
+								/>
+								<Card.Body onClick={() => this.readReviewThree()}>
 									<Card.Title>HyperX cloud earbuds – Earbuds ใส่สบายจากค่าย HyperX</Card.Title>
 									<TextCardReview>
 										วันนี้ทางเราขอนำเสนอรีวิวหนึ่งในหูฟังจากทาง HyperX ที่ไม่ได้มีดีเพียงแค่เสียง
 										แต่รวมไปถึงการสวมใส่ที่ออกแบบมา . . .
 									</TextCardReview>
 								</Card.Body>
+								<button onClick={() => this.props.addLike('5eeccd077835e91cf08bdfea')}>
+									❤️Likes: {this.getLikeCount('5eeccd077835e91cf08bdfea')}{' '}
+								</button>
 							</CustomCardReview>
 						</CustomColTwo>
 					</CustomRow>
 					<CustomRow>
 						<CustomCol md={4}>
-							<CustomCardReview onClick={() => this.readReviewFour()}>
+							<CustomCardReview>
 								<Card.Img
+									onClick={() => this.readReviewFour()}
 									variant="top"
 									src="https://www.nintendo.com/content/dam/noa/en_US/games/switch/n/no-time-to-relax-switch/no-time-to-relax-switch-hero.jpg"
 								/>
-								<Card.Body>
+								<Card.Body onClick={() => this.readReviewFour()}>
 									<Card.Title>No time to relax เกมบอร์ดสุดป่วนจำลองการใช้ชีวิต</Card.Title>
 									<TextCardNewTwo>
 										วันนี้เรามาพบกับรีวิวเกม ‘No time to relax’
@@ -288,36 +316,48 @@ class ReviewPage extends React.Component {
 										. . .
 									</TextCardNewTwo>
 								</Card.Body>
+								<button onClick={() => this.props.addLike('5eeccd6c7835e91cf08bdfeb')}>
+									❤️Likes: {this.getLikeCount('5eeccd6c7835e91cf08bdfeb')}{' '}
+								</button>
 							</CustomCardReview>
 						</CustomCol>
 						<CustomColTwo md={4}>
-							<CustomCardReview onClick={() => this.readReviewFive()}>
+							<CustomCardReview>
 								<CardImage
 									variant="top"
+									onClick={() => this.readReviewFive()}
 									src="https://www.gump.in.th/uploaded_files/images/Razer/hammerhead%20Duo%20-%2006.jpg"
 								/>
-								<Card.Body>
+								<Card.Body onClick={() => this.readReviewFive()}>
 									<Card.Title>Razer Hammerhead Duo (In-ear)</Card.Title>
 									<TextCardNewTwo>
 										สำหรับปี 2019 นั้นได้มีหูฟัง In-ear ตัวใหม่วางจำหน่ายจากทาง Razer
 										ซึ่งมีราคาที่สูสีกับคู่แข่งอย่าง HyperX อย่างมากทั้งในด้านราคาและ . . .
 									</TextCardNewTwo>
 								</Card.Body>
+								<button onClick={() => this.props.addLike('5eeccde07835e91cf08bdfec')}>
+									❤️Likes: {this.getLikeCount('5eeccde07835e91cf08bdfec')}{' '}
+								</button>
 							</CustomCardReview>
 						</CustomColTwo>
 						<CustomColTwo md={4}>
-							<CustomCardReview onClick={() => this.readReviewSix()}>
+							<CustomCardReview>
 								<CardImage
 									variant="top"
-									src="https://lh3.googleusercontent.com/proxy/GCYR99LrunDSf98P_sLQGfm-V859RbKfWv-d_ks1qAXtX5QF52ojMYyn1x3kB-MP7V1IwMIQ-LCEbDRGmNgstaPEPqCn_CkiK_MeOnhMeDzSfQ1K3mxBNIIo0o_HveYCgHpudnBCRhM_pnYadPaNDHLf0AKM"
+									onClick={() => this.readReviewSix()}
+									src="https://cm.lnwfile.com/05z5ms.jpg"
 								/>
-								<Card.Body>
+
+								<Card.Body onClick={() => this.readReviewSix()}>
 									<Card.Title> Razer Kraken pro v.2 จบในตัวไปกับ Razer</Card.Title>
 									<TextCardNewTwo>
 										ในปัจจุบันมีหูฟังในรูปแบบ Headset มากมายวางจำหน่ายในท้องตลาด
 										ซึ่งความหลากหลายที่เกิดขึ้นทำ ให้มีหูฟัง Headset . . .
 									</TextCardNewTwo>
 								</Card.Body>
+								<button onClick={() => this.props.addLike('5eeccdfe7835e91cf08bdfed')}>
+									❤️Likes: {this.getLikeCount('5eeccdfe7835e91cf08bdfed')}{' '}
+								</button>
 							</CustomCardReview>
 						</CustomColTwo>
 					</CustomRow>
@@ -329,4 +369,24 @@ class ReviewPage extends React.Component {
 	}
 }
 
-export default ReviewPage;
+ReviewPage.defaultProps = {
+	showActions: true
+};
+
+ReviewPage.propTypes = {
+	deletePost: PropTypes.func.isRequired,
+	addLike: PropTypes.func.isRequired,
+	removeLike: PropTypes.func.isRequired,
+	post: PropTypes.object.isRequired,
+	auth: PropTypes.object.isRequired,
+	getReview: PropTypes.func.isRequired,
+	review: PropTypes.array,
+	addLike: PropTypes.func.isRequired
+};
+
+const mapStateToProps = (state) => ({
+	auth: state.auth,
+	review: state.review.review_list
+});
+
+export default connect(mapStateToProps, { deletePost, addLike, removeLike, getReview, addLike })(ReviewPage);

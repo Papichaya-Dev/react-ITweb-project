@@ -6,8 +6,8 @@ const passport = require('passport');
 //Post model
 const Post = require('../../models/Post');
 
-//News model 
-const News = require('../../models/News');
+//Article model 
+const Article = require('../../models/Article');
 
 //Profile model
 const Profile = require('../../models/Proflie');
@@ -15,29 +15,29 @@ const Profile = require('../../models/Proflie');
 //Validation
 const validatePostInut = require('../../validation/post')
 
-//@route GET api/news
-//@desc GET news
+//@route GET api/article
+//@desc GET article
 //@access Public
 router.get('/', (req,res) => {
-    News.find()
+    Article.find()
         .sort({date: -1})
         .then(posts => res.json(posts))
         .catch(err => res.status(404).json({nopostfound: 'No news found '}));
 })
 
 
-//@route GET api/news/:id
-//@desc GET news by id
+//@route GET api/article/:id
+//@desc GET article by id
 //@access Public
 router.get('/:id', (req,res) => {
-    News.findById(req.params.id)
+    Article.findById(req.params.id)
         .then(post => res.json(post))
         .catch(err => res.status(404).json({nopostfound: 'No news found with that id'}));
 })
 
 
-//@route POST api/news
-//@desc POST news 
+//@route POST api/article
+//@desc POST article
 //@access Public
 router.post('/',passport.authenticate('jwt',{session: false}), (req,res) => {
     const {errors,isValid} = validatePostInut(req.body);
@@ -48,14 +48,14 @@ router.post('/',passport.authenticate('jwt',{session: false}), (req,res) => {
         return res.status(400).json(errors);  
     }
     
-     const newsPost = new News({
+     const ArticlePost = new Article({
          text: req.body.text,
          title:req.body.title,
          content:req.body.content,
-         user: req.user.id
+         
      });
  
-     newsPost.save().then(news => res.json(news));
+     ArticlePost.save().then(article => res.json(article));
  });
 
 //@route POST api/news/like/:id
@@ -64,16 +64,16 @@ router.post('/',passport.authenticate('jwt',{session: false}), (req,res) => {
 router.post('/like/:id',passport.authenticate('jwt',{session:false}),(req,res) =>
     Profile.findOne({user: req.user.id})
         .then(profile => {
-            News.findById(req.params.id)
-                .then(news => {
-                   if(news.likes.filter(like => like.user.toString() ===  req.user.id).length > 0){
+            Article.findById(req.params.id)
+                .then(article => {
+                   if(article.likes.filter(like => like.user.toString() ===  req.user.id).length > 0){
                        return res.status(400).json({alreadyliked: 'User already liked this post'});
                    }
 
                    //Add user id to like array
-                   news.likes.unshift({ user:req.user.id });
+                   article.likes.unshift({ user:req.user.id });
 
-                   news.save().then(news => res.json(news));
+                   article.save().then(article => res.json(article));
                 })
                 .catch(err => res.status(404).json({postnotfound: 'No post found'}))
         })
