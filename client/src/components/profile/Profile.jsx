@@ -36,9 +36,11 @@ class Profile extends Component {
 				<div>
 					<div className="row">
 						<div className="col-md-6">
-							<ButtonBack to="/profiles" className="btn btn-black mb-3 float-left">
-								Back To Profiles
-							</ButtonBack>
+							{this.props.status === 'admin' && (
+								<ButtonBack to="/profiles" className="btn btn-black mb-3 float-left">
+									Back To Profiles
+								</ButtonBack>
+							)}
 						</div>
 						<div className="col-md-6" />
 					</div>
@@ -65,11 +67,13 @@ class Profile extends Component {
 
 Profile.propTypes = {
 	getProfileByHandle: PropTypes.func.isRequired,
-	profile: PropTypes.object.isRequired
+	profile: PropTypes.object.isRequired,
+	status: PropTypes.string
 };
 
 const mapStateToProps = (state) => ({
-	profile: state.profile
+	profile: state.profile,
+	status: state.auth.user.status
 });
 
 export default connect(mapStateToProps, { getProfileByHandle })(Profile);

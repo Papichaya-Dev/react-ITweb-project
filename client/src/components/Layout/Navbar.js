@@ -21,34 +21,34 @@ color:white;
 const NavText = styled(Link)`
   font-family: 'Source Sans Pro', sans-serif;
   font-family: 'IM Fell French Canon SC', serif;
-	font-size: 25px;
-	color: white;
-	margin-left: 25px;
-	/* letter-spacing: 0.10rem; */
+ font-size: 25px;
+ color: white;
+ margin-left: 25px;
+ /* letter-spacing: 0.10rem; */
 `;
 
 const NavTextUsers = styled(Link)`
-	font-family: 'IM Fell French Canon SC', serif;
-	font-size: 25px;
-	color: white;
-	margin-left: 100px;
-	/* letter-spacing: 0.10rem; */
+ font-family: 'IM Fell French Canon SC', serif;
+ font-size: 25px;
+ color: white;
+ margin-left: 100px;
+ /* letter-spacing: 0.10rem; */
 `;
 
 const NavTextProfile = styled(Link)`
-	font-family: 'IM Fell French Canon SC', serif;
-	font-size: 25px;
-	color: white;
-	margin-left: 30px;
+ font-family: 'IM Fell French Canon SC', serif;
+ font-size: 25px;
+ color: white;
+ margin-left: 30px;
   margin-right:55px;
-	/* letter-spacing: 0.10rem; */
+ /* letter-spacing: 0.10rem; */
 `;
 
 const NavLogout = styled.a`
-	font-family: 'IM Fell French Canon SC', serif;
-	font-size: 25px;
-	color: white;
-	margin-left: -50px;
+ font-family: 'IM Fell French Canon SC', serif;
+ font-size: 25px;
+ color: white;
+ margin-left: -50px;
   margin-right:-100px;
 `;
 
@@ -60,17 +60,36 @@ class Navbar extends Component {
     e.preventDefault();
     this.props.clearCurrentProfile();
     this.props.logoutUser();
+    window.location.href = '/';
   }
+  state = {
+    handle: 'none'
+  }
+
+  
+  
     render() {
       const { isAuthenticated,user} = this.props.auth;
-
+      console.log(this.state.handle);
+      console.log(this.props.profiles);
+      if(this.props.profiles ){
+        this.props.profiles.map((profile) => {
+          if(this.props.auth.user.id === profile.user.id){
+            this.setState({handle:profile.handle})
+            console.log('fgfggfgg');
+          }
+          
+        }) 
+      }
       const authLinks = (
         <ul className="navbar-nav ml-auto">
            <li className="nav-item">
-                    <NavTextUsers className="nav-link" to="/profiles">Users</NavTextUsers>
+             { this.props.status === 'admin' &&  <NavTextUsers className="nav-link" to="/profiles">Users</NavTextUsers>}
+          
                   </li>
            <li className="nav-item">
-                    <NavTextProfile className="nav-link" to="/dashboard">My Profile</NavTextProfile>
+                    {this.state.handle !== 'none' ? <NavTextProfile className="nav-link" to={`/profile/${this.state.handle}`}>My Profile</NavTextProfile> : <NavTextProfile className="nav-link" to="dashboard">My Profile</NavTextProfile>}
+                    
                   </li>
           <li className="nav-item">
             <NavLogout href = "" 
@@ -145,11 +164,14 @@ class Navbar extends Component {
 
 Navbar.propTypes = {
   logoutUser: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
+  status:PropTypes.string
 }
 
 const mapStateToProps = (state) => ({
-  auth: state.auth
+  auth: state.auth,
+  profiles : state.profile.profiles,
+  status:state.auth.user.status
 });
 
 export default connect(mapStateToProps, {logoutUser,clearCurrentProfile})(Navbar);

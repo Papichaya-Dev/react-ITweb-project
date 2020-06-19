@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Spinner from '../common/Spinner';
@@ -46,19 +46,21 @@ class Profiles extends Component {
 		}
 
 		return (
-			<BackgroundProfile className="profiles">
-				<Navbar />
-				<div className="container">
-					<div className="row">
-						<div className="col-md-12">
-							<TextTopic className="display-4 text-center">Admin Page</TextTopic>
-							<TextTopicTwo className="lead text-center">Browse and connect with Users</TextTopicTwo>
+			this.props.status === 'admin' && (
+				<BackgroundProfile className="profiles">
+					<Navbar />
+					<div className="container">
+						<div className="row">
+							<div className="col-md-12">
+								<TextTopic className="display-4 text-center">Admin Page</TextTopic>
+								<TextTopicTwo className="lead text-center">Browse and connect with Users</TextTopicTwo>
 
-							{profileItems}
+								{profileItems}
+							</div>
 						</div>
 					</div>
-				</div>
-			</BackgroundProfile>
+				</BackgroundProfile>
+			)
 		);
 	}
 }
@@ -66,10 +68,12 @@ class Profiles extends Component {
 Profiles.propTypes = {
 	getProfiles: PropTypes.func.isRequired,
 	profile: PropTypes.object.isRequired,
-	deleteAccount: PropTypes.func.isRequired
+	deleteAccount: PropTypes.func.isRequired,
+	status: PropTypes.string
 };
 
 const mapStateToProps = (state) => ({
-	profile: state.profile
+	profile: state.profile,
+	status: state.auth.user.status
 });
 export default connect(mapStateToProps, { getProfiles, deleteAccount })(Profiles);
