@@ -222,6 +222,7 @@ class ReviewOne extends Component {
 						อันเป็นเอกลักษณ์ได้อย่างดี ทำให้เกมนี้เป็นอีกหนึ่งเกมที่ไม่ควรพลาดสำหรับแฟนเกม FPS และ
 						แฟนเกมซีรีย์ Bioshock<br /> ด้วยประการทั้งปวง
 					</TextContent>
+					
 					<FooterHome>ITDismember</FooterHome>
 				</BackgroundBody>
 			</div>

@@ -10,9 +10,43 @@ import Education from './Education';
 import Navbar from '../Layout/Navbar';
 import styled from 'styled-components';
 
-const Background = styled.div`background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+const Background = styled.div`background-image: linear-gradient(to right, #a8caba 0%, #5d4160 120%);;
 height: 100vh;`;
 
+const TextTopic = styled.h1`
+font-family: "Cormorant Garamond", serif;
+font-weight:bolder;
+`;
+
+const TextWelcome = styled.p`
+font-family: "Cormorant Garamond", serif;
+font-weight:bolder;
+font-size:25px;
+`;
+
+const TextContent = styled.p`
+font-family: "Cormorant Garamond", serif;
+font-weight:bolder;
+font-size:25px;
+`;
+
+const ButtonCrete = styled(Link)`
+  font-family: "DM Serif Display", serif;
+  font-weight: bolder;
+  padding: 0.2rem;
+  width: 200px;
+  height: 55px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1px;
+  margin-top: 25px;
+  letter-spacing: 0.1rem;
+  opacity: 1;
+  background-color: black;
+  color: white;
+`;
 class Dashboard extends Component {
     componentDidMount(){
         this.props.getCurrentProfile();
@@ -50,11 +84,11 @@ class Dashboard extends Component {
                 //User is logged in but has no profile
                 dashboardContent = (
                     <div>
-                        <p className="lead text-muted">Welcome {user.name}</p>
-                        <p>You have not yet setup a profile, please add some info</p>
-                        <Link to="/create-profile" className="btn btn-lg btn-info">
+                        <TextWelcome className="lead ">Welcome {user.name}</TextWelcome>
+                        <TextContent>You have not yet setup a profile, please add some info</TextContent>
+                        <ButtonCrete to="/create-profile" className="btn btn-lg btn-info">
                             Create Profile
-                        </Link>
+                        </ButtonCrete>
                     </div>
                 )
             }
@@ -67,7 +101,7 @@ class Dashboard extends Component {
                 <div className= "container">
                     <div className="row">
                         <div className="col-md-12">
-                            <h1 className="display-4">My Profile</h1>
+                            <TextTopic className="display-4">My Profile</TextTopic>
                         {dashboardContent}
                         </div>
                     </div>

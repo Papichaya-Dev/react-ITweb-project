@@ -40,6 +40,7 @@ import ReviewThree from './components/ReviewPage/ReviewThree';
 import ReviewFour from './components/ReviewPage/ReviewFour';
 import ReviewFive from './components/ReviewPage/ReviewFive';
 import ReviewSix from './components/ReviewPage/ReviewSix';
+import Search from './components/search';
 
 
 
@@ -153,7 +154,9 @@ class App extends Component {
             <Switch>
             <PrivateRoute exact path="/reviewsix" component={ReviewSix}/>
             </Switch>
-            
+            <Switch>
+            <PrivateRoute exact path="/search" component={Search}/>
+            </Switch>
             
             
           {/* </div> */}

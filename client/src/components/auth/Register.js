@@ -146,19 +146,23 @@ class Register extends Component {
       <div className="row">
         <div className="col-md-8 m-auto">
         <TitleSingIn className="gray-text text-darken-3">Sign Up</TitleSingIn>
-          <TitleSingInTwo className="gray-text text-darken-3">Create your account :-)</TitleSingInTwo>
-          <form noValidate onSubmit={this.onSubmit}>
+          <TitleSingInTwo className="gray-text text-darken-3">Create your account</TitleSingInTwo>
+          <form novalidate onSubmit={this.onSubmit}>
           <Slot
-          className={classnames('form-control form-control-lg',{
-            'is-invalid':errors.name
-          })}
+          type="text"
               placeholder="Name"
               name="name"
               value={this.state.name}
               onChange={this.onChange}
               error={errors.name}
               autoComplete="off"
+              className={classnames('form-control form-control-lg',{
+                'is-invalid': errors.name
+              })}
               />
+              {errors.name && ( 
+                      <div className="invalid-feedback">{errors.name}</div>
+                    )}
             <Slot
               placeholder="Email"
               name="email"
@@ -168,7 +172,14 @@ class Register extends Component {
               error={errors.email}
               autoComplete="off"
               info="This site uses Gravatar so if you want a profile image, use a Gravatar email"
-              /><TitleSingInInfo>if you want a profile image, use a Gravatar email.</TitleSingInInfo>
+              className={classnames('form-control form-control-lg',{
+                'is-invalid': errors.email
+              })}
+           />
+            {errors.email && ( 
+                      <div className="invalid-feedback">{errors.email}</div>
+                    )}
+              <TitleSingInInfo>if you want a profile image, use a Gravatar email.</TitleSingInInfo>
              <Slot
               placeholder="Password"
               name="password"
@@ -177,7 +188,13 @@ class Register extends Component {
               onChange={this.onChange}
               error={errors.password}
               autoComplete="off"
+              className={classnames('form-control form-control-lg',{
+                'is-invalid': errors.password
+              })}
               />
+              {errors.password && ( 
+                      <div className="invalid-feedback">{errors.password}</div>
+                    )}
               <Slot
               placeholder="Confirm Password"
               name="password2"
@@ -185,10 +202,15 @@ class Register extends Component {
               value={this.state.password2}
               onChange={this.onChange}
               error={errors.password2}
-              
+              className={classnames('form-control form-control-lg',{
+                'is-invalid': errors.password2
+              })}
               />
+              {errors.password2 && ( 
+                      <div className="invalid-feedback">{errors.password2}</div>
+                    )}
     
-    <ButtonSingIn variant="dark" type="submit">
+    <ButtonSingIn variant="dark"  type="submit">
 								Enter
 							</ButtonSingIn>
           </form>

@@ -1,0 +1,60 @@
+{
+	"foods": [
+		{
+			"name": "Playstation 5 กับ Controller “Dualsense ”",
+			"id": "newsone "
+		},
+		{
+			"name": "Epic game store",
+			"id": "newstwo "
+		},
+		{
+			"name": "Ghost recon breakpoint",
+			"id": "newsthree"
+		},
+		{
+			"name": "SSD Samsung  8 TP",
+			"id": "newsfour "
+		},
+		{
+			"name": "World war 3เกมยิงสงครามยุคปัจจุบัน",
+			"id": "newsfive "
+		},
+		{
+			"name": "“หูฟัง” อาวุธสำคัญสำหรับเหล่าเกมเมอร์",
+			"id": "articleone "
+		},
+		{
+			"name": "Smule แอพสำหรับสายร้องเพลง",
+			"id": "articletwo "
+		},
+		{
+			"name": "Sound Card",
+			"id": "articlethree "
+		},
+		{
+			"name": "Hatred ศาลเตี้ยล้างบางผู้คน กับเนื้อหาสุดดาร์ค",
+			"id": "reviewone "
+		},
+		{
+			"name": "Bioshock Infinite",
+			"id": "reviewtwo "
+		},
+		{
+			"name": "HyperX cloud earbuds",
+			"id": "reviewthree "
+		},
+		{
+			"name": "No time to relax เกมบอร์ดสุดป่วนจำลองการใช้ชีวิต",
+			"id": "reviewfour "
+		},
+		{
+			"name": "Razer Hammerhead Duo (In-ear)",
+			"id": "reviewfive "
+		},
+		{
+			"name": "Razer Kraken pro v.2",
+			"id": "reviewsix "
+		}
+	]
+}

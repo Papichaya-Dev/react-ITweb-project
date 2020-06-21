@@ -82,6 +82,11 @@ const ButtonDelete = styled.button`
 	}
 `;
 class PostItem extends Component {
+	state = {
+		handle: 'none',
+		haveProfile: false
+	};
+
 	onDeleteClick(id) {
 		this.props.deletePost(id);
 	}

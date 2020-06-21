@@ -4,6 +4,7 @@ import { Card, Button, Container, Row, Col, Spinner, ListGroup, ListGroupItem } 
 import Swiper from 'react-id-swiper';
 import Navbar from '../Layout/Navbar';
 import Footer from '../Layout/Footer';
+import Search from '../../components/search';
 
 const CustomCardNew = styled(Card)`
 margin-left:200px;
@@ -284,7 +285,9 @@ class HomePage extends React.Component {
 			<div className="inner">
 				<BackgroundHome>
 					<Navbar />
+
 					<TopicText>Daily news !</TopicText>
+
 					<Swiper {...params}>
 						<NewsOne onClick={() => this.readNewsFive()}>
 							<TextTopicOne>

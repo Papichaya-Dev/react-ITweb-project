@@ -9,6 +9,7 @@ const BackgroundHeader = styled.div`
 	border-radius: 10px;
 	height: 400px;
 	font-family: 'Cormorant Garamond', serif;
+	margin-top: 30px;
 `;
 
 const ImageProfile = styled.img`margin-top: 25px;`;
