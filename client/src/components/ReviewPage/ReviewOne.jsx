@@ -142,6 +142,26 @@ const FooterHome = styled.div`
 	margin-top: 150px;
 `;
 
+const BackgroundFooter = styled.div`
+	width: 100%;
+	height: 100px;
+	background-color: black;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 30px;
+	font-color: white;
+	margin-top: 50px;
+`;
+
+const TextFooter = styled.div`
+	margin-left: 560px;
+	margin-top: -10px;
+	color: #d2d2d2;
+	font-size: 25px;
+`;
 class ReviewOne extends Component {
 	render() {
 		const opts = {
@@ -222,8 +242,9 @@ class ReviewOne extends Component {
 						อันเป็นเอกลักษณ์ได้อย่างดี ทำให้เกมนี้เป็นอีกหนึ่งเกมที่ไม่ควรพลาดสำหรับแฟนเกม FPS และ
 						แฟนเกมซีรีย์ Bioshock<br /> ด้วยประการทั้งปวง
 					</TextContent>
-					
-					<FooterHome>ITDismember</FooterHome>
+					<BackgroundFooter>
+						<TextFooter>Copyright &copy; {new Date().getFullYear()}ITDisassembly</TextFooter>
+					</BackgroundFooter>
 				</BackgroundBody>
 			</div>
 		);

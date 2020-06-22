@@ -28,7 +28,7 @@ class CommentItem extends Component {
 		this.props.deleteComment(postId, commentId);
 	}
 	render() {
-		const { comment, postId, auth } = this.props;
+		const { comment, postId, auth, status } = this.props;
 
 		return (
 			<div className="card card-body mb-3">
@@ -47,7 +47,7 @@ class CommentItem extends Component {
 					</div>
 					<div className="col-md-10">
 						<TextPost className="lead">{comment.text}</TextPost>
-						{comment.user === auth.user.id ? (
+						{comment.user === auth.user.id || status === 'admin' ? (
 							<ButtonDelete
 								onClick={this.onDeleteClick.bind(this, postId, comment._id)}
 								type="button"
@@ -67,10 +67,12 @@ CommentItem.propTypes = {
 	deleteComment: PropTypes.func.isRequired,
 	comment: PropTypes.object.isRequired,
 	postId: PropTypes.string.isRequired,
-	auth: PropTypes.object.isRequired
+	auth: PropTypes.object.isRequired,
+	status: PropTypes.string
 };
 const mapStateToProps = (state) => ({
-	auth: state.auth
+	auth: state.auth,
+	status: state.auth.user.status
 });
 
 export default connect(mapStateToProps, { deleteComment })(CommentItem);

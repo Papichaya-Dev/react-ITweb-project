@@ -141,6 +141,26 @@ const FooterHome = styled.div`
 	color: white;
 	margin-top: 150px;
 `;
+const BackgroundFooter = styled.div`
+	width: 100%;
+	height: 100px;
+	background-color: black;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 30px;
+	font-color: white;
+	margin-top: 50px;
+`;
+
+const TextFooter = styled.div`
+	margin-left: 560px;
+	margin-top: -10px;
+	color: #d2d2d2;
+	font-size: 25px;
+`;
 class ReviewSix extends Component {
 	render() {
 		const opts = {
@@ -202,7 +222,9 @@ class ReviewSix extends Component {
 						และการแสดงผลของ เสียงที่ไม่ละเอียดมากนักสำหรับใช้ในการฟังเพลงอย่างจริงจัง และตัววัสดุ<br />ที่เป็นยางตรง
 						Earmuff ที่ร้อนและ อาจจะทำให้ไม่สบายเมื่อใช้งานเป็นเวลานาน
 					</TextContent>
-					<FooterHome>ITDismember</FooterHome>
+					<BackgroundFooter>
+						<TextFooter>Copyright &copy; {new Date().getFullYear()}ITDisassembly</TextFooter>
+					</BackgroundFooter>
 				</BackgroundBody>
 			</div>
 		);

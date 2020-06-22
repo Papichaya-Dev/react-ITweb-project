@@ -14,12 +14,19 @@ const Background = styled.div`
     font-color:white;
 `;
 
+const TextFooter = styled.div`
+margin-left:560px;
+margin-top:-10px;
+color:#D2D2D2;
+font-size:25px;
+`
+
 export class Footer extends Component {
     render() {
         return (
             
            <Background>
-               Copyright &copy; {new Date().getFullYear()}ITDisassembly
+               <TextFooter>Copyright &copy; {new Date().getFullYear()}ITDisassembly</TextFooter>
            </Background>
           
         )

@@ -141,6 +141,26 @@ const FooterHome = styled.div`
 	color: white;
 	margin-top: 150px;
 `;
+const BackgroundFooter = styled.div`
+	width: 100%;
+	height: 100px;
+	background-color: black;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 30px;
+	font-color: white;
+	margin-top: 50px;
+`;
+
+const TextFooter = styled.div`
+	margin-left: 560px;
+	margin-top: -10px;
+	color: #d2d2d2;
+	font-size: 25px;
+`;
 class ReviewThree extends Component {
 	render() {
 		const opts = {
@@ -213,7 +233,9 @@ class ReviewThree extends Component {
 						คือหูฟังในราคา 1450 บาทที่ได้ตามมาตรฐานตลาด และด้วยความใส่สบายและ<br />เนื้อเสียงที่เหมาะกับการเล่นเกมนอกสถานที่
 						ทำให้หูฟังตัวนี้สามารถเป็นตัวเริ่มต้นของผู้ที่ต้องการความจริงจังกับการเล่นเกมบนโทรศัพท์มือถือหรือเครื่องเกม<br />พกพาได้ดี
 					</TextContent>
-					<FooterHome>ITDismember</FooterHome>
+					<BackgroundFooter>
+						<TextFooter>Copyright &copy; {new Date().getFullYear()}ITDisassembly</TextFooter>
+					</BackgroundFooter>
 				</BackgroundBody>
 			</div>
 		);

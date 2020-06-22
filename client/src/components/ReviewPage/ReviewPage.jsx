@@ -177,7 +177,26 @@ const BackgroundBody = styled.div`
 const CardImage = styled(Card.Img)`
 	height:13rem;
 `;
+const BackgroundFooter = styled.div`
+	width: 100%;
+	height: 100px;
+	background-color: black;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 30px;
+	font-color: white;
+	margin-top: 50px;
+`;
 
+const TextFooter = styled.div`
+	margin-left: 560px;
+	margin-top: -10px;
+	color: #d2d2d2;
+	font-size: 25px;
+`;
 class ReviewPage extends React.Component {
 	readReview() {
 		console.log('Fetch');
@@ -362,7 +381,10 @@ class ReviewPage extends React.Component {
 						</CustomColTwo>
 					</CustomRow>
 					<ButtonNext variant="dark">1</ButtonNext> <ButtonNextTwo variant="dark">2</ButtonNextTwo>{' '}
-					<ButtonNextThree variant="dark">3</ButtonNextThree> <FooterHome>ITDismember</FooterHome>
+					<ButtonNextThree variant="dark">3</ButtonNextThree>{' '}
+					<BackgroundFooter>
+						<TextFooter>Copyright &copy; {new Date().getFullYear()}ITDisassembly</TextFooter>
+					</BackgroundFooter>
 				</BackgroundBody>
 			</div>
 		);

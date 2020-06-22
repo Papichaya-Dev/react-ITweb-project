@@ -92,6 +92,7 @@ class Navbar extends Component {
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         {/* <Search/> */}
+        <Search/>
         <li className="nav-item">
           {this.props.status === "admin" && (
             <NavTextUsers className="nav-link" to="/profiles">
@@ -99,7 +100,7 @@ class Navbar extends Component {
             </NavTextUsers>
           )}
         </li>
-        <Search/>
+       
         <li className="nav-item">
           {this.state.handle !== "none" ? (
             <NavTextProfile

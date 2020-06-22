@@ -145,7 +145,7 @@ color:white;
 width:50px;
 height:7vh;
 margin-left:650px;
-margin-top:40px;
+margin-top:-20px;
 &:hover {
    
     cursor: pointer;
@@ -161,7 +161,7 @@ color:white;
 width:50px;
 height:7vh;
 margin-left:30px;
-margin-top:40px;
+margin-top:-20px;
 &:hover {
    
    cursor: pointer;
@@ -176,7 +176,7 @@ color:white;
 width:50px;
 height:7vh;
 margin-left:30px;
-margin-top:40px;
+margin-top:-20px;
 &:hover {
    
    cursor: pointer;
@@ -192,6 +192,26 @@ const BackgroundBody = styled.div`
 	background-size: cover;
 	width: '100vw';
 	height: '100vh';
+`;
+const BackgroundFooter = styled.div`
+	width: 100%;
+	height: 100px;
+	background-color: black;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 30px;
+	font-color: white;
+	margin-top: 50px;
+`;
+
+const TextFooter = styled.div`
+	margin-left: 560px;
+	margin-top: -10px;
+	color: #d2d2d2;
+	font-size: 25px;
 `;
 class NewsPage extends React.Component {
 	readNews() {
@@ -354,8 +374,10 @@ class NewsPage extends React.Component {
 						</CustomColTwo>
 					</CustomRow>
 					<ButtonNext variant="dark">1</ButtonNext> <ButtonNextTwo variant="dark">2</ButtonNextTwo>{' '}
-					<ButtonNextThree variant="dark">3</ButtonNextThree>{' '}
-					<FooterHome>Copyright &copy; {new Date().getFullYear()}ITDisassembly</FooterHome>
+					<ButtonNextThree variant="dark">3</ButtonNextThree>
+					<BackgroundFooter>
+						<TextFooter>Copyright &copy; {new Date().getFullYear()}ITDisassembly</TextFooter>
+					</BackgroundFooter>
 				</BackgroundBody>
 			</div>
 		);

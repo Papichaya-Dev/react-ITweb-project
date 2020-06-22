@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Moment from 'react-moment';
 import { deleteExperience } from '../../actions/profileActions';
+import styled from 'styled-components';
 
+const TextHeader = styled.h4`margin-top: 13px;`;
 class Experience extends Component {
 	onDeleteClick(id) {
 		this.props.deleteExperience(id, this.props.history);
@@ -25,7 +27,7 @@ class Experience extends Component {
 		));
 		return (
 			<div>
-				<h4 className="mb-4">Add more info</h4>
+				<TextHeader className="mb-4">Add more info</TextHeader>
 				<table className="table">
 					<thead>
 						<tr>

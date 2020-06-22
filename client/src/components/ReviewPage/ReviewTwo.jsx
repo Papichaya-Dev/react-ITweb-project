@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import  Navbar from '../Layout/Navbar';
+import Navbar from '../Layout/Navbar';
 import styled from 'styled-components';
 import { Animated } from 'react-animated-css';
 import Swiper from 'react-id-swiper';
@@ -16,6 +16,26 @@ const BackgroundHeader = styled.div`
 	background-size: cover; */
 `;
 
+const BackgroundFooter = styled.div`
+	width: 100%;
+	height: 100px;
+	background-color: black;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 30px;
+	font-color: white;
+	margin-top: 50px;
+`;
+
+const TextFooter = styled.div`
+	margin-left: 560px;
+	margin-top: -10px;
+	color: #d2d2d2;
+	font-size: 25px;
+`;
 const BackgroundBody = styled.div`
 	background-image: linear-gradient(350deg, #e0c3fc 0%, #8ec5fc 100%);
 	background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -232,7 +252,9 @@ class ReviewTwo extends Component {
 						อันเป็นเอกลักษณ์ได้อย่างดี ทำให้เกมนี้เป็นอีกหนึ่งเกมที่ไม่ควรพลาดสำหรับแฟนเกม FPS และ
 						แฟนเกมซีรีย์ Bioshock<br /> ด้วยประการทั้งปวง
 					</TextContent>
-					<FooterHome>ITDismember</FooterHome>
+					<BackgroundFooter>
+						<TextFooter>Copyright &copy; {new Date().getFullYear()}ITDisassembly</TextFooter>
+					</BackgroundFooter>
 				</BackgroundBody>
 			</div>
 		);

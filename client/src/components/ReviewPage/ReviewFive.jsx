@@ -127,6 +127,26 @@ const FooterHome = styled.div`
 	color: white;
 	margin-top: 150px;
 `;
+const BackgroundFooter = styled.div`
+	width: 100%;
+	height: 100px;
+	background-color: black;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 30px;
+	font-color: white;
+	margin-top: 50px;
+`;
+
+const TextFooter = styled.div`
+	margin-left: 560px;
+	margin-top: -10px;
+	color: #d2d2d2;
+	font-size: 25px;
+`;
 class ReviewFive extends Component {
 	render() {
 		const opts = {
@@ -181,7 +201,9 @@ class ReviewFive extends Component {
 						<br />Razer Hammerhead Duo เป็นหูฟัง In-ear ที่มีประสทธิภาพสูงและคุ้มกับราคา 1,590 บาท เป็น
 						ตัวเริ่มต้นและตัวจบที่ดีสำหรับผู้ที่กำลังต้องการเพิ่ม<br />ความจริงจังกับการเล่นเกม
 					</TextContent>
-					<FooterHome>ITDismember</FooterHome>
+					<BackgroundFooter>
+						<TextFooter>Copyright &copy; {new Date().getFullYear()}ITDisassembly</TextFooter>
+					</BackgroundFooter>
 				</BackgroundBody>
 			</div>
 		);

@@ -126,7 +126,7 @@ class AddExperience extends Component {
 		if (this.state.handle === 'none' && this.state.haveProfile === false) {
 			if (this.props.profiles) {
 				this.props.profiles.map((profile) => {
-					if (this.props.auth.user.id) {
+					if (this.props.auth.user.id === profile.user._id) {
 						this.setState({ handle: profile.handle });
 						this.setState({ haveProfile: true });
 					}
