@@ -71,11 +71,17 @@ class Navbar extends Component {
   }
 
   render() {
+    // const { profile } = this.props;
+		// console.log(profile);
+
+		// if (!profile.user) {
+		// 	return false;
+		// }
     const { isAuthenticated, user } = this.props.auth;
     if (this.state.handle === "none" && this.state.haveProfile === false) {
       if (this.props.profiles) {
         this.props.profiles.map((profile) => {
-          if (this.props.auth.user.id === profile.user._id) {
+          if (this.props.auth.user.id === profile) {
             this.setState({ handle: profile.handle });
             this.setState({ haveProfile: true });
           }
@@ -203,12 +209,15 @@ Navbar.propTypes = {
   auth: PropTypes.object.isRequired,
   status: PropTypes.string,
   getProfiles: PropTypes.func.isRequired,
+  profile: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => ({
   auth: state.auth,
   profiles: state.profile.profiles,
   status: state.auth.user.status,
+  profile: state.profile,
+
 });
 
 export default connect(mapStateToProps, {

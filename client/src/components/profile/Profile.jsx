@@ -18,6 +18,13 @@ const ButtonBack = styled(Link)`
    margin-left:-180px;
 	
 `;
+const ButtonBackUser = styled(Link)`
+	font-family: 'DM Serif Display', serif;
+   font-size:20px;
+   margin-left:-700px;
+   margin-top:10px;
+	
+`;
 class Profile extends Component {
 	componentDidMount() {
 		if (this.props.match.params.handle) {
@@ -40,6 +47,13 @@ class Profile extends Component {
 								<ButtonBack to="/profiles" className="btn btn-black mb-3 float-left">
 									Back To Profiles
 								</ButtonBack>
+							)}
+						</div>
+						<div className="col-md-6">
+							{this.props.status === 'user' && (
+								<ButtonBackUser to="/dashboard" className="btn btn-black mb-3 float-left">
+									Back To Profiles
+								</ButtonBackUser>
 							)}
 						</div>
 						<div className="col-md-6" />

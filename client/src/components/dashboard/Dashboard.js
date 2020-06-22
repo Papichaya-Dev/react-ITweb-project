@@ -47,6 +47,28 @@ const ButtonCrete = styled(Link)`
   background-color: black;
   color: white;
 `;
+const Textname = styled(Link)`
+  
+  color: #F5F5F5;
+`;
+const ButtonDelete = styled.button`
+  font-family: "DM Serif Display", serif;
+  font-weight: bolder;
+  padding: 0.2rem;
+  width: 180px;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 385px;
+  margin-top: -63px;
+  letter-spacing: 0.1rem;
+  opacity: 1;
+  background-color: #EB3A3A;
+  color: white;
+`;
+
 class Dashboard extends Component {
     componentDidMount(){
         this.props.getCurrentProfile();
@@ -70,14 +92,16 @@ class Dashboard extends Component {
             if(Object.keys(profile).length > 0){
                 dashboardContent = (
                     <div>
-                         <p className="lead text-muted">Welcome <Link to={`/profile/${profile.handle}`}> 
-                         {user.name}</Link></p>
+                         <TextWelcome className="lead text-muted">Welcome <Textname to={`/profile/${profile.handle}`}> 
+                         {user.name}</Textname></TextWelcome>
                          <ProfileAction/>
+                         <ButtonDelete onClick={this.onDeleteClick.bind(this)} className="btn btn-danger">Delete My Account
+                         </ButtonDelete>
                          <Experience experience={profile.experience}/>
                          <Education education={profile.education}/>
+                         
                          <div style={{ marginBottom: '60px'}}/>
-                         <button onClick={this.onDeleteClick.bind(this)} className="btn btn-danger">Delete My Account
-                         </button>
+                         
                     </div>
                 )
             } else {
