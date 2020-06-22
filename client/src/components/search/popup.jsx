@@ -27,6 +27,7 @@ export default class Popup extends React.Component {
 							})}
 						{!items && <div className="warning">Nothing Found!</div>}
 					</div>
+					{/* {items && <div className="footer">Type Keyword to search for Content</div>} */}
 					{/* <div className="footer">Type Keyword to search for Content</div> */}
 				</div>
 			</div>

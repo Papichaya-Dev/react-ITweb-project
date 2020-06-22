@@ -196,23 +196,23 @@ const BackgroundBody = styled.div`
 class NewsPage extends React.Component {
 	readNews() {
 		console.log('Fetch');
-		this.props.history.push('/newsone');
+		this.props.history.push('/news/NewsOne');
 	}
 	readNewsTwo() {
 		console.log('Fetch');
-		this.props.history.push('/newstwo');
+		this.props.history.push('/news/NewsTwo');
 	}
 	readNewsThree() {
 		console.log('Fetch');
-		this.props.history.push('/newsthree');
+		this.props.history.push('/news/NewsThree');
 	}
 	readNewsFour() {
 		console.log('Fetch');
-		this.props.history.push('/newsfour');
+		this.props.history.push('/news/NewsFour');
 	}
 	readNewsFive() {
 		console.log('Fetch');
-		this.props.history.push('/newsfive');
+		this.props.history.push('/news/NewsFive');
 	}
 
 	state = {

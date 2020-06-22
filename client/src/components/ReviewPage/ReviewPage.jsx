@@ -181,27 +181,27 @@ const CardImage = styled(Card.Img)`
 class ReviewPage extends React.Component {
 	readReview() {
 		console.log('Fetch');
-		this.props.history.push('/reviewone');
+		this.props.history.push('/review/ReviewOne');
 	}
 	readReviewTwo() {
 		console.log('Fetch');
-		this.props.history.push('/reviewtwo');
+		this.props.history.push('/review/ReviewTwo');
 	}
 	readReviewThree() {
 		console.log('Fetch');
-		this.props.history.push('/reviewthree');
+		this.props.history.push('/review/ReviewThree');
 	}
 	readReviewFour() {
 		console.log('Fetch');
-		this.props.history.push('/reviewfour');
+		this.props.history.push('/review/ReviewFour');
 	}
 	readReviewFive() {
 		console.log('Fetch');
-		this.props.history.push('/reviewfive');
+		this.props.history.push('/review/ReviewFive');
 	}
 	readReviewSix() {
 		console.log('Fetch');
-		this.props.history.push('/reviewsix');
+		this.props.history.push('/review/ReviewSix');
 	}
 	state = {
 		likes: 0

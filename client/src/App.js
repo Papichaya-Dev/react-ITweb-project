@@ -41,8 +41,9 @@ import ReviewFour from './components/ReviewPage/ReviewFour';
 import ReviewFive from './components/ReviewPage/ReviewFive';
 import ReviewSix from './components/ReviewPage/ReviewSix';
 import Search from './components/search';
-
-
+import News from './components/NewsPage';
+import Article from './components/ArticlePage';
+import Review from './components/ReviewPage';
 
 //Check for token
 if(localStorage.jwtToken){
@@ -71,6 +72,7 @@ class App extends Component {
     return (
      <Provider store = {store}>
      <Router>
+       <Switch>
        <div className="App">
           {/* <Navbar/> */}
           <Route exact path="/" component={Landing} />
@@ -79,90 +81,44 @@ class App extends Component {
             <Route exact path="/login" component={Login}/>
             <Route exact path="/profiles" component={Profiles}/>
             <Route exact path="/profile/:handle" component={Profile}/>
-            <Switch>
+            
             <PrivateRoute exact path="/dashboard" component={Dashboard}/>
-            </Switch>
-            <Switch>
+            
             <PrivateRoute exact path="/create-profile" component={CreateProfile}/>
-            </Switch>
-            <Switch>
+            
             <PrivateRoute exact path="/edit-profile" component={EditProfile}/>
-            </Switch>
-            <Switch>
+           
             <PrivateRoute exact path="/add-experience" component={AddExperience}/>
-            </Switch>
-            <Switch>
+          
             <PrivateRoute exact path="/add-education" component={AddEducation}/>
-            </Switch>
-            <Switch>
+          
             <PrivateRoute exact path="/feed" component={Posts}/>
-            </Switch>
-            <Switch>
+            
             <PrivateRoute exact path="/post/:id" component={Post}/>
-            </Switch>
-            <Switch>
+           
             <PrivateRoute exact path="/home" component={HomePage}/>
-            </Switch>
-            <Switch>
+            
             <PrivateRoute exact path="/news" component={NewsPage}/>
-            </Switch>
-            <Switch>
+           
             <PrivateRoute exact path="/article" component={ArticlePage}/>
-            </Switch>
-            <Switch>
+            
             <PrivateRoute exact path="/review" component={ReviewPage}/>
-            </Switch>
-            <Switch>
-            <PrivateRoute exact path="/newsone" component={NewsOne}/>
-            </Switch>
-            <Switch>
-            <PrivateRoute exact path="/newstwo" component={NewsTwo}/>
-            </Switch>
-            <Switch>
-            <PrivateRoute exact path="/newsthree" component={NewsThree}/>
-            </Switch>
-            <Switch>
-            <PrivateRoute exact path="/newsfour" component={NewsFour}/>
-            </Switch>
-            <Switch>
-            <PrivateRoute exact path="/newsfive" component={NewsFive}/>
-            </Switch>
-            <Switch>
-            <PrivateRoute exact path="/articleone" component={ArticleOne}/>
-            </Switch>
-            <Switch>
-            <PrivateRoute exact path="/articletwo" component={ArticleTwo}/>
-            </Switch>
-            <Switch>
-            <PrivateRoute exact path="/articlethree" component={ArticleThree}/>
-            </Switch>
-            <Switch>
-            <PrivateRoute exact path="/reviewone" component={ReviewOne}/>
-            </Switch>
-            <Switch>
-            <PrivateRoute exact path="/reviewtwo" component={ReviewTwo}/>
-            </Switch>
-            <Switch>
-            <PrivateRoute exact path="/reviewthree" component={ReviewThree}/>
-            </Switch>
-            <Switch>
-            <PrivateRoute exact path="/reviewfour" component={ReviewFour}/>
-            </Switch>
-            <Switch>
-            <PrivateRoute exact path="/reviewfive" component={ReviewFive}/>
-            </Switch>
-            <Switch>
-            <PrivateRoute exact path="/reviewsix" component={ReviewSix}/>
-            </Switch>
-            <Switch>
+          
+           
+           <PrivateRoute exact path="/news/:newsNum" component={News}></PrivateRoute>
+           <PrivateRoute exact path="/article/:articleNum" component={Article}></PrivateRoute>
+           <PrivateRoute exact path="/review/:reviewNum" component={Review}></PrivateRoute>
+           
+           
             <PrivateRoute exact path="/search" component={Search}/>
-            </Switch>
+           
             
             
           {/* </div> */}
    
           {/* <Footer/> */}
         </div>
+        </Switch>
       </Router>
       </Provider> 
   );

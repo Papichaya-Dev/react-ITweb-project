@@ -185,15 +185,15 @@ const BackgroundBody = styled.div`
 class ArticlePage extends React.Component {
 	readArticle() {
 		console.log('Fetch');
-		this.props.history.push('/articleone');
+		this.props.history.push('/article/ArticleOne');
 	}
 	readArticleTwo() {
 		console.log('Fetch');
-		this.props.history.push('/articletwo');
+		this.props.history.push('/article/ArticleTwo');
 	}
 	readArticleThree() {
 		console.log('Fetch');
-		this.props.history.push('/articlethree');
+		this.props.history.push('/article/ArticleThree');
 	}
 	state = {
 		likes: 0
