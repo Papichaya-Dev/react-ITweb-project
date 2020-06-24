@@ -6,6 +6,7 @@ import ReviewFour from './ReviewFour';
 import ReviewFive from './ReviewFive';
 import ReviewSix from './ReviewSix';
 import { Switch } from '@material-ui/core';
+import Dashboard from '../dashboard/Dashboard';
 
 class index extends React.Component {
 	render() {
@@ -23,7 +24,7 @@ class index extends React.Component {
 			case 'ReviewSix':
 				return <ReviewSix />;
 			default:
-				return <div>Don't have this news</div>;
+				return <Dashboard />;
 		}
 	}
 }

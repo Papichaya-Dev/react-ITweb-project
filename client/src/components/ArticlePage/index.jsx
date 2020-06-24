@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ArticleOne from './ArticleOne';
 import ArticleTwo from './ArticleTwo';
 import ArticleThree from './ArticleThree';
+import Dashboard from '../dashboard/Dashboard';
 
 class index extends React.Component {
 	render() {
@@ -13,7 +14,7 @@ class index extends React.Component {
 			case 'ArticleThree':
 				return <ArticleThree />;
 			default:
-				return <div>Don't have this news</div>;
+				return <Dashboard />;
 		}
 	}
 }

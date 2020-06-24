@@ -20,10 +20,11 @@ app.use(bodyParser.json());
 const db = require('./config/keys').mongoURI;
 
 //Connect to MongoDB
-mongoose
-    .connect(db)
-    .then(() => console.log('MongoDB Connected'))
-    .catch(err => console.log(err));
+mongoose.connect(process.env.URI || 'mongodb://localhost/socialwebdatabase', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+
 
 //Passport middleware
 app.use(passport.initialize());
@@ -39,10 +40,7 @@ app.use('/api/news',news);
 app.use('/api/article',article);
 app.use('/api/review',review);
 
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/socialwebdatabase', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
+
 
 //Server static assets if in production
 if(process.env.NODE_ENV === 'production') {

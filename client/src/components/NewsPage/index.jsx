@@ -5,6 +5,7 @@ import NewsThree from './NewsThree';
 import NewsFour from './NewsFour';
 import NewsFive from './NewsFive';
 import { Switch } from '@material-ui/core';
+import Dashboard from '../dashboard/Dashboard';
 
 class index extends React.Component {
 	render() {
@@ -20,7 +21,7 @@ class index extends React.Component {
 			case 'NewsFive':
 				return <NewsFive />;
 			default:
-				return <div>Don't have this news</div>;
+				return <Dashboard />;
 		}
 	}
 }
