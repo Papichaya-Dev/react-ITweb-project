@@ -210,7 +210,8 @@ Navbar.propTypes = {
   auth: PropTypes.object.isRequired,
   status: PropTypes.string,
   getProfiles: PropTypes.func.isRequired,
-  profile: PropTypes.object.isRequired
+  profile: PropTypes.object.isRequired,
+  
 };
 
 const mapStateToProps = (state) => ({

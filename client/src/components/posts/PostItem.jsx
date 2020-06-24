@@ -8,6 +8,8 @@ import styled from 'styled-components';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ThumbDownAltIcon from '@material-ui/icons/ThumbDownAlt';
+import { getProfiles } from "../../actions/profileActions";
+
 
 const BackgroundPost = styled.div`
 	background-color: #cddcdc;
@@ -87,6 +89,9 @@ class PostItem extends Component {
 		haveProfile: false
 	};
 
+	componentDidMount() {
+		this.props.getProfiles();
+	  }
 	onDeleteClick(id) {
 		this.props.deletePost(id);
 	}
@@ -109,11 +114,26 @@ class PostItem extends Component {
 	}
 	render() {
 		const { post, auth, showActions, status } = this.props;
+		const { profile} = this.props.profile;
+		if (this.state.handle === "none" && this.state.haveProfile === false) {
+			console.log('araikordai');
+			if (this.props.profiles) {
+				console.log('aaaa');
+			  this.props.profiles.map((profile) => {
+				if (this.props.post.user === profile.user._id) {
+					console.log(profile.handle);
+				  this.setState({ handle: profile.handle });
+				  this.setState({ haveProfile: true });
+				}
+			  });
+			}
+		  }
+
 		return (
 			<BackgroundPost className="card card-body mb-3">
 				<div className="row">
 					<div className="col-md-2">
-						<a href="profile.html">
+						<a href={`/profile/${this.state.handle}`} >
 							<img className="rounded-circle d-none d-md-block" src={post.avatar} alt="" />
 						</a>
 						<br />
@@ -173,12 +193,20 @@ PostItem.propTypes = {
 	removeLike: PropTypes.func.isRequired,
 	post: PropTypes.object.isRequired,
 	auth: PropTypes.object.isRequired,
-	status: PropTypes.string
+	status: PropTypes.string,
+	profile: PropTypes.object.isRequired,
+	getProfiles: PropTypes.func.isRequired,
+
+
 };
 
 const mapStateToProps = (state) => ({
 	auth: state.auth,
-	status: state.auth.user.status
+	status: state.auth.user.status,
+	profile: state.profile,
+	profiles: state.profile.profiles,
+	
+
 });
 
-export default connect(mapStateToProps, { deletePost, addLike, removeLike })(PostItem);
+export default connect(mapStateToProps, { deletePost, addLike, removeLike,getProfiles })(PostItem);
