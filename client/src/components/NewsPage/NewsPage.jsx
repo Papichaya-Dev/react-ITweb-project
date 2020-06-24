@@ -283,8 +283,8 @@ class NewsPage extends React.Component {
 										บริษัทเจ้าของเครื่องเล่นเกมชั้นนำของโลก ก็ได้เปิดเผยข้อมูลสำคัญ . . .{' '}
 									</TextCardNew>
 								</Card.Body>
-								<button onClick={() => this.props.addLike('5ef3724e00ac363f297d21d3')}>
-									❤️Likes: {this.getLikeCount('5ef3724e00ac363f297d21d3')}{' '}
+								<button onClick={() => this.props.addLike('5ef37b0b9e980840e8c5ecaf')}>
+									❤️Likes: {this.getLikeCount('5ef37b0b9e980840e8c5ecaf')}{' '}
 								</button>
 							</CustomCardNew>
 						</CustomCol>
@@ -303,8 +303,8 @@ class NewsPage extends React.Component {
 										เจ้าของ engine ชื่อดังอย่าง Unreal engine ที่จะ . . .
 									</TextCardNew>
 								</Card.Body>
-								<button onClick={() => this.props.addLike('5ef372f800ac363f297d21d4')}>
-									❤️Likes: {this.getLikeCount('5ef372f800ac363f297d21d4')} {' '}
+								<button onClick={() => this.props.addLike('5ef37b1f9e980840e8c5ecb0')}>
+									❤️Likes: {this.getLikeCount('5ef37b1f9e980840e8c5ecb0')} {' '}
 								</button>
 							</CustomCardNew>
 						</CustomColTwo>
@@ -325,8 +325,8 @@ class NewsPage extends React.Component {
 										ภายในเดือนนี้ พร้อมกับ . . .
 									</TextCardNew>
 								</Card.Body>
-								<button onClick={() => this.props.addLike('5ef3732a00ac363f297d21d5')}>
-									❤️Likes: {this.getLikeCount('5ef3732a00ac363f297d21d5')} {' '}
+								<button onClick={() => this.props.addLike('5ef37b309e980840e8c5ecb1')}>
+									❤️Likes: {this.getLikeCount('5ef37b309e980840e8c5ecb1')} {' '}
 								</button>
 							</CustomCardNew>
 						</CustomColTwo>
@@ -346,8 +346,8 @@ class NewsPage extends React.Component {
 										จากทาง Samsung ซึ่งเพิ่มดีกรี . . .
 									</TextCardNewTwo>
 								</Card.Body>
-								<button onClick={() => this.props.addLike('5ef3736b00ac363f297d21d7')}>
-									❤️Likes: {this.getLikeCount('5ef3736b00ac363f297d21d7')} {' '}
+								<button onClick={() => this.props.addLike('5ef37b489e980840e8c5ecb2')}>
+									❤️Likes: {this.getLikeCount('5ef37b489e980840e8c5ecb2')} {' '}
 								</button>
 							</CustomCardArticle>
 						</CustomCol>
@@ -367,8 +367,8 @@ class NewsPage extends React.Component {
 										World war 3 เกมยิง แนวสงครามขนาดใหญ่ . . .
 									</TextCardNewTwo>
 								</Card.Body>
-								<button onClick={() => this.props.addLike('5ef373a500ac363f297d21d8')}>
-									❤️Likes: {this.getLikeCount('5ef373a500ac363f297d21d8')} {' '}
+								<button onClick={() => this.props.addLike('5ef37b559e980840e8c5ecb3')}>
+									❤️Likes: {this.getLikeCount('5ef37b559e980840e8c5ecb3')} {' '}
 								</button>
 							</CustomCardArticle>
 						</CustomColTwo>

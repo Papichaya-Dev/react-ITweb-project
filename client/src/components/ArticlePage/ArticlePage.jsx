@@ -265,8 +265,8 @@ class ArticlePage extends React.Component {
 										ซึ่งปัจจุบันยังได้รับความนิยมอย่างต่อเนื่อง . . .
 									</TextCardNew>
 								</Card.Body>
-								<button onClick={() => this.props.addLike('5ef36d5400ac363f297d21ca')}>
-									❤️Likes: {this.getLikeCount('5ef36d5400ac363f297d21ca')}{' '}
+								<button onClick={() => this.props.addLike('5ef379089e980840e8c5ecaa')}>
+									❤️Likes: {this.getLikeCount('5ef379089e980840e8c5ecaa')}{' '}
 								</button>
 							</CustomCardArticle>
 						</CustomCol>
@@ -285,8 +285,8 @@ class ArticlePage extends React.Component {
 										ทำให้กิจกรรมหลายๆอย่างนอกสถานที่ถูกระงับไป ซึ่ง . . .
 									</TextCardNew>
 								</Card.Body>
-								<button onClick={() => this.props.addLike('5ef36d8b00ac363f297d21cb')}>
-									❤️Likes: {this.getLikeCount('5ef36d8b00ac363f297d21cb')}{' '}
+								<button onClick={() => this.props.addLike('5ef3799c9e980840e8c5ecac')}>
+									❤️Likes: {this.getLikeCount('5ef3799c9e980840e8c5ecac')}{' '}
 								</button>
 							</CustomCardArticle>
 						</CustomColTwo>
@@ -305,8 +305,8 @@ class ArticlePage extends React.Component {
 										คือหนึ่งในสื่อที่มีอิทธิพลอย่างมาก ไม่ว่าจะเป็น . . .
 									</TextCardNew>
 								</Card.Body>
-								<button onClick={() => this.props.addLike('5ef36db800ac363f297d21cc')}>
-									❤️Likes: {this.getLikeCount('5ef36db800ac363f297d21cc')}{' '}
+								<button onClick={() => this.props.addLike('5ef379c09e980840e8c5ecad')}>
+									❤️Likes: {this.getLikeCount('5ef379c09e980840e8c5ecad')}{' '}
 								</button>
 							</CustomCardArticle>
 						</CustomColTwo>
