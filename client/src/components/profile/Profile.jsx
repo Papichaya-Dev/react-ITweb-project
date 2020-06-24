@@ -49,13 +49,13 @@ class Profile extends Component {
 								</ButtonBack>
 							)}
 						</div>
-						<div className="col-md-6">
+						{/* <div className="col-md-6">
 							{this.props.status === 'user' && (
 								<ButtonBackUser to="/dashboard" className="btn btn-black mb-3 float-left">
 									Back To Profiles
 								</ButtonBackUser>
 							)}
-						</div>
+						</div> */}
 						<div className="col-md-6" />
 					</div>
 					<ProfileHeader profile={profile} />
