@@ -242,43 +242,43 @@ class HomePage extends React.Component {
 
 	readNews() {
 		console.log('Fetch');
-		this.props.history.push('/newsone');
+		this.props.history.push('/news/NewsOne');
 	}
 	readNewsTwo() {
 		console.log('Fetch');
-		this.props.history.push('/newstwo');
+		this.props.history.push('/news/NewsTwo');
 	}
 	readNewsThree() {
 		console.log('Fetch');
-		this.props.history.push('/newsthree');
+		this.props.history.push('/news/NewsThree');
 	}
 	readNewsFive() {
 		console.log('Fetch');
-		this.props.history.push('/newsfive');
+		this.props.history.push('/news/NewsFive');
 	}
 	readArticle() {
 		console.log('Fetch');
-		this.props.history.push('/articleone');
+		this.props.history.push('/article/ArticleOne');
 	}
 	readArticleTwo() {
 		console.log('Fetch');
-		this.props.history.push('/articletwo');
+		this.props.history.push('/article/ArticleTwo');
 	}
 	readArticleThree() {
 		console.log('Fetch');
-		this.props.history.push('/articlethree');
+		this.props.history.push('/article/ArticleThree');
 	}
 	readReview() {
 		console.log('Fetch');
-		this.props.history.push('/reviewone');
+		this.props.history.push('/review/ReviewOne');
 	}
 	readReviewTwo() {
 		console.log('Fetch');
-		this.props.history.push('/reviewtwo');
+		this.props.history.push('/review/ReviewTwo');
 	}
 	readReviewThree() {
 		console.log('Fetch');
-		this.props.history.push('/reviewthree');
+		this.props.history.push('/review/ReviewThree');
 	}
 	render() {
 		return (
