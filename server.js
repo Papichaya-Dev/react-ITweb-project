@@ -39,10 +39,10 @@ app.use('/api/news',news);
 app.use('/api/article',article);
 app.use('/api/review',review);
 
-mongoose.connect('mongodb://localhost/socialwebdatabase', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/socialwebdatabase', {
   useNewUrlParser: true,
   useUnifiedTopology: true
-})
+});
 
 
 //Server static assets if in production
