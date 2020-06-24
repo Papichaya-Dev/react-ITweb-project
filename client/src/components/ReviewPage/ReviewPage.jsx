@@ -271,8 +271,8 @@ class ReviewPage extends React.Component {
 										ของชายผู้บ้าคลั่งออกไล่ฆ่าผู้คนด้วยเหตุผลที่เข้าใจได้อย่าง Hatred . . .
 									</TextCardReview>
 								</Card.Body>
-								<button onClick={() => this.props.addLike('5eeccc237835e91cf08bdfe8')}>
-									❤️Likes: {this.getLikeCount('5eeccc237835e91cf08bdfe8')}{' '}
+								<button onClick={() => this.props.addLike('5ef36df500ac363f297d21cd')}>
+									❤️Likes: {this.getLikeCount('5ef36df500ac363f297d21cd')}{' '}
 								</button>
 							</CustomCardReview>
 						</CustomCol>
@@ -293,8 +293,8 @@ class ReviewPage extends React.Component {
 										ไว้อย่างลงตัว และเนื้อเรื่องที่ซับซ้อนน่าติดตามกับ Bioshock Infinite . . .
 									</TextCardReview>
 								</Card.Body>
-								<button onClick={() => this.props.addLike('5eecccd27835e91cf08bdfe9')}>
-									❤️Likes: {this.getLikeCount('5eecccd27835e91cf08bdfe9')}{' '}
+								<button onClick={() => this.props.addLike('5ef36e4700ac363f297d21ce')}>
+									❤️Likes: {this.getLikeCount('5ef36e4700ac363f297d21ce')}{' '}
 								</button>
 							</CustomCardReview>
 						</CustomColTwo>
@@ -313,8 +313,8 @@ class ReviewPage extends React.Component {
 										แต่รวมไปถึงการสวมใส่ที่ออกแบบมา . . .
 									</TextCardReview>
 								</Card.Body>
-								<button onClick={() => this.props.addLike('5eeccd077835e91cf08bdfea')}>
-									❤️Likes: {this.getLikeCount('5eeccd077835e91cf08bdfea')}{' '}
+								<button onClick={() => this.props.addLike('5ef36e8000ac363f297d21cf')}>
+									❤️Likes: {this.getLikeCount('5ef36e8000ac363f297d21cf')}{' '}
 								</button>
 							</CustomCardReview>
 						</CustomColTwo>
@@ -335,8 +335,8 @@ class ReviewPage extends React.Component {
 										. . .
 									</TextCardNewTwo>
 								</Card.Body>
-								<button onClick={() => this.props.addLike('5eeccd6c7835e91cf08bdfeb')}>
-									❤️Likes: {this.getLikeCount('5eeccd6c7835e91cf08bdfeb')}{' '}
+								<button onClick={() => this.props.addLike('5ef36eb200ac363f297d21d0')}>
+									❤️Likes: {this.getLikeCount('5ef36eb200ac363f297d21d0')}{' '}
 								</button>
 							</CustomCardReview>
 						</CustomCol>
@@ -354,8 +354,8 @@ class ReviewPage extends React.Component {
 										ซึ่งมีราคาที่สูสีกับคู่แข่งอย่าง HyperX อย่างมากทั้งในด้านราคาและ . . .
 									</TextCardNewTwo>
 								</Card.Body>
-								<button onClick={() => this.props.addLike('5eeccde07835e91cf08bdfec')}>
-									❤️Likes: {this.getLikeCount('5eeccde07835e91cf08bdfec')}{' '}
+								<button onClick={() => this.props.addLike('5ef36ed800ac363f297d21d1')}>
+									❤️Likes: {this.getLikeCount('5ef36ed800ac363f297d21d1')}{' '}
 								</button>
 							</CustomCardReview>
 						</CustomColTwo>
@@ -374,8 +374,8 @@ class ReviewPage extends React.Component {
 										ซึ่งความหลากหลายที่เกิดขึ้นทำ ให้มีหูฟัง Headset . . .
 									</TextCardNewTwo>
 								</Card.Body>
-								<button onClick={() => this.props.addLike('5eeccdfe7835e91cf08bdfed')}>
-									❤️Likes: {this.getLikeCount('5eeccdfe7835e91cf08bdfed')}{' '}
+								<button onClick={() => this.props.addLike('5ef36f0200ac363f297d21d2')}>
+									❤️Likes: {this.getLikeCount('5ef36f0200ac363f297d21d2')}{' '}
 								</button>
 							</CustomCardReview>
 						</CustomColTwo>
