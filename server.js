@@ -21,7 +21,7 @@ const db = require('./config/keys').mongoURI;
 
 //Connect to MongoDB
 mongoose
-    .connect(db)
+    .connect(db, { useUnifiedTopology:true, useNewUrlParser:true})
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
 
@@ -39,10 +39,10 @@ app.use('/api/news',news);
 app.use('/api/article',article);
 app.use('/api/review',review);
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/socialwebdatabase', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/socialwebdatabase', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// });
 
 
 //Server static assets if in production

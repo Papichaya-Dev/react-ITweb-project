@@ -8,6 +8,7 @@ import styled from 'styled-components';
 const BackgroundComment = styled.div`
 	background-color: black;
 	font-family: 'Kanit', sans-serif;
+	height: fit-content;
 `;
 
 const ButtonComment = styled.button`font-family: 'Kanit', sans-serif;`;
