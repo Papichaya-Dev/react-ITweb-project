@@ -39,7 +39,7 @@ app.use('/api/news',news);
 app.use('/api/article',article);
 app.use('/api/review',review);
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/socialwebdatabase', {
+mongoose.connect('mongodb://localhost/socialwebdatabase', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
