@@ -43,21 +43,16 @@ width:22rem;
   margin-top:-40px;
   font-family: 'Kanit', sans-serif;
   
-
 `;
 const CustomCol = styled(Col)`
   margin-bottom:50px;
-
 `;
 const CustomColTwo = styled(Col)`
   margin-bottom:50px;
   margin-left:-100px;
-
 `;
 const CustomRow = styled(Row)`
 margin-top:50px;
-
-
 `;
 const TextCardNew = styled(Card.Text)`
     transition: transform .10s;
@@ -213,7 +208,6 @@ const TopicText = styled.div`
 	text-align: center;
 	justify-content: center;
 	align-items: center;
-
 	font-size: 50px;
 `;
 const FooterHome = styled.div`

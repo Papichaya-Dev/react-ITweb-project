@@ -42,13 +42,13 @@ class Profile extends Component {
 			profileContent = (
 				<div>
 					<div className="row">
-						<div className="col-md-6">
+						{/* <div className="col-md-6">
 							{this.props.status === 'admin' && (
 								<ButtonBack to="/profiles" className="btn btn-black mb-3 float-left">
 									Back To Profiles
 								</ButtonBack>
 							)}
-						</div>
+						</div> */}
 						{/* <div className="col-md-6">
 							{this.props.status === 'user' && (
 								<ButtonBackUser to="/dashboard" className="btn btn-black mb-3 float-left">
