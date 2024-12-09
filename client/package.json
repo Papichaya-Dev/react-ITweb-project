@@ -34,7 +34,7 @@
     "redux-thunk": "^2.3.0",
     "semantic-ui-react": "^0.88.2",
     "styled-components": "^5.1.1",
-    "swiper": "^5.4.3"
+    "swiper": "^6.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
